@@ -35,6 +35,15 @@ fetch('/src/components/footer.html')
 .catch(err => console.error('Fooder load error', err)
 );
 
+//fetch header
+fetch('/src/components/header.html')
+.then(res => res.text())
+.then(data => {
+    document.getElementById('header-placeholder').innerHTML = data
+})
+.catch(err => console.error('Header load error', err)
+);
+
 //mobile nav bar
 const menuBtn = document.getElementById('menu-btn')
 const mobileMenu = document.getElementById('mobile-menu')
