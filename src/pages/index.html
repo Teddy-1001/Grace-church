@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/assets/css/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/assets/images/ack-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Grace Church</title>
+</head>
+<script src="/src/assets/js/index.js" defer></script>
+<script src="/src/assets/js/bibleVerses.js" defer></script>
+
+<body class="">
+    <header class="bg-gray-200 sticky top-0 z-50 ">
+        <nav class="items-center flex mx-auto bg-blue-600 text-white px-4 py-2">
+            <div class="max-w-7xl flex items-center text-center justify-center w-full mx-auto">
+                <h2>Join us every Sunday at 10:00AM for our main Swahili service | </h2>
+                <div class=" py-2">
+                    <div
+                        class="max-w-7xl mx-auto px-4 hidden sm:flex items-center justify-end gap-6 text-sm text-gray-200">
+                        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- desktop nav -->
+
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div>
+                <img class="h-14 w-auto" src="../assets/images/ack-logo.svg" alt="Church Logo">
+            </div>
+
+            <!-- Links -->
+            <div class="hidden md:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="#" class="text-gray-800 hover:text-gray-600">Home</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-gray-600">About</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-gray-600">Events</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-gray-600">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- donation -->
+            <button class="bg-blue-600 px-4 py-2 text-white rounded hidden md:block">
+                <i class="fa-solid fa-heart"></i>
+                Donate
+            </button>
+            <button id="menu-btn" class=" px-4 py-2 text-blue-950 rounded">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+
+        </nav>
+
+        <!-- mobile nav -->
+        <div id="mobile-menu" class="hidden md:hidden items-center mx-auto space-y-3 w-1/2">
+            <ul class="flex flex-col items-center gap-6 py-6">
+                <li><a href="#" class="text-gray-800 hover:text-gray-600">Home</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-gray-600">About</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-gray-600">Events</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-gray-600">Contact</a></li>
+            </ul>
+            <button class="bg-blue-600 px-4 py-2 text-white rounded md:hidden block mb-3">
+                <i class="fa-solid fa-heart"></i>
+                Donate
+            </button>
+        </div>
+    </header>
+
+    <div class="relative h-screen overflow-hidden">
+
+        <!-- Fixed background -->
+        <div class="fixed inset-0 -z-10">
+            <img src="../assets/images/human-silhouettes-outside-dark.jpg" class="w-full h-full object-cover scale-105"
+                alt="Grace Church">
+        </div>
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content -->
+        <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+
+            <!-- Main title -->
+            <h1 class="text-white text-5xl md:text-7xl font-bold tracking-wide">
+                Grace Church
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-white/90 text-xl md:text-2xl mt-4 max-w-2xl leading-relaxed">
+                A place to grow in faith and community
+            </p>
+
+            <!-- Callout box -->
+            <div class="mt-8 border-l-4 border-white pl-4 text-left">
+                <h2 class="text-2xl md:text-3xl text-white font-semibold">
+                    Join Us This Sunday
+                </h2>
+                <p class="text-white/80 mt-1">
+                    Discover purpose. Encounter God. Build community.
+                </p>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+                <a href="#" class="bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
+                    Join Us
+                </a>
+
+                <a href="#"
+                    class="border border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition duration-300">
+                    Watch Sermons
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- notices -->
+    <section class="bg-[#f0f4f7] text-gray-900 py-4">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-6">
+            <button
+                class="bg-blue-600  mt-3 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-500  duration-200 transition-all">ALWAYS
+                STAY UPDATED</button>
+            <p class="text-xl font-medium max-w-2xl text-center text-gray-600">Stay informed about upcoming events,
+                announcements, and opportunities to connect with our community</p>
+            <!-- tabs -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <button data-tab="services"
+                    class="tab-btn active-tab bg-blue-600 text-white uppercase px-4 py-3 rounded-md transition-all duration-300">
+                    <i class="fa-solid fa-clock"></i>
+                    Daily Services
+                </button>
+
+                <button data-tab="announcements"
+                    class="tab-btn bg-gray-200 text-gray-700 uppercase px-4 py-3 rounded-md hover:bg-blue-300 transition-all duration-300">
+                    <i class="fa-solid fa-bullhorn fa-2xs"></i>
+                    Announcements
+                </button>
+
+                <button data-tab="events"
+                    class="tab-btn bg-gray-200 text-gray-700 uppercase px-4 py-3 rounded-md hover:bg-blue-300 transition-all duration-300">
+                    <i class="fa-solid fa-calendar"></i>
+                    Upcoming Events
+                </button>
+
+                <button data-tab="jobs"
+                    class="tab-btn bg-gray-200 text-gray-700 uppercase px-4 py-3 rounded-md hover:bg-blue-300 transition-all duration-300">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Job Opportunities
+                </button>
+
+                <button data-tab="verse"
+                    class="tab-btn bg-gray-200 text-gray-700 uppercase px-4 py-3 rounded-md hover:bg-blue-300 transition-all duration-300">
+                    <i class="fa-solid fa-book-bible"></i>
+                    Verse Of The Day
+                </button>
+            </div>
+            <!-- services  -->
+            <div id="services" class="tab-content grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- weekly services -->
+                <!-- monday -->
+                <div
+                    class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df] hover:-translate-y-1 transition duration-300">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Monday</h1>
+                    <div
+                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            6:00AM - 7:00AM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
+                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
+                                your week.</p>
+
+                        </span>
+                    </div>
+
+                </div>
+                <!-- tuesday -->
+                <div
+                    class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df] hover:-translate-y-1 transition duration-300">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Tuesday</h1>
+                    <div
+                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            8:00AM - 5:00pm
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Office Day</p>
+                            <p class="text-sm font-light text-gray-500">The parish office is open for <br>
+                                administrative work and prayers.</p>
+
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            6:00AM - 7:00AM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
+                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
+                                your week.</p>
+
+                        </span>
+                    </div>
+                </div>
+                <!-- wednesday -->
+                <div
+                    class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df] hover:-translate-y-1 transition duration-300">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Wednesday</h1>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
+                            5:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Choir Practice</p>
+                            <p class="text-sm text-gray-500">Join us for a time of singing and <br> choir rehearsals.
+                            </p>
+
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
+                            5:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Praise and Worship Practice</p>
+                            <p class="text-sm text-gray-500">Join us for a time of singing and <br> praiseand worship
+                                rehearsals.</p>
+
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            2:00PM-5:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Youth Fellowship</p>
+                            <p class="text-sm text-gray-500">Join our vibrant youths for a bible study session.
+                                <br>Carry a bible and notebook .
+                            </p>
+
+                        </span>
+                    </div>
+                </div>
+                <!-- thursday -->
+                <div
+                    class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df] hover:-translate-y-1 transition duration-300">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Thursday</h1>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            6:00AM - 7:00AM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
+                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
+                                your week.</p>
+
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
+                            3:00PM-5:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Church vergers training</p>
+                            <p class="text-sm text-gray-500">Join our church vergers for a training <br> session on
+                                coordinating church instruments </p>
+
+                        </span>
+                    </div>
+                </div>
+                <!-- friday -->
+                <div class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df]">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Friday</h1>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            6:00AM - 7:00AM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
+                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
+                                your week.</p>
+
+                        </span>
+                    </div>
+                </div>
+
+                <!-- sunday -->
+                <div
+                    class="bg-[#edeef5] p-6 rounded-xl border border-[#c2c5df] hover:-translate-y-1 transition duration-300">
+                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Sunday</h1>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            8:00AM - 9:00AM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">English Service</p>
+                            <p class="text-sm text-gray-500">Early Morning service to cater for early risers</p>
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            10:00AM - 12:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Sunday School & Teens Service</p>
+                            <p class="text-sm text-gray-500">Sunday Schools services with children activities</p>
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            10:00AM - 12:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Kiswahili Service</p>
+                            <p class="text-sm text-gray-500">Swahili family service for families.</p>
+                        </span>
+                    </div>
+                    <div
+                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
+                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
+                            2:00PM - 4:00PM
+                        </span>
+                        <span>
+                            <p class="text-sm text-gray-700 font-medium">Fellowship</p>
+                            <p class="text-sm text-gray-500">Estate fellowships at organised homes.</p>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- announcemnts -->
+            <div id="announcements" class="tab-content hidden">
+
+                <div class="max-w-7xl mx-auto px-4 text-center bg-emerald-700">
+
+                    <img src="/src/assets/images/announcement-illustration.svg" alt="Announcements Illustration"
+                        class="w-64 mx-auto p-10">
+
+                    <h1 class="text-2xl font-semibold pt-4 text-gray-700">
+                        No latest announcements yet
+                    </h1>
+
+                    <p class="text-gray-500 mt-2 p-6">
+                        Check back later for church updates and upcoming events.
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- events -->
+            <div id="events" class="tab-content hidden">
+                <!-- events content -->
+                <h1>Events</h1>
+            </div>
+            <!-- job content -->
+            <div id="jobs" class="tab-content hidden">
+                <!-- jobs content -->
+                <h1>Jobs</h1>
+            </div>
+            <!--  verse of the day -->
+            <div id="verse" class="tab-content hidden bg-[#f0f4f7] w-full py-16 border-t border-gray-300">
+                <!-- verse content -->
+                <div class="max-w-4xl mx-auto px-4 text-center">
+
+                    <h2 class="text-3xl font-bold text-gray-800">
+                        Verse of the Day
+                    </h2>
+
+                    <div id="verse-content" class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+
+                        <p class="text-gray-500">
+                            Loading verse...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <a href="#" class="text-sm underline hover:text-gray-200">Learn More</a>
+        </div>
+    </section>
+
+    <!--  -->
+    <section class="bg-[#f0f4f7] w-full py-16">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1 -->
+                <div class="relative group overflow-hidden rounded-xl h-96">
+
+                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.jpg"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
+
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                        <h2 class="text-3xl text-white font-bold">Our Mission</h2>
+                        <p class="text-white/90 mt-2">
+                            To share the love of Christ and make disciples of all nations.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="relative group overflow-hidden rounded-xl h-96">
+                    <img src="../assets/images/stressed-student-anxious-being-unable-finish-daunting-homework.jpg"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
+
+                    <div class="absolute inset-0 bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                        <h2 class="text-3xl text-white font-bold">Our Services</h2>
+                        <p class="text-white/90 mt-2"> Every Sunday we gather for worship services.</p>
+                        <div class="mt-4 text-white text-sm space-y-1">
+                            <p>8AM - 10AM | English Service</p>
+                            <p>10AM - 12PM | Yoruba Service</p>
+                            <p>10PM - 12PM | Teens Service</p>
+                            <p>10PM - 12PM | Sunday School Service</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative group overflow-hidden rounded-xl h-96">
+
+                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.jpg"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
+
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                        <h2 class="text-3xl text-white font-bold">Our Vision</h2>
+                        <p class="text-white/90 mt-2">
+                            Transforming lives through the gospel of Jesus Christ.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl h-96">
+
+                    <!-- Image -->
+                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.jpg"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+                        <h2 class="text-3xl md:text-4xl text-white font-bold">
+                            A Place For Everyone
+                        </h2>
+
+                        <p class="text-white/90 mt-2 max-w-md">
+                            We believe in creating a space for everyone through our ministries.
+                        </p>
+
+                        <!-- Links -->
+                        <div class="mt-5 w-full max-w-xs space-y-2">
+
+                            <a href="#"
+                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
+                                Men's Ministry
+                            </a>
+
+                            <a href="#"
+                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
+                                Women's Ministry
+                            </a>
+
+                            <a href="#"
+                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
+                                Youth Ministry
+
+                            </a>
+
+                            <a href="#"
+                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
+                                Children's Ministry
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+    <!-- rest of section -->
+    <section class="bg-[#f0f4f7] w-full py-16 border-t border-gray-300">
+
+        <div class="max-w-7xl relative flex flex-col md:flex-row items-center justify-between mx-auto px-4 py-16 gap-12 md:gap-24 lg:gap-32">
+
+            <div class="relative flex flex-col md:flex-row">
+                <img src="/src/assets/images/bible-image.jpg" class="h-96 rounded-md" alt="">
+
+                <h1 class="px-4 text-xl text-gray-400">Since <br> <span
+                        class="text-5xl font-extrabold leading-10 text-gray-600">2008</span> </h1>
+                <img src="/src/assets/images/crown-thorns (1).jpg" class="h-64 rounded top-45 left-48 absolute hidden md:block " alt="">
+            </div>
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-800 leading-relaxed">
+                        Our Years Theme
+                    </h2>
+                    <p class="text-xl">We Preach the gospel in every sermon</p>
+                </div>
+                <div class="pt-4 border-l-blue-600 border-l-4 pl-4">
+                    <h2 class="text-2xl md:text-4xl font-semibold text-gray-800 leading-relaxed">
+                        “Since then we have a great high priest who has passed through the heavens, Jesus, the Son of
+                        God, let us hold fast our confession.”
+                    </h2>
+
+                    <p class="mt-4 text-gray-600 font-medium">
+                        — Hebrews 4:14
+                    </p>
+                </div>
+                <button
+                    class="bg-blue-600  mt-3 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-500 duration-300 transition-all">Know
+                    about Our Church</button>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+
+
+
+
+</body>
+
+</html>
