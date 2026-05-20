@@ -28,26 +28,37 @@ tabButtons.forEach(button => {
 
 //fetch footer
 fetch('/src/components/footer.html')
-.then(res => res.text())
-.then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data
-})
-.catch(err => console.error('Fooder load error', err)
-);
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data
+    })
+    .catch(err => console.error('Fooder load error', err)
+    );
 
 //fetch header
 fetch('/src/components/header.html')
-.then(res => res.text())
-.then(data => {
-    document.getElementById('header-placeholder').innerHTML = data
-})
-.catch(err => console.error('Header load error', err)
-);
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        //wait for dom update
+        setTimeout(() => {
+            initHeader()
+        }, 0);
+    })
+    .catch(err => console.error('Header load error', err));
 
 //mobile nav bar
-const menuBtn = document.getElementById('menu-btn')
-const mobileMenu = document.getElementById('mobile-menu')
+function initHeader() {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-menuBtn.addEventListener('click', ()=>{
-    mobileMenu.classList.toggle('hidden')
-})
+    if (!menuBtn || !mobileMenu) {
+        console.log("Header elements not found");
+        return;
+    }
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+}
+

@@ -1,5 +1,6 @@
 const verseElement = document.getElementById('verse-content');
 const getVerse = async () => {
+    if(!verseElement) return
     try {
         const res = await fetch('https://beta.ourmanna.com/api/v1/get?format=json');
         const data = await res.json();
@@ -114,3 +115,4 @@ const renderSermons = () => {
 };
 
 renderSermons()
+

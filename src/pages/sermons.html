@@ -8,17 +8,18 @@
     <link rel="shortcut icon" href="/src/assets/images/ack-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Sermons</title>
+    <link rel="preload" as="image" href="/src/assets/images/sermon.jpg"
+/>
 </head>
 <script src="/src/assets/js/index.js" defer></script>
 <script src="/src/assets/js/bibleVerses.js" defer></script>
-
 <body>
     <div class="" id="header-placeholder"></div>
     <section class="relative min-h-[84vh] flex items-center">
 
         <!-- Background image -->
         <div class="fixed inset-0 -z-10">
-            <img src="../assets/images/sermon.jpg" class="w-full h-full object-cover scale-110"
+            <img loading="eager" src="../assets/images/sermon.webp" class="w-full h-full object-cover scale-110"
                 alt="Grace Church Sermons">
         </div>
 
@@ -56,11 +57,8 @@
         </div>
 
     </section>
-
     <section class="bg-gray-50 py-20">
-
         <div class="max-w-7xl mx-auto px-6">
-
             <!-- Header -->
             <div class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
@@ -70,19 +68,14 @@
                     Watch, listen, and grow through our latest teachings
                 </p>
             </div>
-
             <!-- Grid -->
             <div id="sermons-container" class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 <!-- rendered by js -->
             </div>
-
         </div>
-
     </section>
     <!-- footer -->
     <div id="footer-placeholder"></div>
-
-
 </body>
 
 </html>

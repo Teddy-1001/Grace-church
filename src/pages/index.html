@@ -3,14 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic SEO -->
+    <meta name="description"
+        content="Grace Church is a Christ-centered community dedicated to worship, discipleship, and transforming lives through the Gospel of Jesus Christ." />
+    <meta name="keywords"
+        content="Grace Church, Church in Kenya, Christian fellowship, Sunday service, worship, sermons, Bible teaching, Nairobi church" />
+    <meta name="author" content="Grace Church" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Grace Church - Worship | Word | Community" />
+    <meta property="og:site_name" content="Grace Church" />
+    <meta property="og:description"
+        content="Join Grace Church for powerful worship, life-changing sermons, and a welcoming Christian community. Grow your faith with us every Sunday." />
+    <!-- <meta property="og:image" content="https://your-domain.com/assets/images/church-banner.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Grace Church - Worship | Word | Community" />
+    <meta name="twitter:description"
+        content="Join Grace Church for inspiring worship and Bible-based teaching every Sunday." />
+    <meta name="twitter:image" content="https://your-domain.com/assets/images/church-banner.jpg" />
     <link href="/src/assets/css/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="/src/assets/images/ack-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Grace Church</title>
+    <link rel="preload" as="image" href="/src/assets/images/human-silhouettes-outside-dark.jpg"
+/>
 </head>
-<script src="/src/assets/js/index.js" defer></script>
-<script src="/src/assets/js/bibleVerses.js" defer></script>
 
 <body class="">
     <div class="" id="header-placeholder"></div>
@@ -21,7 +43,7 @@
 
         <!-- Fixed background -->
         <div class="fixed inset-0 -z-10">
-            <img src="../assets/images/human-silhouettes-outside-dark.jpg" class="w-full h-full object-cover scale-110"
+            <img loading="eager" src="../assets/images/human-silhouettes-outside-dark.webp" class="w-full h-full object-cover scale-110"
                 alt="Grace Church">
         </div>
 
@@ -69,7 +91,7 @@
     </div>
 
     <!-- notices -->
-    <section class="bg-[#f0f4f7] text-gray-900 py-12">
+    <section class="bg-[#f0f4f7] text-gray-900 py-24">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-6">
             <button
                 class="bg-blue-600 text-sm mt-3 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-500  duration-200 transition-all">Always
@@ -230,7 +252,8 @@
                     </div>
                 </div>
                 <!-- friday -->
-                <div class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
+                <div
+                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
                     <h1 class="text-2xl font-semibold text-blue-900 p-2">Friday</h1>
                     <div
                         class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
@@ -342,7 +365,7 @@
                 <!-- Card 1 -->
                 <div class="relative group overflow-hidden rounded-2xl h-96 shadow-lg">
 
-                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.jpg"
+                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.webp"
                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="">
 
                     <div class="absolute inset-0 bg-black/60"></div>
@@ -358,7 +381,7 @@
 
 
                 <div class="relative group overflow-hidden rounded-xl h-96">
-                    <img src="../assets/images/stressed-student-anxious-being-unable-finish-daunting-homework.jpg"
+                    <img src="../assets/images/stressed-student-anxious-being-unable-finish-daunting-homework.webp"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
 
                     <div class="absolute inset-0 bg-black/60"></div>
@@ -397,7 +420,7 @@
                 <div class="relative group overflow-hidden rounded-xl h-96">
 
                     <!-- Image -->
-                    <img src="../assets/images/vertical-grayscale-shot-grassy-field-with-blurred-cross.jpg"
+                    <img src="../assets/images/vertical-grayscale-shot-grassy-field-with-blurred-cross.webp"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="">
 
                     <!-- Overlay -->
@@ -490,7 +513,8 @@
     <!-- footer -->
     <div id="footer-placeholder"></div>
 
-
+    <script src="/src/assets/js/index.js" defer></script>
+    <script src="/src/assets/js/bibleVerses.js" defer></script>
 
 
 </body>
