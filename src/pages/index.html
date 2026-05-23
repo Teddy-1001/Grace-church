@@ -4,494 +4,663 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Parish details — update these when your parish info is final -->
+    <meta name="description"
+        content="Anglican Church of Kenya — Grace Church Parish, Kangemi. Sunday worship, Holy Communion, estate fellowships, and ministries in the Diocese of Eldoret." />
+    <meta name="keywords"
+        content="ACK, Anglican Church of Kenya, St. Philips Kapkoros, Kapchumba parish, Sunday service, Holy Communion, KAMA, Mothers Union, KAYO" />
+    <meta name="author" content="Anglican Church of Kenya — St.Philips Chrch" />
+
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ACK St Phillips Church, Kapkoros — Worship | Word | Community" />
+    <meta property="og:site_name" content="ACK St. Phillips Parish" />
+    <meta property="og:description"
+        content="Join us for Anglican worship every Sunday in Kangemi. English and Kiswahili services, Sunday School, and estate fellowships." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ACK Grace Church Parish, Kangemi" />
+    <meta name="twitter:description"
+        content="A caring, listening church in the Diocese of Eldoret. All are welcome." />
+
     <link href="/src/assets/css/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="/src/assets/images/ack-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Grace Church</title>
+    <title>ACK St. Phillips, Eldoret | Anglican Church of Kenya</title>
+    <link rel="preload" as="image" href="/src/assets/images/pexels-mbaraga-bernard-2158456013-35388499.webp" />
 </head>
-<script src="/src/assets/js/index.js" defer></script>
-<script src="/src/assets/js/bibleVerses.js" defer></script>
 
-<body class="">
-    <div class="" id="header-placeholder"></div>
+<body class="bg-ack-cream text-gray-900 antialiased">
 
-    <!-- hero section -->
+    <div id="header-placeholder"></div>
 
-    <div class="relative h-screen overflow-hidden">
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Welcome">
 
-        <!-- Fixed background -->
         <div class="fixed inset-0 -z-10">
-            <img src="../assets/images/human-silhouettes-outside-dark.jpg" class="w-full h-full object-cover scale-110"
-                alt="Grace Church">
+            <img loading="eager" src="../assets/images/pexels-mbaraga-bernard-2158456013-35388499.webp"
+                class="w-full h-full object-cover scale-105" alt="Congregation worshipping at Grace Church Parish">
         </div>
 
-        <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-ack-purple-dark/85 via-ack-purple/75 to-black/70"></div>
 
-        <!-- Content -->
-        <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+        <div class="relative w-full max-w-7xl mx-auto px-6 py-28 md:py-32 text-center">
 
-            <!-- Main title -->
-            <h1 class="text-white text-5xl md:text-7xl font-bold tracking-tight">
-                Grace Church
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="text-white/80 text-xl md:text-2xl mt-5 max-w-2xl leading-relaxed">
-                A place to grow in faith and community
+            <p class="inline-flex items-center gap-2 text-ack-gold text-sm md:text-base font-medium tracking-wide uppercase">
+                <img src="/src/assets/images/ack-logo.svg" alt="" class="h-12 w-12 opacity-90" aria-hidden="true">
+                Anglican Church of Kenya
             </p>
 
-            <!-- Callout box -->
-            <div class="mt-10 border-l-4 border-white pl-4 text-left">
-                <h2 class="text-2xl md:text-3xl text-white font-semibold">
-                    Join Us This Sunday
-                </h2>
-                <p class="text-white/80 mt-1">
-                    Discover purpose. Encounter God. Build community.
+            <h1 class="font-display text-white text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mt-4">
+                ACK - St. Phillips Roadblock
+            </h1>
+
+            <p class="text-white/90 text-lg md:text-xl mt-3 font-medium">
+                Road-Block · Diocese of Eldoret
+            </p>
+
+            <p class="text-white/75 text-base md:text-lg mt-5 max-w-2xl mx-auto leading-relaxed">
+                A caring, listening church — welcoming you to worship, Word, and community in Christ.
+            </p>
+
+            <div class="mt-10 inline-block text-left border-l-4 border-ack-gold pl-5 max-w-md mx-auto md:mx-0 md:ml-auto md:mr-auto">
+                <p class="text-ack-gold text-sm font-semibold uppercase tracking-wider">This Sunday</p>
+                <h2 class="text-2xl md:text-3xl text-white font-semibold mt-1">Main Kiswahili Service</h2>
+                <p class="text-white/80 mt-1 text-sm md:text-base">
+                    10:00 AM – 12:30 PM &nbsp;·&nbsp; English service 8:00 – 9:00 AM with Holy Communion
                 </p>
             </div>
 
-            <!-- CTA buttons -->
-            <div class="mt-10 flex flex-col sm:flex-row gap-4">
-
-                <a href="#" class="bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
-                    Join Us
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#worship-schedule"
+                    class="w-full sm:w-auto bg-ack-gold text-ack-purple-dark px-8 py-3 rounded-lg font-semibold hover:bg-amber-300 transition shadow-lg">
+                    <i class="fa-solid fa-church mr-2" aria-hidden="true"></i>Service Times
                 </a>
-
-                <a href="#"
-                    class="border border-white/40 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 hover:text-black transition duration-300">
-                    Watch Sermons
+                <a href="/src/pages/sermons.html"
+                    class="w-full sm:w-auto border-2 border-white/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+                    <i class="fa-solid fa-play mr-2" aria-hidden="true"></i>Watch Sermons
                 </a>
-
+                <a href="/src/pages/fellowships.html"
+                    class="w-full sm:w-auto border border-white/30 text-white/95 px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+                    Estate Fellowships
+                </a>
             </div>
-
-        </div>
-    </div>
-
-    <!-- notices -->
-    <section class="bg-[#f0f4f7] text-gray-900 py-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-6">
-            <button
-                class="bg-blue-600 text-sm mt-3 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-500  duration-200 transition-all">Always
-                Stay Updated</button>
-            <p class="text-lg mt-4 max-w-2xl text-center text-gray-600">Stay informed about upcoming events,
-                announcements, and opportunities to connect with our community</p>
-            <!-- tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mt-6">
-                <button data-tab="services"
-                    class="tab-btn active-tab bg-blue-600 text-white text-sm font-medium shadow uppercase px-4 py-2 rounded-full transition-all duration-300">
-                    <i class="fa-solid fa-clock"></i>
-                    Daily Services
-                </button>
-
-                <button data-tab="announcements"
-                    class="tab-btn px-4 py-2 rounded-full bg-white border text-gray-700 hover:bg-gray-100 text-sm">
-                    <i class="fa-solid fa-bullhorn fa-2xs"></i>
-                    Announcements
-                </button>
-
-                <button data-tab="events"
-                    class="tab-btn px-4 py-2 rounded-full bg-white border text-gray-700 hover:bg-gray-100 text-sm">
-                    <i class="fa-solid fa-calendar"></i>
-                    Upcoming Events
-                </button>
-
-                <button data-tab="jobs"
-                    class="tab-btn px-4 py-2 rounded-full bg-white border text-gray-700 hover:bg-gray-100 text-sm">
-                    <i class="fa-solid fa-briefcase"></i>
-                    Job Opportunities
-                </button>
-
-                <button data-tab="verse"
-                    class="tab-btn px-4 py-2 rounded-full bg-white border text-gray-700 hover:bg-gray-100 text-sm">
-                    <i class="fa-solid fa-book-bible"></i>
-                    Verse Of The Day
-                </button>
-            </div>
-            <!-- services  -->
-            <div id="services" class="tab-content grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <!-- weekly services -->
-                <!-- monday -->
-                <div
-                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Monday</h1>
-                    <div
-                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            6:00AM - 7:00AM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
-                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
-                                your week.</p>
-
-                        </span>
-                    </div>
-
-                </div>
-                <!-- tuesday -->
-                <div
-                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Tuesday</h1>
-                    <div
-                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            8:00AM - 5:00pm
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Office Day</p>
-                            <p class="text-sm font-light text-gray-500">The parish office is open for <br>
-                                administrative work and prayers.</p>
-
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300  p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            6:00AM - 7:00AM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
-                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
-                                your week.</p>
-
-                        </span>
-                    </div>
-                </div>
-                <!-- wednesday -->
-                <div
-                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Wednesday</h1>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
-                            5:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Choir Practice</p>
-                            <p class="text-sm text-gray-500">Join us for a time of singing and <br> choir rehearsals.
-                            </p>
-
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
-                            5:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Praise and Worship Practice</p>
-                            <p class="text-sm text-gray-500">Join us for a time of singing and <br> praiseand worship
-                                rehearsals.</p>
-
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            2:00PM-5:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Youth Fellowship</p>
-                            <p class="text-sm text-gray-500">Join our vibrant youths for a bible study session.
-                                <br>Carry a bible and notebook .
-                            </p>
-
-                        </span>
-                    </div>
-                </div>
-                <!-- thursday -->
-                <div
-                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Thursday</h1>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            6:00AM - 7:00AM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
-                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
-                                your week.</p>
-
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold ">
-                            3:00PM-5:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Church vergers training</p>
-                            <p class="text-sm text-gray-500">Join our church vergers for a training <br> session on
-                                coordinating church instruments </p>
-
-                        </span>
-                    </div>
-                </div>
-                <!-- friday -->
-                <div class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Friday</h1>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            6:00AM - 7:00AM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Morning Prayer</p>
-                            <p class="text-sm text-gray-500">Join us for a time of prayer and <br> reflection to start
-                                your week.</p>
-
-                        </span>
-                    </div>
-                </div>
-
-                <!-- sunday -->
-                <div
-                    class="bg-[#edeef5] p-6 rounded-2xl shadow-sm border border-[#c2c5df] hover:-translate-y-1 hover:shadow-md transition duration-300">
-                    <h1 class="text-2xl font-semibold text-blue-900 p-2">Sunday</h1>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            8:00AM - 9:00AM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">English Service</p>
-                            <p class="text-sm text-gray-500">Early Morning service to cater for early risers</p>
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            10:00AM - 12:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Sunday School & Teens Service</p>
-                            <p class="text-sm text-gray-500">Sunday Schools services with children activities</p>
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            10:00AM - 12:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Kiswahili Service</p>
-                            <p class="text-sm text-gray-500">Swahili family service for families.</p>
-                        </span>
-                    </div>
-                    <div
-                        class="border border-gray-300 -sm p-4 rounded-md bg-gray-100 flex flex-col sm:flex-row sm:items-center gap-4 w-full mt-2">
-                        <span class="border p-2 rounded-md bg-gray-200 text-blue-900 font-bold">
-                            2:00PM - 4:00PM
-                        </span>
-                        <span>
-                            <p class="text-sm text-gray-700 font-medium">Fellowship</p>
-                            <p class="text-sm text-gray-500">Estate fellowships at organised homes.</p>
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- announcemnts -->
-            <div id="announcements" class="tab-content hidden">
-
-            </div>
-            <!-- events -->
-            <div id="events" class="tab-content hidden">
-                <!-- events content -->
-                <h1>Events</h1>
-            </div>
-            <!-- job content -->
-            <div id="jobs" class="tab-content hidden">
-                <!-- jobs content -->
-                <h1>Jobs</h1>
-            </div>
-            <!--  verse of the day -->
-            <div id="verse" class="tab-content hidden bg-[#f0f4f7] w-full py-16 border-t border-gray-300">
-                <!-- verse content -->
-                <div class="max-w-4xl mx-auto px-4 text-center">
-
-                    <h2 class="text-3xl font-bold text-gray-800">
-                        Verse of the Day
-                    </h2>
-
-                    <div id="verse-content" class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-
-                        <p class="text-gray-500">
-                            Loading verse...
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <a href="#" class="text-sm underline hover:text-gray-200">Learn More</a>
         </div>
     </section>
 
-    <!--  -->
-    <section class="bg-[#f0f4f7] w-full py-16">
+    <!-- Quick info strip -->
+    <section class="bg-ack-purple text-white py-8" aria-label="Parish quick information">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
+                <i class="fa-solid fa-clock text-ack-gold text-xl mt-1" aria-hidden="true"></i>
+                <div>
+                    <p class="font-semibold text-ack-gold text-sm uppercase">Sunday Worship</p>
+                    <p class="text-sm text-white/90 mt-1">8:00 AM English · 10:00 AM Kiswahili &amp; Sunday School</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
+                <i class="fa-solid fa-wine-glass text-ack-gold text-xl mt-1" aria-hidden="true"></i>
+                <div>
+                    <p class="font-semibold text-ack-gold text-sm uppercase">Holy Communion</p>
+                    <p class="text-sm text-white/90 mt-1">Celebrated at the 8:00 AM English service each Sunday</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
+                <i class="fa-solid fa-location-dot text-ack-gold text-xl mt-1" aria-hidden="true"></i>
+                <div>
+                    <p class="font-semibold text-ack-gold text-sm uppercase">Location</p>
+                    <p class="text-sm text-white/90 mt-1">Roadbloc, near Eldoret-Nakuru Highway, Eldoret</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
+                <i class="fa-solid fa-hands-praying text-ack-gold text-xl mt-1" aria-hidden="true"></i>
+                <div>
+                    <p class="font-semibold text-ack-gold text-sm uppercase">Morning Prayer</p>
+                    <p class="text-sm text-white/90 mt-1">Weekdays 6:00 – 7:00 AM in the parish church</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Worship schedule & notices -->
+    <section id="worship-schedule" class="bg-[#eef1f6] text-gray-900 py-20 md:py-24">
         <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Parish Life</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-2">
+                    Worship Schedule &amp; Notices
+                </h2>
+                <p class="text-gray-600 mt-4 text-lg">
+                    Service times, announcements, and parish updates. Content will be managed from the admin panel later.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mt-10" role="tablist" aria-label="Parish information tabs">
+                <button type="button" data-tab="services" role="tab" aria-selected="true" aria-controls="services"
+                    class="tab-btn bg-ack-purple text-white shadow-md text-sm font-medium px-4 py-2 rounded-full transition-all duration-300">
+                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> Weekly Schedule
+                </button>
+                <button type="button" data-tab="announcements" role="tab" aria-selected="false"
+                    aria-controls="announcements"
+                    class="tab-btn px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-600 hover:text-gray-200 text-sm font-medium transition">
+                    <i class="fa-solid fa-bullhorn mr-1" aria-hidden="true"></i> Announcements
+                </button>
+                <button type="button" data-tab="events" role="tab" aria-selected="false" aria-controls="events"
+                    class="tab-btn px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-600 hover:text-gray-200 text-sm font-medium transition">
+                    <i class="fa-solid fa-calendar mr-1" aria-hidden="true"></i> Events
+                </button>
+                <button type="button" data-tab="jobs" role="tab" aria-selected="false" aria-controls="jobs"
+                    class="tab-btn px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-600 hover:text-gray-200 text-sm font-medium transition">
+                    <i class="fa-solid fa-briefcase mr-1" aria-hidden="true"></i> Vacancies
+                </button>
+                <button type="button" data-tab="verse" role="tab" aria-selected="false" aria-controls="verse"
+                    class="tab-btn px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-600 hover:text-gray-200 text-sm font-medium transition">
+                    <i class="fa-solid fa-book-bible mr-1" aria-hidden="true"></i> Verse of the Day
+                </button>
+            </div>
+
+            <!-- Weekly schedule -->
+            <div id="services" class="tab-content mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" role="tabpanel">
+
+                <!-- Monday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Monday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">6:00 AM – 7:00 AM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Morning Prayer</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Start the week in prayer and reflection.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tuesday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Tuesday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">6:00 AM – 7:00 AM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Morning Prayer</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Parish intercessions and Scripture.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">8:00 AM – 5:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Parish Office Day</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Administration, enquiries, and pastoral appointments.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wednesday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Wednesday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">2:00 PM – 5:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">KAYO / Youth Fellowship</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Bible study for youth. Bring your Bible and notebook.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">5:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Choir Practice</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Hymns and worship music rehearsal.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">5:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Praise &amp; Worship Practice</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Contemporary worship team rehearsal.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Thursday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Thursday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">6:00 AM – 7:00 AM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Morning Prayer</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Mid-week gathering for prayer.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">3:00 PM – 5:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Vergers Training</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Liturgy, coordination, and service order.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Friday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Friday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">6:00 AM – 7:00 AM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Morning Prayer</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Prepare for the Lord's Day together.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Saturday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border border-[#d4d9e8] hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-4">Saturday</h3>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">By arrangement</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Guild &amp; Ministry Preparations</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Choir, MU, KAMA, and outreach teams as scheduled.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sunday -->
+                <article class="schedule-day-card bg-white p-6 rounded-2xl shadow-sm border-2 border-ack-gold/40 md:col-span-2 xl:col-span-1 hover:-translate-y-0.5 hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-ack-purple mb-1">Sunday</h3>
+                    <p class="text-xs text-ack-gold font-semibold uppercase mb-4">Lord's Day — All welcome</p>
+                    <div class="schedule-slot">
+                        <span class="schedule-time">8:00 AM – 9:00 AM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">English Service</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Early service with <strong>Holy Communion</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">10:00 AM – 12:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Sunday School &amp; Teens</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Children and teen programmes during main worship.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">10:00 AM – 12:30 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Kiswahili Service</p>
+                            <p class="text-sm text-gray-500 mt-0.5">Main family service in Kiswahili.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-slot mt-3">
+                        <span class="schedule-time">2:00 PM – 4:00 PM</span>
+                        <div>
+                            <p class="font-medium text-gray-800">Estate Fellowships</p>
+                            <p class="text-sm text-gray-500 mt-0.5">
+                                Home-based groups —
+                                <a href="/src/pages/fellowships.html" class="text-ack-purple underline hover:text-ack-gold">find your fellowship</a>.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Announcements (placeholder until admin) -->
+            <div id="announcements" class="tab-content hidden mt-10 max-w-3xl mx-auto" role="tabpanel">
+                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
+                    <img src="/src/assets/images/announcement-illustration.svg" alt="" class="w-24 mx-auto opacity-80" aria-hidden="true">
+                    <h3 class="text-xl font-semibold text-ack-purple mt-4">Parish Announcements</h3>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Notices from the vicar, synod, and parish committees will appear here once the admin panel is connected.
+                    </p>
+                    <ul class="mt-6 text-left space-y-3 text-sm text-gray-700 border-t border-gray-100 pt-6">
+                        <li class="flex gap-3">
+                            <span class="text-ack-gold font-bold shrink-0">NEW</span>
+                            <span>Welcome to our updated parish website. Check the weekly schedule for service times.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-gray-400 font-bold shrink-0">INFO</span>
+                            <span>Parish office open Tuesdays, 8:00 AM – 5:00 PM. Contact the church office for baptisms and weddings.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Events placeholder -->
+            <div id="events" class="tab-content hidden mt-10 max-w-3xl mx-auto" role="tabpanel">
+                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
+                    <i class="fa-solid fa-calendar-days text-4xl text-ack-purple/40" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold text-ack-purple mt-4">Upcoming Events</h3>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Diocesan synods, confirmations, MU rallies, and parish special services will be listed here.
+                    </p>
+                    <p class="text-gray-400 text-sm mt-4 italic">No events posted yet.</p>
+                </div>
+            </div>
+
+            <!-- Vacancies placeholder -->
+            <div id="jobs" class="tab-content hidden mt-10 max-w-3xl mx-auto" role="tabpanel">
+                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
+                    <i class="fa-solid fa-briefcase text-4xl text-ack-purple/40" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold text-ack-purple mt-4">Job &amp; Volunteer Opportunities</h3>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Parish and diocesan vacancies (vergers, secretaries, teachers, etc.) will be published here.
+                    </p>
+                    <p class="text-gray-400 text-sm mt-4 italic">No openings at this time.</p>
+                </div>
+            </div>
+
+            <!-- Verse of the day -->
+            <div id="verse" class="tab-content hidden mt-10 w-full" role="tabpanel">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="font-display text-2xl font-bold text-ack-purple-dark">Verse of the Day</h3>
+                    <div id="verse-content" class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-10">
+                        <p class="text-gray-500">Loading verse…</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center mt-10">
+                <a href="#contact" class="text-ack-purple font-semibold text-sm hover:text-ack-gold transition underline underline-offset-4">
+                    Questions about services? Contact the parish office
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission, vision, ministries -->
+    <section class="bg-ack-cream py-16 md:py-20" aria-label="Mission and ministries">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Who We Are</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-2">
+                    Rooted in Christ, Serving Kangemi
+                </h2>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <!-- Card 1 -->
-                <div class="relative group overflow-hidden rounded-2xl h-96 shadow-lg">
-
-                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.jpg"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="">
-
-                    <div class="absolute inset-0 bg-black/60"></div>
-
+                <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
+                    <img src="../assets/images/man-reads-bible-male-hands-with-bible-closeup.webp"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                        alt="Hands holding an open Bible">
+                    <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                        <h2 class="text-3xl text-white font-bold">Our Mission</h2>
-                        <p class="text-white/90 mt-2">
-                            To share the love of Christ and make disciples of all nations.
+                        <h3 class="font-display text-2xl text-white font-bold">Our Mission</h3>
+                        <p class="text-white/90 mt-3 text-sm leading-relaxed">
+                            To make Christ known through holistic ministry — worship, discipleship, and service in our community.
                         </p>
                     </div>
+                </article>
 
-                </div>
-
-
-                <div class="relative group overflow-hidden rounded-xl h-96">
-                    <img src="../assets/images/stressed-student-anxious-being-unable-finish-daunting-homework.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
-
-                    <div class="absolute inset-0 bg-black/60"></div>
+                <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
+                    <img src="../assets/images/church.webp"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        alt="Church building">
+                    <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                        <h2 class="text-3xl text-white font-bold">Our Services</h2>
-                        <p class="text-white/90 mt-2"> Every Sunday we gather for worship services.</p>
-                        <div class="mt-4 text-white text-sm space-y-1">
-                            <p>8AM - 10AM | English Service</p>
-                            <p>10AM - 12PM | Yoruba Service</p>
-                            <p>10PM - 12PM | Teens Service</p>
-                            <p>10PM - 12PM | Sunday School Service</p>
-                        </div>
-
+                        <h3 class="font-display text-2xl text-white font-bold">Sunday Worship</h3>
+                        <p class="text-white/90 mt-2 text-sm">Every Lord's Day we gather as one parish family.</p>
+                        <ul class="mt-4 text-white text-sm space-y-1.5 text-left w-full max-w-[14rem]">
+                            <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>8:00 – 9:00 AM · English + Communion</li>
+                            <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>10:00 AM – 12:30 PM · Kiswahili</li>
+                            <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>10:00 AM · Sunday School &amp; Teens</li>
+                            <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>2:00 – 4:00 PM · Estate fellowships</li>
+                        </ul>
                     </div>
+                </article>
 
-                </div>
-
-                <!-- Card 3 -->
-                <div class="relative group overflow-hidden rounded-xl h-96">
-
+                <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
                     <img src="../assets/images/41654.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="">
-
-                    <div class="absolute inset-0 bg-black/60"></div>
-
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        alt="Cross at sunrise">
+                    <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                        <h2 class="text-3xl text-white font-bold">Our Vision</h2>
-                        <p class="text-white/90 mt-2">
-                            Transforming lives through the gospel of Jesus Christ.
+                        <h3 class="font-display text-2xl text-white font-bold">Our Vision</h3>
+                        <p class="text-white/90 mt-3 text-sm leading-relaxed">
+                            A Christ-centred parish sustainably transforming society through the Gospel.
                         </p>
-
                     </div>
+                </article>
 
-                </div>
-
-                <div class="relative group overflow-hidden rounded-xl h-96">
-
-                    <!-- Image -->
-                    <img src="../assets/images/vertical-grayscale-shot-grassy-field-with-blurred-cross.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="">
-
-                    <!-- Overlay -->
-                    <div class="absolute inset-0 bg-black/60"></div>
-
-                    <!-- Content -->
+                <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
+                    <img src="../assets/images/vertical-grayscale-shot-grassy-field-with-blurred-cross.webp"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                        alt="Cross in a field">
+                    <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-
-                        <h2 class="text-3xl md:text-4xl text-white font-bold">
-                            A Place For Everyone
-                        </h2>
-
-                        <p class="text-white/90 mt-2 max-w-md">
-                            We believe in creating a space for everyone through our ministries.
-                        </p>
-
-                        <!-- Links -->
-                        <div class="mt-5 w-full max-w-xs space-y-2">
-
-                            <a href="#"
-                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
-                                Men's Ministry
+                        <h3 class="font-display text-2xl text-white font-bold">ACK Guilds &amp; Ministries</h3>
+                        <p class="text-white/90 mt-2 text-sm max-w-xs">Serve and grow through our parish groups.</p>
+                        <nav class="mt-5 w-full max-w-xs space-y-2" aria-label="Ministry links">
+                            <a href="/src/pages/ministry.html?id=men-fellowship"
+                                class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
+                                KAMA (Men's Association)
                             </a>
-
-                            <a href="#"
-                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
-                                Women's Ministry
+                            <a href="/src/pages/ministry.html?id=mothers-union"
+                                class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
+                                Mothers' Union
                             </a>
-
-                            <a href="#"
-                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
-                                Youth Ministry
-
+                            <a href="/src/pages/ministry.html?id=youth-ministry"
+                                class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
+                                KAYO / Youth Ministry
                             </a>
-
-                            <a href="#"
-                                class="block bg-white/10 hover:bg-white/20 transition text-white px-4 py-2 rounded-md text-left">
-                                Children's Ministry
+                            <a href="/src/pages/ministry.html?id=sunday-school"
+                                class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
+                                Sunday School
                             </a>
-
-                        </div>
-
+                        </nav>
+                        <a href="/src/pages/ministries.html"
+                            class="inline-block mt-4 text-ack-gold text-sm font-semibold hover:underline">
+                            View all ministries →
+                        </a>
                     </div>
-
-                </div>
-
-            </div>
-
-    </section>
-    <!-- rest of section -->
-    <section class="bg-[#f0f4f7] w-full py-20 border-t border-gray-200">
-
-        <div
-            class="max-w-7xl relative flex flex-col md:flex-row items-center justify-between mx-auto px-4 py-16 gap-12 md:gap-24 lg:gap-32">
-
-            <div class="relative flex flex-col md:flex-row">
-                <img src="/src/assets/images/bible-image.jpg" class="h-96 rounded-2xl shadow-lg object-cover" alt="">
-
-                <h1 class="px-4 text-xl text-gray-400">Since <br> <span
-                        class="text-5xl font-extrabold leading-10 text-gray-600">2008</span> </h1>
-                <img src="/src/assets/images/crown-thorns (1).jpg"
-                    class="h-64 rounded top-45 left-48 absolute hidden md:block " alt="">
-            </div>
-            <div class="w-full lg:w-1/2 text-center lg:text-left">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold text-gray-800 leading-relaxed">
-                        Our Years Theme
-                    </h2>
-                    <p class="text-xl">We Preach the gospel in every sermon</p>
-                </div>
-                <div class="pt-4 border-l-blue-600 border-l-4 pl-4">
-                    <h2 class="text-2xl md:text-4xl font-semibold text-gray-800 leading-relaxed">
-                        “Since then we have a great high priest who has passed through the heavens, Jesus, the Son of
-                        God, let us hold fast our confession.”
-                    </h2>
-
-                    <p class="mt-4 text-gray-600 font-medium">
-                        — Hebrews 4:14
-                    </p>
-                </div>
-                <button
-                    class="bg-blue-600  mt-3 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-500 duration-300 transition-all">Know
-                    about Our Church</button>
-
-
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- footer -->
+    <!-- Theme of the year -->
+    <section id="theme" class="bg-white py-20 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+            <div class="relative flex-shrink-0 w-full lg:w-auto flex justify-center">
+                <img src="/src/assets/images/bible-image.jpg"
+                    class="h-80 md:h-96 w-full max-w-md object-cover rounded-2xl shadow-xl"
+                    alt="Open Bible">
+                <div class="absolute -bottom-4 -right-2 md:-right-6 bg-ack-purple text-white px-5 py-3 rounded-xl shadow-lg text-center">
+                    <p class="text-ack-gold text-xs font-semibold uppercase">Established</p>
+                    <p class="text-3xl font-bold font-display">2008</p>
+                </div>
+                <img src="/src/assets/images/crown-thorns (1).jpg"
+                    class="h-48 w-48 object-cover rounded-xl shadow-lg absolute -top-6 -left-4 hidden md:block border-4 border-white"
+                    alt="Crown of thorns symbolizing Christ's sacrifice">
+            </div>
+
+            <div class="w-full lg:flex-1 text-center lg:text-left">
+                <span class="text-ack-gold text-sm font-semibold uppercase tracking-wider">Parish Focus</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-ack-purple-dark mt-2 leading-tight">
+                    Theme of the Year
+                </h2>
+                <p class="text-gray-600 mt-3 text-lg">We preach Christ in every sermon and gathering.</p>
+
+                <blockquote class="mt-8 border-l-4 border-ack-gold pl-5">
+                    <p class="text-xl md:text-2xl font-semibold text-gray-800 leading-relaxed italic">
+                        “Since then we have a great high priest who has passed through the heavens, Jesus, the Son of
+                        God, let us hold fast our confession.”
+                    </p>
+                    <cite class="mt-4 block text-ack-purple font-medium not-italic">— Hebrews 4:14 (ESV)</cite>
+                </blockquote>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#about"
+                        class="bg-ack-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-ack-purple-dark transition text-center">
+                        About Our Parish
+                    </a>
+                    <a href="https://www.ackenya.org/" target="_blank" rel="noopener noreferrer"
+                        class="border border-ack-purple text-ack-purple px-6 py-3 rounded-lg font-semibold hover:bg-ack-purple/5 transition text-center">
+                        ACK Province <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About teaser -->
+    <section id="about" class="bg-[#eef1f6] py-20">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Welcome</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-2">
+                    A Parish of the Anglican Church of Kenya
+                </h2>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    St.Phillips Roadblock serves the Kahoya community under the Diocese of Eldoret. We are a
+                    <strong>caring, listening church</strong> — offering Anglican worship, sacraments, guilds, and estate
+                    fellowships that bring the Gospel to every neighbourhood.
+                </p>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    Whether you are new to faith or returning to church, you are welcome at our services. Come as you are;
+                    leave encouraged in Christ.
+                </p>
+                <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                    <li><i class="fa-solid fa-circle-check text-ack-gold mr-2" aria-hidden="true"></i>Book of Common Prayer tradition</li>
+                    <li><i class="fa-solid fa-circle-check text-ack-gold mr-2" aria-hidden="true"></i>Baptism, confirmation, weddings &amp; funerals</li>
+                    <li><i class="fa-solid fa-circle-check text-ack-gold mr-2" aria-hidden="true"></i>Pastoral care and community outreach</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-ack-purple text-lg">New to our parish?</h3>
+                <ol class="mt-4 space-y-4 text-sm text-gray-600">
+                    <li class="flex gap-3">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ack-purple text-white text-xs font-bold">1</span>
+                        <span>Arrive on Sunday — ushers will guide you to a seat.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ack-purple text-white text-xs font-bold">2</span>
+                        <span>Introduce yourself to the vicar or welcome team after service.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ack-purple text-white text-xs font-bold">3</span>
+                        <span>Join an estate fellowship or guild that fits your season of life.</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & map -->
+    <section id="contact" class="bg-ack-purple-dark text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+
+                <div>
+                    <h2 class="font-display text-3xl font-bold">Visit Us</h2>
+                    <p class="text-white/80 mt-3 leading-relaxed">
+                        ACK St. Phillips Roadblock<br>
+                        Near Eldoret–Nakuru Highway, Roadblock estate<br>
+                        Eldoret, Uasin Gishu County, Kenya
+                    </p>
+                    <ul class="mt-6 space-y-3 text-sm text-white/90">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <a href="tel:+254798125596" class="hover:text-ack-gold transition">+254 798 125 596</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <a href="mailto:info@stphillips.church.org" class="hover:text-ack-gold transition break-all">info@stphillips.church.org</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <span>Parish office: Tuesdays 8:00 AM – 5:00 PM</span>
+                        </li>
+                    </ul>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=0.549954,35.244222"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 mt-8 bg-ack-gold text-ack-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-amber-300 transition">
+                        <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                        Get directions
+                    </a>
+
+                    <div class="mt-10 bg-white/10 rounded-2xl p-6 border border-white/20">
+                        <p class="text-ack-gold font-semibold text-sm uppercase">Giving &amp; Support</p>
+                        <p class="text-white/85 mt-2 text-sm leading-relaxed">
+                            Tithes and offerings support parish ministry, clergy welfare, and outreach. M-Pesa and bank
+                            details will be published here — manageable from the admin panel later.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <h3 class="sr-only">Map and location</h3>
+                    <div class="rounded-2xl overflow-hidden border border-white/20 shadow-xl aspect-[4/3] lg:aspect-auto lg:min-h-[420px] bg-white/5">
+                        <iframe
+                            class="w-full h-full min-h-[280px] lg:min-h-[420px]"
+                            title="Map showing ACK St. Phillips Roadblock, Eldoret"
+                            src="https://maps.google.com/maps?q=0.549954,35.244222&hl=en&z=16&output=embed"
+                            style="border:0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p class="text-white/50 text-xs mt-3 text-center lg:text-left">
+                        <a href="https://www.google.com/maps/search/?api=1&query=ACK+St+Phillips+Roadblock+Eldoret"
+                            target="_blank" rel="noopener noreferrer"
+                            class="hover:text-ack-gold transition underline underline-offset-2">
+                            Open in Google Maps
+                        </a>
+                        · Drag the pin in Google Maps if you need to refine the exact church entrance
+                    </p>
+
+                    <!-- Bolt Food & Wasili (uses parish location) -->
+                    <div class="mt-6 rounded-2xl border border-white/20 bg-white/10 p-5">
+                        <p class="text-ack-gold text-sm font-semibold uppercase tracking-wide">
+                            <i class="fa-solid fa-motorcycle mr-1" aria-hidden="true"></i>
+                            Deliveries &amp; rides
+                        </p>
+                        <p class="text-white/75 text-xs mt-2 leading-relaxed">
+                            Order food to the parish or book a ride to church. Copy our address first, then paste it in
+                            <strong>Bolt Food</strong> as your delivery location. Use <strong>Wasili</strong> for a cab
+                            to our pin.
+                        </p>
+
+                        <div class="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
+                            <button type="button" id="copy-parish-location"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-medium transition border border-white/20">
+                                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                <span id="copy-parish-label">Copy parish address</span>
+                            </button>
+
+                            <a id="bolt-food-link" href="https://food.bolt.eu/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#34D186] hover:bg-[#2bc077] text-[#052e1c] text-sm font-semibold transition shadow-sm">
+                                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                                Order on Bolt Food
+                            </a>
+
+                            <a id="wasili-ride-link" href="#" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-ack-gold hover:bg-amber-300 text-ack-purple-dark text-sm font-semibold transition shadow-sm">
+                                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                                Ride with Wasili
+                            </a>
+                        </div>
+
+                        <p class="text-white/45 text-[11px] mt-4 leading-relaxed">
+                            Bolt Food:
+                            <a href="https://play.google.com/store/apps/details?id=com.bolt.deliveryclient"
+                                class="underline hover:text-ack-gold" target="_blank" rel="noopener noreferrer">Get the app</a>
+                            · Wasili:
+                            <a href="https://play.google.com/store/apps/details?id=com.wasili.rider"
+                                class="underline hover:text-ack-gold" target="_blank" rel="noopener noreferrer">Wasili Rider app</a>
+                            (Eldoret). Apps may not pre-fill the address from this page — use <em>Copy parish address</em> after opening.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
-
-
+    <script src="/src/assets/js/index.js" defer></script>
+    <script src="/src/assets/js/bibleVerses.js" defer></script>
 
 </body>
 

@@ -1,6 +1,27 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+@theme {
+    --color-ack-purple: #3d2461;
+    /* --color-ack-purple: #C41E3A; */
+    --color-ack-purple-dark: #2a1845;
+    --color-ack-gold: #c9a227;
+    --color-ack-cream: #f7f5f0;
+}
+/* runnung css====npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch */
+
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.schedule-slot {
+    @apply border border-gray-200 p-4 rounded-lg bg-gray-50 flex flex-col sm:flex-row sm:items-start gap-3 w-full;
+}
+
+.schedule-time {
+    @apply shrink-0 border border-ack-purple/20 px-3 py-2 rounded-md bg-white text-ack-purple text-xs sm:text-sm font-bold;
 }
