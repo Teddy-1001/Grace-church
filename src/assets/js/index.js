@@ -6,23 +6,22 @@ tabButtons.forEach(button => {
 
         const target = button.dataset.tab
 
-        // Hide all content
         tabContents.forEach(content => {
             content.classList.add('hidden')
         })
 
-        // Show selected content
-        document.getElementById(target).classList.remove('hidden')
+        const panel = document.getElementById(target)
+        if (panel) panel.classList.remove('hidden')
 
-        // Reset all buttons
         tabButtons.forEach(btn => {
-            btn.classList.remove('bg-blue-600', 'text-white')
-            btn.classList.add('bg-gray-200', 'text-gray-700')
+            btn.classList.remove('bg-ack-purple', 'text-white', 'shadow-md')
+            btn.classList.add('bg-white', 'border', 'border-gray-200', 'text-gray-700')
+            btn.setAttribute('aria-selected', 'false')
         })
 
-        // Active button
-        button.classList.remove('bg-gray-200', 'text-gray-700')
-        button.classList.add('bg-blue-600', 'text-white')
+        button.classList.remove('bg-white', 'border-gray-200', 'text-gray-700')
+        button.classList.add('bg-ack-purple', 'text-white', 'shadow-md')
+        button.setAttribute('aria-selected', 'true')
     })
 })
 

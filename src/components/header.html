@@ -1,71 +1,66 @@
-<header class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-gray-200/60">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
 
-        <!-- Top announcement bar -->
-        <div class="bg-blue-600 text-white text-sm">
-            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2">
-
-                <p class="text-center sm:text-left">
-                    Join us every Sunday at <span class="font-semibold">10:00 AM</span> for our main Swahili service
-                </p>
-
-                <div class="flex items-center gap-4 text-white/90">
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-
+    <div class="bg-ack-purple text-white text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2">
+            <p class="text-center sm:text-left">
+                Join us Sunday — English <span class="font-semibold">8:00 AM</span> · Kiswahili <span class="font-semibold">10:00 AM</span>
+            </p>
+            <div class="flex items-center gap-4 text-white/90">
+                <a href="#" class="hover:text-ack-gold transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
+    </div>
 
-        <!-- Main navigation -->
-        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
 
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <img src="../assets/images/ack-logo.svg" class="h-12 w-auto" alt="Church Logo">
-                <span class="font-semibold text-gray-800 hidden sm:block">Grace Church</span>
-            </div>
+        <a href="/src/pages/index.html" class="flex items-center gap-2 shrink-0">
+            <img src="/src/assets/images/ack-logo.svg" class="h-11 w-auto" alt="ACK logo">
+            <span class="font-semibold text-ack-purple-dark hidden sm:block leading-tight text-sm">
+                St. Phillips<br><span class="text-xs font-normal text-gray-600">Roadblock</span>
+            </span>
+        </a>
 
-            <!-- Desktop links -->
-            <ul class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-                <li><a href="/src/pages/index.html" class="hover:text-blue-600 transition">Home</a></li>
-                <li><a href="#" class="hover:text-blue-600 transition">About</a></li>
-                <li><a href="/src/pages/sermons.html" class="hover:text-blue-600 transition">Sermons</a></li>
-                <li><a href="#" class="hover:text-blue-600 transition">Events</a></li>
-                <li><a href="/src/pages/fellowships.html" class="hover:text-blue-600 transition">Fellowships</a></li>
-            </ul>
+        <ul class="hidden lg:flex items-center gap-6 text-gray-700 font-medium text-sm">
+            <li><a href="/src/pages/index.html" class="hover:text-ack-purple transition">Home</a></li>
+            <li><a href="/src/pages/index.html#about" class="hover:text-ack-purple transition">About</a></li>
+            <li><a href="/src/pages/index.html#worship-schedule" class="hover:text-ack-purple transition">Services</a></li>
+            <li><a href="/src/pages/ministries.html" class="hover:text-ack-purple transition">Ministries</a></li>
+            <li><a href="/src/pages/fellowships.html" class="hover:text-ack-purple transition">Fellowships</a></li>
+            <li><a href="/src/pages/sermons.html" class="hover:text-ack-purple transition">Sermons</a></li>
+            <li><a href="/src/pages/index.html#contact" class="hover:text-ack-purple transition">Contact</a></li>
+        </ul>
 
-            <!-- Actions -->
-            <div class="hidden md:flex items-center gap-3">
-                <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded-lg shadow-sm">
-                    <i class="fa-solid fa-heart mr-2"></i>Donate
-                </button>
-            </div>
-
-            <!-- Mobile menu button -->
-            <button id="menu-btn" class="md:hidden text-gray-800">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-
-        </nav>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-
-            <ul class="flex flex-col items-center gap-6 py-6 text-gray-700 font-medium">
-                <li><a href="/src/pages/index.html" class="hover:text-blue-600">Home</a></li>
-                <li><a href="#" class="hover:text-blue-600">About</a></li>
-                <li><a href="#" class="hover:text-blue-600">Events</a></li>
-                <li><a href="/src/pages/fellowships.html" class="hover:text-blue-600">Fellowships</a></li>
-            </ul>
-
-            <div class="flex justify-center pb-6">
-                <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-2 rounded-lg">
-                    <i class="fa-solid fa-heart mr-2"></i>Donate
-                </button>
-            </div>
-
+        <div class="hidden lg:flex items-center gap-3">
+            <a href="/src/pages/index.html#contact"
+                class="bg-ack-gold text-ack-purple-dark hover:bg-amber-300 transition px-4 py-2 rounded-lg text-sm font-semibold shadow-sm">
+                <i class="fa-solid fa-hand-holding-heart mr-1" aria-hidden="true"></i>Give
+            </a>
         </div>
 
-    </header>
+        <button id="menu-btn" type="button" class="lg:hidden text-ack-purple-dark p-2" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+        <ul class="flex flex-col items-center gap-5 py-6 text-gray-700 font-medium">
+            <li><a href="/src/pages/index.html" class="hover:text-ack-purple">Home</a></li>
+            <li><a href="/src/pages/index.html#about" class="hover:text-ack-purple">About</a></li>
+            <li><a href="/src/pages/index.html#worship-schedule" class="hover:text-ack-purple">Services</a></li>
+            <li><a href="/src/pages/ministries.html" class="hover:text-ack-purple">Ministries</a></li>
+            <li><a href="/src/pages/fellowships.html" class="hover:text-ack-purple">Fellowships</a></li>
+            <li><a href="/src/pages/sermons.html" class="hover:text-ack-purple">Sermons</a></li>
+            <li><a href="/src/pages/index.html#contact" class="hover:text-ack-purple">Contact</a></li>
+        </ul>
+        <div class="flex justify-center pb-6">
+            <a href="/src/pages/index.html#contact"
+                class="bg-ack-gold text-ack-purple-dark px-6 py-2 rounded-lg font-semibold">
+                <i class="fa-solid fa-hand-holding-heart mr-1" aria-hidden="true"></i>Give
+            </a>
+        </div>
+    </div>
+
+</header>
