@@ -545,37 +545,114 @@
         </div>
     </section>
 
-    <!-- Contact strip -->
-    <section id="contact" class="bg-ack-purple-dark text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h2 class="font-display text-3xl font-bold">Visit Us</h2>
-                <p class="text-white/80 mt-3 leading-relaxed">
-                    St. Phillips, Roadblock<br>
-                    Near Eldoret-Nakuru Highway<br>
-                    Eldoret, Kenya
-                </p>
-                <ul class="mt-6 space-y-2 text-sm text-white/90">
-                    <li>
-                        <i class="fa-solid fa-phone text-ack-gold w-5" aria-hidden="true"></i>
-                        <a href="tel:+254700000000" class="hover:text-ack-gold transition">+254 700 000 000</a>
-                        <span class="text-white/50 text-xs"> (update number)</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope text-ack-gold w-5" aria-hidden="true"></i>
-                        <a href="mailto:info@gracechurch.kangemi.org" class="hover:text-ack-gold transition">info@gracechurch.kangemi.org</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-                <p class="text-ack-gold font-semibold text-sm uppercase">Giving &amp; Support</p>
-                <p class="text-white/85 mt-2 text-sm leading-relaxed">
-                    Tithes and offerings support parish ministry, clergy welfare, and outreach. M-Pesa and bank details
-                    will be published here — manageable from the admin panel later.
-                </p>
-                <p class="mt-4 text-xs text-white/50">
-                    Map embed can be added below once your exact coordinates are confirmed.
-                </p>
+    <!-- Contact & map -->
+    <section id="contact" class="bg-ack-purple-dark text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+
+                <div>
+                    <h2 class="font-display text-3xl font-bold">Visit Us</h2>
+                    <p class="text-white/80 mt-3 leading-relaxed">
+                        ACK St. Phillips Roadblock<br>
+                        Near Eldoret–Nakuru Highway, Roadblock estate<br>
+                        Eldoret, Uasin Gishu County, Kenya
+                    </p>
+                    <ul class="mt-6 space-y-3 text-sm text-white/90">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <a href="tel:+254798125596" class="hover:text-ack-gold transition">+254 798 125 596</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <a href="mailto:info@stphillips.church.org" class="hover:text-ack-gold transition break-all">info@stphillips.church.org</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-ack-gold mt-0.5" aria-hidden="true"></i>
+                            <span>Parish office: Tuesdays 8:00 AM – 5:00 PM</span>
+                        </li>
+                    </ul>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=0.549954,35.244222"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 mt-8 bg-ack-gold text-ack-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-amber-300 transition">
+                        <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                        Get directions
+                    </a>
+
+                    <div class="mt-10 bg-white/10 rounded-2xl p-6 border border-white/20">
+                        <p class="text-ack-gold font-semibold text-sm uppercase">Giving &amp; Support</p>
+                        <p class="text-white/85 mt-2 text-sm leading-relaxed">
+                            Tithes and offerings support parish ministry, clergy welfare, and outreach. M-Pesa and bank
+                            details will be published here — manageable from the admin panel later.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <h3 class="sr-only">Map and location</h3>
+                    <div class="rounded-2xl overflow-hidden border border-white/20 shadow-xl aspect-[4/3] lg:aspect-auto lg:min-h-[420px] bg-white/5">
+                        <iframe
+                            class="w-full h-full min-h-[280px] lg:min-h-[420px]"
+                            title="Map showing ACK St. Phillips Roadblock, Eldoret"
+                            src="https://maps.google.com/maps?q=0.549954,35.244222&hl=en&z=16&output=embed"
+                            style="border:0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p class="text-white/50 text-xs mt-3 text-center lg:text-left">
+                        <a href="https://www.google.com/maps/search/?api=1&query=ACK+St+Phillips+Roadblock+Eldoret"
+                            target="_blank" rel="noopener noreferrer"
+                            class="hover:text-ack-gold transition underline underline-offset-2">
+                            Open in Google Maps
+                        </a>
+                        · Drag the pin in Google Maps if you need to refine the exact church entrance
+                    </p>
+
+                    <!-- Bolt Food & Wasili (uses parish location) -->
+                    <div class="mt-6 rounded-2xl border border-white/20 bg-white/10 p-5">
+                        <p class="text-ack-gold text-sm font-semibold uppercase tracking-wide">
+                            <i class="fa-solid fa-motorcycle mr-1" aria-hidden="true"></i>
+                            Deliveries &amp; rides
+                        </p>
+                        <p class="text-white/75 text-xs mt-2 leading-relaxed">
+                            Order food to the parish or book a ride to church. Copy our address first, then paste it in
+                            <strong>Bolt Food</strong> as your delivery location. Use <strong>Wasili</strong> for a cab
+                            to our pin.
+                        </p>
+
+                        <div class="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
+                            <button type="button" id="copy-parish-location"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-medium transition border border-white/20">
+                                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                <span id="copy-parish-label">Copy parish address</span>
+                            </button>
+
+                            <a id="bolt-food-link" href="https://food.bolt.eu/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#34D186] hover:bg-[#2bc077] text-[#052e1c] text-sm font-semibold transition shadow-sm">
+                                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                                Order on Bolt Food
+                            </a>
+
+                            <a id="wasili-ride-link" href="#" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-ack-gold hover:bg-amber-300 text-ack-purple-dark text-sm font-semibold transition shadow-sm">
+                                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                                Ride with Wasili
+                            </a>
+                        </div>
+
+                        <p class="text-white/45 text-[11px] mt-4 leading-relaxed">
+                            Bolt Food:
+                            <a href="https://play.google.com/store/apps/details?id=com.bolt.deliveryclient"
+                                class="underline hover:text-ack-gold" target="_blank" rel="noopener noreferrer">Get the app</a>
+                            · Wasili:
+                            <a href="https://play.google.com/store/apps/details?id=com.wasili.rider"
+                                class="underline hover:text-ack-gold" target="_blank" rel="noopener noreferrer">Wasili Rider app</a>
+                            (Eldoret). Apps may not pre-fill the address from this page — use <em>Copy parish address</em> after opening.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

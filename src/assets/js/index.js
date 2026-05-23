@@ -58,6 +58,61 @@ function initHeader() {
 
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
     });
 }
+
+/** Parish location — used for map, directions, Bolt Food & Wasili links */
+const PARISH_LOCATION = {
+    lat: 0.549954,
+    lng: 35.244222,
+    name: 'ACK St. Phillips Roadblock',
+    addressLine: 'Near Eldoret–Nakuru Highway, Roadblock estate, Eldoret, Kenya',
+    get fullText() {
+        return `${this.name}\n${this.addressLine}\nhttps://maps.google.com/?q=${this.lat},${this.lng}`;
+    },
+    get mapsQuery() {
+        return encodeURIComponent(`${this.name}, ${this.addressLine}`);
+    },
+    get geoUri() {
+        return `geo:${this.lat},${this.lng}?q=${this.lat},${this.lng}(${encodeURIComponent(this.name)})`;
+    },
+};
+
+function initDeliveryLinks() {
+    const copyBtn = document.getElementById('copy-parish-location');
+    const copyLabel = document.getElementById('copy-parish-label');
+    const wasiliLink = document.getElementById('wasili-ride-link');
+    const boltLink = document.getElementById('bolt-food-link');
+
+    if (wasiliLink) {
+        wasiliLink.href = PARISH_LOCATION.geoUri;
+        wasiliLink.title = `Open maps / ride apps with destination: ${PARISH_LOCATION.name}`;
+    }
+
+    if (boltLink) {
+        boltLink.title = 'Open Bolt Food — paste the copied parish address as your delivery location';
+    }
+
+    if (!copyBtn) return;
+
+    copyBtn.addEventListener('click', async () => {
+        const text = PARISH_LOCATION.fullText;
+        try {
+            await navigator.clipboard.writeText(text);
+            if (copyLabel) {
+                const original = copyLabel.textContent;
+                copyLabel.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyLabel.textContent = original;
+                }, 2000);
+            }
+        } catch {
+            window.prompt('Copy this address for Bolt Food or Wasili:', text);
+        }
+    });
+}
+
+initDeliveryLinks();
 
