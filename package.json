@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css",
+    "dev": "npm run build && npx serve . -l 5501",
     "dev:css": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch"
   },
   "dependencies": {

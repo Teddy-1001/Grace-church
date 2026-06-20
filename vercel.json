@@ -4,14 +4,11 @@
   "rewrites": [
     { "source": "/", "destination": "/src/pages/index.html" },
     { "source": "/ministries", "destination": "/src/pages/ministries.html" },
-    { "source": "/ministries.html", "destination": "/src/pages/ministries.html" },
+    { "source": "/ministry", "destination": "/src/pages/ministry.html" },
     { "source": "/sermons", "destination": "/src/pages/sermons.html" },
-    { "source": "/sermons.html", "destination": "/src/pages/sermons.html" },
     { "source": "/fellowships", "destination": "/src/pages/fellowships.html" },
-    { "source": "/fellowships.html", "destination": "/src/pages/fellowships.html" },
     { "source": "/fellowship", "destination": "/src/pages/fellowship.html" },
-    { "source": "/shop", "destination": "/src/pages/shop.html" },
-    { "source": "/shop.html", "destination": "/src/pages/shop.html" }
+    { "source": "/shop", "destination": "/src/pages/shop.html" }
   ],
   "headers": [
     {

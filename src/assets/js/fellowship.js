@@ -231,7 +231,7 @@ function renderFellowshipCard(f) {
           <li><i class="fa-solid fa-location-dot text-ack-gold w-4" aria-hidden="true"></i> ${f.location}</li>
           <li><i class="fa-solid fa-clock text-ack-gold w-4" aria-hidden="true"></i> ${f.day}, ${f.time}</li>
         </ul>
-        <a href="fellowship.html?id=${f.id}" class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
+        <a href="${PATHS.fellowshipId(f.id)}" class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
           View fellowship <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
         </a>
       </div>
@@ -249,14 +249,14 @@ function renderFellowshipDetail() {
   if (!fellowship) {
     detailContainer.innerHTML = renderNotFound({
       title: "Fellowship not found",
-      backHref: "/src/pages/fellowships.html",
+      backHref: PATHS.fellowships,
       backLabel: "All fellowships",
     });
-    document.title = "Fellowship not found | ACK St. Phillips Roadblock";
+    document.title = `Fellowship not found | ${PARISH.pageTitleSuffix}`;
     return;
   }
 
-  document.title = `${fellowship.title} | ACK St. Phillips Roadblock`;
+  document.title = `${fellowship.title} | ${PARISH.pageTitleSuffix}`;
   const badgeClass = tagColors[fellowship.tag] || "bg-gray-100 text-gray-800";
   const fallback = fellowship.fallbackImage || "/src/assets/images/church.webp";
 
@@ -304,15 +304,15 @@ function renderFellowshipDetail() {
     ],
     payments: fellowship.payments,
     extraLinks: [
-      { href: "/src/pages/index.html#worship-schedule", label: "Sunday service times", primary: true },
+      { href: PATHS.services, label: "Sunday service times", primary: true },
       { href: `https://www.google.com/maps/dir/?api=1&destination=0.549954,35.244222`, label: "Directions to parish", primary: false },
-      { href: "/src/pages/fellowships.html", label: "← All fellowships", primary: false },
+      { href: PATHS.fellowships, label: "← All fellowships", primary: false },
     ],
   });
 
   detailContainer.innerHTML = `
     ${renderDetailHero({
-      backHref: "/src/pages/fellowships.html",
+      backHref: PATHS.fellowships,
       backLabel: "All fellowships",
       badge: `
         <span class="${badgeClass} text-xs px-3 py-1 rounded-full font-semibold">${fellowship.tag}</span>

@@ -1,6 +1,6 @@
 /** Shared sections for ministry & fellowship detail pages */
 
-const PARISH_CONTACT = {
+const PARISH_CONTACT = typeof PARISH !== "undefined" ? PARISH : {
   phone: "+254 798 125 596",
   email: "info@stphillips.church.org",
   officeHours: "Tuesdays, 8:00 AM – 5:00 PM",

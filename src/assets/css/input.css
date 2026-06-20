@@ -9,6 +9,9 @@
     --color-ack-cream: #f7f5f0;
 }
 /* runnung css====npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;

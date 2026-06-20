@@ -303,7 +303,7 @@ function renderMinistryCard(m) {
           <li><i class="fa-solid fa-calendar text-ack-gold w-4" aria-hidden="true"></i> ${m.meetingDay}</li>
           <li><i class="fa-solid fa-clock text-ack-gold w-4" aria-hidden="true"></i> ${m.time}</li>
         </ul>
-        <a href="ministry.html?id=${m.id}" class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
+        <a href="${PATHS.ministryId(m.id)}" class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
           View ministry <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
         </a>
       </div>
@@ -321,14 +321,14 @@ function renderMinistryDetail() {
   if (!ministry) {
     detailContainer.innerHTML = renderNotFound({
       title: "Ministry not found",
-      backHref: "/src/pages/ministries.html",
+      backHref: PATHS.ministries,
       backLabel: "All ministries",
     });
-    document.title = "Ministry not found | ACK St. Phillips Roadblock";
+    document.title = `Ministry not found | ${PARISH.pageTitleSuffix}`;
     return;
   }
 
-  document.title = `${ministry.name} | ACK St. Phillips Roadblock`;
+  document.title = `${ministry.name} | ${PARISH.pageTitleSuffix}`;
   const badgeClass = typeColors[ministry.type] || "bg-gray-100 text-gray-800";
   const fallback = ministry.fallbackImage || "/src/assets/images/church.webp";
 
@@ -355,15 +355,15 @@ function renderMinistryDetail() {
     ],
     payments: ministry.payments,
     extraLinks: [
-      { href: "/src/pages/index.html#worship-schedule", label: "Sunday service times", primary: true },
-      { href: "/src/pages/index.html#contact", label: "Contact parish office", primary: false },
-      { href: "/src/pages/ministries.html", label: "← All ministries", primary: false },
+      { href: PATHS.services, label: "Sunday service times", primary: true },
+      { href: PATHS.contact, label: "Contact parish office", primary: false },
+      { href: PATHS.ministries, label: "← All ministries", primary: false },
     ],
   });
 
   detailContainer.innerHTML = `
     ${renderDetailHero({
-      backHref: "/src/pages/ministries.html",
+      backHref: PATHS.ministries,
       backLabel: "All ministries",
       badge: `<span class="${badgeClass} text-xs px-3 py-1 rounded-full font-semibold">${ministry.type}</span>`,
       title: ministry.name,

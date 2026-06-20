@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Leadership at ACK St. Phillips Roadblock, Eldoret — clergy, church wardens, and guild chairpersons." />
+    <title>Leadership | ACK St. Phillips Roadblock</title>
+    <link href="/src/assets/css/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/assets/images/ack-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-ack-cream text-gray-900 antialiased">
+
+    <div id="header-placeholder"></div>
+
+    <section class="relative min-h-[50vh] flex items-center overflow-hidden" aria-label="Leadership">
+
+        <div class="fixed inset-0 -z-10">
+            <img loading="eager" src="../assets/images/sermon.webp" class="w-full h-full object-cover scale-105"
+                alt="Clergy and congregation at St. Phillips Roadblock">
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-ack-purple-dark/90 via-ack-purple/80 to-black/70"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
+            <div class="max-w-2xl text-white">
+                <p class="text-ack-gold text-sm font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-users mr-1" aria-hidden="true"></i> Our Leaders
+                </p>
+                <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mt-3">
+                    Parish Leadership
+                </h1>
+                <p class="mt-4 text-white/85 text-lg leading-relaxed">
+                    Clergy, wardens, and lay leaders serving St. Phillips Roadblock under the Diocese of Eldoret.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Clergy</span>
+                <h2 class="font-display text-3xl font-bold text-ack-purple-dark mt-2">Parish Priest &amp; Curates</h2>
+                <p class="text-gray-600 mt-2 text-sm max-w-2xl">
+                    Our clergy lead worship, administer sacraments, and provide pastoral care. Names and photos will be
+                    updated when confirmed.
+                </p>
+            </div>
+            <div id="clergy-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- leadership.js -->
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Lay Leadership</span>
+                <h2 class="font-display text-3xl font-bold text-ack-purple-dark mt-2">Wardens &amp; Parish Officers</h2>
+                <p class="text-gray-600 mt-2 text-sm max-w-2xl">
+                    Elected and appointed lay leaders who steward parish life alongside the clergy.
+                </p>
+            </div>
+            <div id="lay-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- leadership.js -->
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Guilds</span>
+                <h2 class="font-display text-2xl font-bold text-ack-purple-dark mt-2">Guild Chairpersons</h2>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                <table class="w-full text-left px-2">
+                    <thead class="bg-ack-cream border-b border-gray-200">
+                        <tr>
+                            <th class="py-3 px-4 text-xs font-bold text-ack-purple uppercase">Guild / Ministry</th>
+                            <th class="py-3 px-4 text-xs font-bold text-ack-purple uppercase">Chairperson</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guild-table-body" class="px-4">
+                        <!-- leadership.js -->
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-6 text-sm text-gray-500">
+                See full ministry details on the
+                <a href="/src/pages/ministries.html" class="text-ack-purple font-semibold hover:text-ack-gold">Ministries</a>
+                page.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-ack-purple-dark text-white py-14">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-display text-2xl font-bold">Pastoral enquiries</h2>
+            <p class="text-white/80 mt-3 text-sm max-w-xl mx-auto">
+                For baptisms, weddings, funerals, counselling, or home visits, contact the parish office or speak to
+                an usher after Sunday service.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="tel:+254798125596"
+                    class="bg-ack-gold text-ack-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-amber-300 transition">
+                    Call Parish Office
+                </a>
+                <a href="/src/pages/index.html#contact"
+                    class="border border-white/40 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+                    Location &amp; Map
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/src/assets/js/paths.js"></script>
+    <script src="/src/assets/js/index.js" defer></script>
+    <script src="/src/assets/js/leadership.js" defer></script>
+</body>
+
+</html>
