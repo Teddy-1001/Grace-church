@@ -106,6 +106,12 @@ app.get("/sitemap.xml", (req, res) => {
         </urlset>
     `);
 });
-app.listen(PORT, () => {
-    console.log('Server running')
-})
+// Export Express app for Vercel
+export default app;
+
+// Start local server during development
+if (!process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`Server running at http://localhost:${PORT}`);
+    });
+}
