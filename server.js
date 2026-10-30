@@ -67,7 +67,7 @@ app.get('/ministry/:id', (req, res)=>{
 })
 
 app.get("/sitemap.xml", (req, res) => {
-    const BASE_URL = "https://grace-church-tau.vercel.app";
+    const BASE_URL = "https://ackstphillipschurch.vercel.app";
 
     const staticPages = [
         "/",
