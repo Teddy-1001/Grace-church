@@ -1,0 +1,25 @@
+<article
+    class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
+    <div class="relative h-56 overflow-hidden bg-ack-purple/10">
+        <img src="<%= m.image %>" alt="<%= m.title %>"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        <span class="absolute top-4 left-4 <%= m.badgeClass %> text-xs px-3 py-1 rounded-full font-semibold">
+            <%= m.name %>
+        </span>
+        <span class="absolute bottom-4 left-4 bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">
+            <%= m.estate %>
+        </span>
+    </div>
+    <div class="p-6">
+        <h2 class="text-xl font-bold text-ack-purple-dark"><%= m.title %></h2>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed line-clamp-3"><%= m.description %></p>
+        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+            <li><i class="fa-solid fa-location-dot text-ack-gold w-4" aria-hidden="true"></i><%= m.location %></li>
+            <li><i class="fa-solid fa-clock text-ack-gold w-4" aria-hidden="true"></i><%= m.meetingDay %>, <%= m.time %></li>
+        </ul>
+        <a href="/ministry/<%= m.id %>"
+            class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
+            View ministry <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+        </a>
+    </div>
+</article>

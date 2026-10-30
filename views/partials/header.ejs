@@ -1,0 +1,89 @@
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
+    <div class="bg-ack-purple text-white text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2">
+            <p class="text-center sm:text-left">
+                Join us every Sunday — English <span>8:00 AM</span> · Kiswahili <span class="font-semibold">10:00
+                    AM</span>
+            </p>
+            <div class="flex items-center gap-4 text-white/90">
+                <a href="#" class="hover:text-ack-gold transition" aria-label="Facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="X"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-ack-gold transition" aria-label="YouTube"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
+
+        <a href="/" class="flex items-center gap-2 shrink-0">
+            <img src="/images/ack-logo.svg" class="h-11 w-auto" alt="ACK logo">
+            <span class="font-semibold text-ack-purple-dark hidden sm:block leading-tight text-sm">
+                St. Phillips<br><span class="text-xs font-normal text-gray-600">Roadblock</span>
+            </span>
+        </a>
+
+        <ul class="hidden lg:flex items-center gap-5 text-gray-700 font-medium text-sm">
+            <li><a href="/" class="hover:text-ack-purple transition">Home</a></li>
+            <li><a href="/about" class="hover:text-ack-purple transition">About</a></li>
+            <li><a href="/leadership" class="hover:text-ack-purple transition">Leadership</a></li>
+            <li><a href="/#worship-schedule" class="hover:text-ack-purple transition">Services</a></li>
+            <li><a href="/ministries" class="hover:text-ack-purple transition">Ministries</a></li>
+            <li><a href="/fellowships" class="hover:text-ack-purple transition">Fellowships</a></li>
+            <li><a href="/sermons" class="hover:text-ack-purple transition">Sermons</a></li>
+            <li><a href="/shop" class="hover:text-ack-purple transition">Bookshop</a></li>
+            <li><a href="/#contact" class="hover:text-ack-purple transition">Contact</a></li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-3">
+            <a href="/src/pages/give.html"
+                class="bg-ack-gold text-ack-purple-dark hover:bg-amber-300 transition px-4 py-2 rounded-lg text-sm font-semibold shadow-sm">
+                <i class="fa-solid fa-hand-holding-heart mr-1" aria-hidden="true"></i>Give
+            </a>
+        </div>
+
+        <button id="menu-btn" type="button" class="lg:hidden text-ack-purple-dark p-2" aria-label="Open menu"
+            aria-expanded="false">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+        <ul class="flex flex-col items-center gap-5 py-6 text-gray-700 font-medium">
+            <li><a href="/" class="hover:text-ack-purple">Home</a></li>
+            <li><a href="/about" class="hover:text-ack-purple">About</a></li>
+            <li><a href="/leadership" class="hover:text-ack-purple">Leadership</a></li>
+            <li><a href="/#worship-schedule" class="hover:text-ack-purple">Services</a></li>
+            <li><a href="/ministries" class="hover:text-ack-purple">Ministries</a></li>
+            <li><a href="/fellowships" class="hover:text-ack-purple">Fellowships</a></li>
+            <li><a href="/sermons" class="hover:text-ack-purple">Sermons</a></li>
+            <li><a href="/shop" class="hover:text-ack-purple">Bookshop</a></li>
+            <li><a href="/#contact" class="hover:text-ack-purple">Contact</a></li>
+        </ul>
+        <div class="flex justify-center pb-6">
+            <a href="/give" class="bg-ack-gold text-ack-purple-dark px-6 py-2 rounded-lg font-semibold">
+                <i class="fa-solid fa-hand-holding-heart mr-1" aria-hidden="true"></i>Give
+            </a>
+        </div>
+    </div>
+</header>
+<script>
+    function initHeader() {
+        const menuBtn = document.getElementById('menu-btn')
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        if (!menuBtn || !mobileMenu) {
+            console.log('mobile menu lacks')
+            return;
+        }
+        menuBtn.addEventListener('click', () => {
+            console.log('clicked')
+            mobileMenu.classList.toggle('hidden')
+            const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        })
+    }
+    document.addEventListener('DOMContentLoaded', initHeader);
+</script>

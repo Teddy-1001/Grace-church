@@ -1,0 +1,17 @@
+<div id="services" class="tab-content mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" role="tabpanel">
+    <% schedule.forEach(day=> { %>
+        <article
+            class="schedule-day-card bg-white p-6 rounded-xl  border border-[#d4d9e8] hover:-translate-y-0.5 transition duration-300">
+            <h3 class="text-xl font-semibold text-ack-purple mb-4"><%= day.day %></h3>
+            <% day.events.forEach(e=> { %>
+            <div class="schedule-slot">
+                <span class="schedule-time"><%= e.time %></span>
+                <div>
+                    <p class="font-medium text-gray-800"><%= e.title %></p>
+                    <p class="text-sm text-gray-500 mt-0.5"><%= e.description %></p>
+                </div>
+            </div>
+            <% }) %>
+        </article>
+        <% }) %>
+</div>

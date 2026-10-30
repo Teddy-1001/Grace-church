@@ -1,0 +1,19 @@
+<div id="verse" class="tab-content hidden mt-10 w-full" role="tabpanel">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="font-display text-2xl font-bold text-ack-purple-dark">Verse of the Day</h3>
+        <div id="verse-content" class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-10">
+            <% if(verse){ %>
+                <p class="text-xl italic text-gray-700 leading-relaxed">
+                    "<%= verse.text %>"
+                </p>
+
+                <p class="text-sm mt-4 text-ack-purple font-semibold">
+                    —<%= verse.reference %>
+                </p>
+                <% } else{ %>
+                    <p class="text-gray-500">Loading verse…</p>
+                    <% } %>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/output.css">
+    <title>
+        <%= fellowship.id %> Fellowship | ACK St. Phillips Roadblock
+    </title>
+</head>
+
+<body class="bg-ack-cream text-gray-900 antialiased">
+    <%- include('partials/header.ejs') %>
+        <main id="fellowship-detail" class="min-h-[60vh]">
+            <section class="relative min-h-[42vh] flex items-end overflow-hidden">
+                <img src="<%= fellowship.image %>" alt="" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple/70 to-transparent">
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto px-6 pb-12 pt-32 w-full text-white">
+                    <a href="/fellowships"
+                        class="inline-flex items-center gap-2 text-white/80 hover:text-ack-gold text-sm mb-4 transition">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All Fellowships
+                    </a>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="<%= fellowship.badgeClass %> text-xs px-3 py-1 rounded-full font-semibold">
+                            <%= fellowship.tag %>
+                        </span>
+                        <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                            <%= fellowship.estate %>
+                        </span>
+                    </div>
+                    <h1 class="font-display text-3xl md:text-5xl font-bold">
+                        <%= fellowship.estate %> Estate Fellowship
+                    </h1>
+                </div>
+            </section>
+
+            <section class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <div class="lg:col-span-2">
+                        <h2 class="text-sm font-semibold text-ack-purple uppercase tracking-wider">About this group</h2>
+                        <p class="text-gray-700 mt-3 leading-relaxed text-lg">
+                            <%= fellowship.description %>
+                        </p>
+                        <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                            <%= fellowship.membership %>
+                        </p>
+                        <!-- week blog -->
+                        <div class="mt-8 bg-[#eef1f6] rounded-2xl p-6 border border-gray-200">
+                            <h3 class="font-semibold text-ack-purple-dark flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-week text-ack-gold" aria-hidden="true"></i> This week's
+                                meeting
+                            </h3>
+                            <p class="text-gray-700 mt-3 text-sm">
+                                <strong>
+                                    <%= fellowship.day %>
+                                </strong> at <strong>
+                                    <%= fellowship.time %>
+                                </strong><br>
+                                <%= fellowship.location %>
+                            </p>
+                            <p class="text-gray-500 text-xs mt-3"><i class="fa-solid fa-map-pin text-ack-gold mr-1"
+                                    aria-hidden="true"></i>
+                                <%= fellowship.mapNote %>
+                            </p>
+                            <p class="text-gray-500 text-xs mt-3 italic">Times may vary on public holidays — check the
+                                parish
+                                noticeboard.</p>
+                        </div>
+                        <!-- list -->
+                        <section class="mt-10">
+                            <h2
+                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-list-check text-ack-gold" aria-hidden="true"></i> A typical
+                                meeting includes
+                            </h2>
+                            <ul class="mt-4 space-y-2">
+                                <% fellowship.activities.map((item)=>{ %>
+                                    <li class="flex gap-2 text-gray-700 text-sm leading-relaxed">
+                                        <i class="fa-solid fa-check text-ack-gold mt-1 shrink-0" aria-hidden="true"></i>
+                                        <span>
+                                            <%= item %>
+                                        </span>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </section>
+                        <!-- schedule section -->
+                        <section class="mt-10">
+                            <h2
+                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-days text-ack-gold" aria-hidden="true"></i> Weekly
+                                schedule
+                            </h2>
+                            <div class="mt-4 space-y-3">
+                                <% fellowship.schedule.map((s)=>{ %>
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                                        <span class="text-xs font-bold text-ack-purple uppercase shrink-0 w-28">
+                                            <%= s.day %>
+                                        </span>
+                                        <span class="text-sm font-semibold text-gray-900 shrink-0">
+                                            <%= s.time %>
+                                        </span>
+                                        <span class="text-sm text-gray-600">
+                                            <%= s.activity %>
+                                        </span>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                            <%= fellowship.note ? fellowship.note : '' %>
+                        </section>
+
+                        <!-- payment -->
+                        <section class="mt-10">
+                            <h2
+                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-hand-holding-dollar text-ack-gold" aria-hidden="true"></i>
+                                Giving &amp; Payments
+                            </h2>
+
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                                Support this group’s programmes through the channels below.
+                                Always include your <strong>name</strong> and
+                                <strong>ministry/fellowship</strong> in the M-Pesa message.
+                            </p>
+
+                            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                                <% fellowship.payments.forEach(p=> { %>
+                                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                                        <p class="font-semibold text-ack-purple-dark text-sm">
+                                            <%= p.title %>
+                                        </p>
+                                        <% if (p.amount) { %>
+                                            <p class="text-2xl font-bold text-gray-900 mt-1">
+                                                <%= p.amount %>
+                                            </p>
+                                            <% } %>
+                                                <% if (p.mpesa) { %>
+                                                    <p class="text-sm text-gray-700 mt-3">
+                                                        <i class="fa-solid fa-mobile-screen text-green-600 mr-1"
+                                                            aria-hidden="true"></i>
+                                                        <strong>M-Pesa:</strong>
+                                                        <%= p.mpesa %>
+                                                    </p>
+                                                    <% } %>
+                                                        <% if (p.account) { %>
+                                                            <p class="text-sm text-gray-600 mt-1">
+                                                                <strong>Account:</strong>
+                                                                <%= p.account %>
+                                                            </p>
+                                                            <% } %>
+                                                                <% if (p.notes) { %>
+                                                                    <p class="text-xs text-gray-500 mt-2">
+                                                                        <%= p.notes %>
+                                                                    </p>
+                                                                    <% } %>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                        </section>
+
+                        <section class="mt-10">
+                            <h2
+                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-users text-ack-gold" aria-hidden="true"></i> Leadership
+                            </h2>
+                            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                                <% fellowship.leadership.map((t)=>{ %>
+                                    <div class="bg-[#eef1f6] rounded-xl p-4 border border-gray-100">
+                                        <p class="text-xs text-ack-purple font-semibold uppercase">
+                                            <%= t.role %>
+                                        </p>
+                                        <p class="font-semibold text-gray-900 mt-1">
+                                            <%= t.name %>
+                                        </p>
+                                        <a href="tel:<%= t.phone.replace(/\s/g, '') %>"
+                                            class="text-sm text-ack-purple hover:text-ack-gold mt-1 inline-block">
+                                            <%= t.phone %>
+                                        </a>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                        </section>
+                        <div class="mt-10 grid sm:grid-cols-2 gap-4">
+                            <div class="rounded-xl p-5  bg-white border border-gray-200">
+                                <h3 class="font-semibold text-sm  text-ack-purple-dark">What to bring</h3>
+                                <p class="text-sm mt-2 leading-relaxed  text-gray-600">
+                                    <%= fellowship.bring %>
+                                </p>
+                            </div>
+                            <div class="rounded-xl p-5  bg-ack-purple text-white">
+                                <h3 class="font-semibold text-sm  text-ack-gold">How to join</h3>
+                                <p class="text-sm mt-2 leading-relaxed  text-white/85">
+                                    <%= fellowship.getInvolved %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ${sidebar} -->
+                    <aside class="space-y-6 lg:sticky lg:top-24 h-fit">
+                        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+                            <h2 class="font-semibold text-ack-purple-dark">Meeting details</h2>
+                            <ul class="mt-4 space-y-4 text-sm text-gray-700">
+                                <% meeting.map((m)=>{ %>
+                                    <li class="flex gap-3">
+                                        <i class="fa-solid fa-<%= m.icon %> text-ack-gold mt-0.5"
+                                            aria-hidden="true"></i>
+                                        <span>
+                                            <strong class="text-gray-900">
+                                                <%= m.label %>
+                                            </strong><br>
+
+                                            <% if (m.html) { %>
+                                                <%- m.html %>
+                                                    <% } else { %>
+                                                        <%= m.value %>
+                                                            <% } %>
+                                        </span>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+
+
+        </main>
+</body>
+
+</html>
