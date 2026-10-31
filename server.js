@@ -8,6 +8,7 @@ import schedule from './data/schedule.js'
 import { fellowships, getFellowshipDetails } from './data/fellowships.js'
 import { ministries, PARISH_CONTACT } from './data/ministries.js'
 import { sermons } from './data/sermons.js'
+import { leadership } from './data/leadership.js'
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -75,6 +76,21 @@ app.get('/sermons', (req, res) => {
     res.render('sermons', {
         featuredSermon,
         sermons: pastSermons
+    });
+});
+
+app.get("/gallery", (req, res) => {
+  res.render("gallery");
+});
+
+app.get("/leadership", (req, res) => {
+    const sortedLeadership = [...leadership].sort(
+        (a, b) => a.order - b.order
+    );
+
+    res.render("leadership", {
+        featuredLeaders: sortedLeadership.filter(leader => leader.featured),
+        otherLeaders: sortedLeadership.filter(leader => !leader.featured)
     });
 });
 

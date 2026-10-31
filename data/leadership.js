@@ -1,0 +1,110 @@
+export const leadership = [
+{
+id: 1,
+name: "Emmanuel Chumo",
+position: "Vicar",
+category: "Clergy",
+image: "/images/DSC_0919.JPG",
+bio: "Providing spiritual direction and pastoral leadership to the congregation. Committed to nurturing faith, preaching God's Word, and building a welcoming church community rooted in Christ.",
+email: "",
+phone: "+254 798 125 596",
+featured: true,
+order: 1
+},
+{
+id: 2,
+name: "Tirop Tirop",
+position: "Assistant Vicar",
+category: "Clergy",
+image: "/images/DSC_0919.JPG",
+bio: "Supporting the Vicar in pastoral care, worship services, discipleship, and community outreach. Passionate about encouraging believers to grow in faith and serve others.",
+email: "",
+phone: "+254 798 125 596",
+featured: true,
+order: 2
+},
+{
+id: 3,
+name: "Ezekiel Chumo",
+position: "Church Administrator",
+category: "Administration",
+image: "/images/DSC_0919.JPG",
+bio: "Coordinating the administrative functions of the church, supporting ministry teams, maintaining effective communication, and helping ensure the smooth running of church activities.",
+email: "",
+phone: "",
+featured: true,
+order: 3
+},
+{
+id: 4,
+name: "Grace Wanjiku",
+position: "Lay Reader",
+category: "Church Leadership",
+image: "/images/DSC_0919.JPG",
+bio: "Serving in the ministry of the Word through Scripture readings, leading prayers, and supporting the spiritual life of the congregation.",
+email: "",
+phone: "",
+featured: false,
+order: 4
+},
+{
+id: 5,
+name: "Peter Kiptoo",
+position: "Church Treasurer",
+category: "Administration",
+image: "/images/DSC_0919.JPG",
+bio: "Overseeing church financial records, supporting responsible stewardship, and promoting transparency and accountability in the management of church resources.",
+email: "",
+phone: "",
+featured: false,
+order: 5
+},
+{
+id: 6,
+name: "Mary Chebet",
+position: "Mother's Union Chairperson",
+category: "Ministry Leadership",
+image: "/images/DSC_0919.JPG",
+bio: "Providing leadership to the Mother's Union, encouraging fellowship, strengthening families, and coordinating activities that support women and the wider church community.",
+email: "",
+phone: "",
+featured: false,
+order: 6
+},
+{
+id: 7,
+name: "David Kiprono",
+position: "Youth Ministry Coordinator",
+category: "Ministry Leadership",
+image: "/images/DSC_0919.JPG",
+bio: "Encouraging young people to develop a strong Christian foundation through fellowship, mentorship, worship, and active participation in church life.",
+email: "",
+phone: "",
+featured: false,
+order: 7
+},
+{
+id: 8,
+name: "Esther Jepkosgei",
+position: "Sunday School Coordinator",
+category: "Ministry Leadership",
+image: "/images/DSC_0919.JPG",
+bio: "Coordinating children's Christian education and supporting Sunday School teachers as they nurture young hearts in faith, biblical understanding, and Christian values.",
+email: "",
+phone: "",
+featured: false,
+order: 8
+},
+{
+id: 9,
+name: "Samuel Mutai",
+position: "Men's Fellowship Chairperson",
+category: "Ministry Leadership",
+image: "/images/DSC_0919.JPG",
+bio: "Leading men's fellowship activities, promoting spiritual growth, brotherhood, accountability, and meaningful participation in the mission of the church.",
+email: "",
+phone: "",
+featured: false,
+order: 9
+}
+];

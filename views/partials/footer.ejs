@@ -1,73 +1,263 @@
-<footer class="bg-ack-purple text-white pt-16 pb-8 px-4 md:px-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div>
-            <img class="w-20 mb-4" src="/images/ack-logo.svg" alt="ACK logo">
-            <p class="text-white/75 text-sm leading-relaxed">
-                Anglican Church of Kenya — St. Phillips Roadblock, Eldoret. A caring, listening church in the Diocese of
-                Eldoret.
+<footer class="relative overflow-hidden bg-ack-purple text-white">
+
+
+<!-- Decorative background elements -->
+
+<div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-16 pb-10">
+
+    <!-- Main footer content -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-10">
+
+        <!-- Church identity -->
+        <div class="lg:col-span-4">
+
+            <a href="/" class="inline-flex items-center gap-3 mb-6">
+                <img
+                    src="/images/ack-logo.svg"
+                    alt="ACK St. Phillips logo"
+                    class="w-16 h-16 object-contain"
+                >
+                <div>
+                    <h2 class="font-display text-lg font-semibold tracking-wide">
+                        ST. PHILLIPS
+                    </h2>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-ack-gold">
+                        Anglican Church of Kenya
+                    </p>
+                </div>
+            </a>
+
+            <p class="text-white/65 text-sm leading-7 max-w-sm">
+                A caring, listening church in the Diocese of Eldoret.
+                Growing together in faith, serving our community, and
+                sharing the love of Christ.
             </p>
-            <div class="flex gap-4 mt-5 text-white/70">
-                <a href="#" class="hover:text-ack-gold transition" aria-label="Facebook"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-ack-gold transition" aria-label="Instagram"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-ack-gold transition" aria-label="X"><i
-                        class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="hover:text-ack-gold transition" aria-label="YouTube"><i
-                        class="fa-brands fa-youtube"></i></a>
+
+            <!-- Social media -->
+            <div class="flex items-center gap-3 mt-7">
+
+                <a href="#"
+                    aria-label="Facebook"
+                    class="w-10 h-10 flex items-center justify-center rounded-full border border-white/15 text-white/70 hover:bg-ack-gold hover:text-ack-purple hover:border-ack-gold transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                    aria-label="Instagram"
+                    class="w-10 h-10 flex items-center justify-center rounded-full border border-white/15 text-white/70 hover:bg-ack-gold hover:text-ack-purple hover:border-ack-gold transition-all duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                    aria-label="X"
+                    class="w-10 h-10 flex items-center justify-center rounded-full border border-white/15 text-white/70 hover:bg-ack-gold hover:text-ack-purple hover:border-ack-gold transition-all duration-300">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#"
+                    aria-label="YouTube"
+                    class="w-10 h-10 flex items-center justify-center rounded-full border border-white/15 text-white/70 hover:bg-ack-gold hover:text-ack-purple hover:border-ack-gold transition-all duration-300">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
             </div>
         </div>
-        <div>
-            <h3 class="font-semibold text-sm mb-4 text-ack-gold uppercase tracking-wider">Sunday Services</h3>
-            <ul class="space-y-3 text-sm text-white/75">
-                <li>8:00 AM – 9:00 AM — English Service</li>
-                <li>10:00 AM – 12:30 PM — Kiswahili Service</li>
-                <li>9:00 AM — Sunday School &amp; Teens Service</li>
-                <li>2:00 PM – 4:00 PM — Estate Fellowships</li>
+
+        <!-- Service times -->
+        <div class="lg:col-span-3">
+
+            <h3 class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em] mb-7">
+                Join Us for Worship
+            </h3>
+
+            <ul class="space-y-5 text-sm">
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-white">English Service</p>
+                        <p class="text-white/55 text-xs mt-1">Sunday · 8:00 AM – 9:00 AM</p>
+                    </div>
+                </li>
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-white">Kiswahili Service</p>
+                        <p class="text-white/55 text-xs mt-1">Sunday · 10:00 AM – 12:30 PM</p>
+                    </div>
+                </li>
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-white">Sunday School & Teens</p>
+                        <p class="text-white/55 text-xs mt-1">Sunday · 9:00 AM</p>
+                    </div>
+                </li>
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-white">Estate Fellowships</p>
+                        <p class="text-white/55 text-xs mt-1">Sunday · 2:00 PM – 4:00 PM</p>
+                    </div>
+                </li>
+
             </ul>
         </div>
 
-        <div>
-            <h3 class="font-semibold text-sm mb-4 text-ack-gold uppercase tracking-wider">Quick Links</h3>
-            <ul class="space-y-3 text-sm text-white/75">
-                <li><a href="/" class="hover:text-ack-gold transition">Home</a></li>
-                <!-- <li><a href="/about" class="hover:text-ack-gold transition">About Us</a></li> -->
-                <!-- <li><a href="/leadership" class="hover:text-ack-gold transition">Leadership</a></li> -->
-                <li><a href="/ministries" class="hover:text-ack-gold transition">Ministries</a></li>
-                <li><a href="/fellowships" class="hover:text-ack-gold transition">Fellowships</a></li>
-                <li><a href="/sermons" class="hover:text-ack-gold transition">Sermons</a></li>
-                <li><a href="/give" class="hover:text-ack-gold transition">Give</a></li>
-                <!-- <li><a href="/#contact" class="hover:text-ack-gold transition">Contact</a></li> -->
-                <!-- <li><a href="#" class="hover:text-ack-gold transition">Admin Login</a></li> -->
+        <!-- Quick links -->
+        <div class="lg:col-span-2">
+
+            <h3 class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em] mb-7">
+                Explore
+            </h3>
+
+            <ul class="space-y-4 text-sm text-white/65">
+
+                <li>
+                    <a href="/" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/ministries" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Ministries
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/fellowships" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Fellowships
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/sermons" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Sermons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/gallery" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/give" class="inline-flex items-center gap-2 hover:text-ack-gold hover:translate-x-1 transition-all duration-200">
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                        Give
+                    </a>
+                </li>
+
             </ul>
         </div>
 
-        <div>
-            <h3 class="font-semibold text-sm mb-4 text-ack-gold uppercase tracking-wider">Contact</h3>
-            <p class="text-sm text-white/75 mb-4">
-                St. Phillips Roadblock<br>
-                Near Eldoret–Nakuru Highway<br>
-                Eldoret, Kenya
+        <!-- Contact -->
+        <div class="lg:col-span-3">
+
+            <h3 class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em] mb-7">
+                Get in Touch
+            </h3>
+
+            <p class="text-white/65 text-sm leading-7 mb-6">
+                We'd love to hear from you. Whether you have a question,
+                need prayer, or simply want to visit, you're welcome.
             </p>
-            <p class="text-sm text-white/75">
-                <i class="fa-solid fa-phone text-ack-gold mr-1" aria-hidden="true"></i>
-                <a href="tel:+254798125596" class="hover:text-ack-gold">+254 798 125 596</a><br>
-                <i class="fa-solid fa-envelope text-ack-gold mr-1 mt-2 inline-block" aria-hidden="true"></i>
-                <a href="mailto:info@stphillips.church.org" class="hover:text-ack-gold">info@stphillips.church.org</a>
-            </p>
+
+            <ul class="space-y-5 text-sm">
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <p class="text-white/70 leading-6">
+                        St. Phillips Roadblock,<br>
+                        Along Uganda Road, Behind Rubis Petrol Station,<br>
+                        Eldoret, Kenya.
+                    </p>
+                </li>
+
+                <li class="flex gap-4 items-center">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <a href="tel:+254798125596"
+                        class="text-white/70 hover:text-ack-gold transition">
+                        +254 798 125 596
+                    </a>
+                </li>
+
+                <li class="flex gap-4 items-center">
+                    <div class="w-9 h-9 shrink-0 rounded-lg bg-white/10 flex items-center justify-center text-ack-gold">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <a href="mailto:info@stphillips.church.org"
+                        class="text-white/70 hover:text-ack-gold transition break-all">
+                        info@stphillips.church.org
+                    </a>
+                </li>
+
+            </ul>
         </div>
+
     </div>
 
-    <hr class="border-white/20 my-8" />
+    <!-- Bottom bar -->
+    <div class="mt-16 pt-7 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-5">
 
-    <div
-        class="max-w-7xl mx-auto text-sm text-white/60 flex flex-col md:flex-row justify-between gap-3 text-center md:text-left">
-        <p>© <%= new Date().getFullYear() %> Anglican Church of Kenya — St. Phillips Roadblock. All rights reserved.</p>
-        <div class="flex gap-4 justify-center md:justify-end">
-            <a href="https://www.ackenya.org/" target="_blank" rel="noopener noreferrer" class="hover:text-ack-gold">ACK
-                Province</a>
-            <a href="#" class="hover:text-ack-gold">Privacy</a>
-            <a href="#" class="hover:text-ack-gold">Terms</a>
+        <p class="text-xs text-white/45 text-center md:text-left">
+            &copy; <%= new Date().getFullYear() %> ACK St. Phillips Roadblock.
+            All rights reserved.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-white/50">
+
+            <a href="https://www.ackenya.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-ack-gold transition">
+                ACK Province
+            </a>
+
+            <a href="/privacy"
+                class="hover:text-ack-gold transition">
+                Privacy Policy
+            </a>
+
+            <a href="/terms"
+                class="hover:text-ack-gold transition">
+                Terms of Use
+            </a>
+
         </div>
+
     </div>
+
+    <!-- Closing message -->
+    <div class="mt-8 text-center">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-white/35">
+            To God Be The Glory
+        </p>
+    </div>
+
+</div>
+
+
 </footer>
