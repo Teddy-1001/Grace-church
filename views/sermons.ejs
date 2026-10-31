@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Watch past sermons, biblical teachings and inspiring messages from ACK St. Phillips Roadblock, Eldoret.">
+
+    <title>Sermons & Biblical Teachings | ACK St. Phillips Roadblock, Eldoret</title>
+
+    <meta name="description"
+        content="Watch past sermons, inspiring biblical teachings and messages of faith from ACK St. Phillips Roadblock Church, Eldoret. Grow spiritually through God's Word.">
+
+    <meta name="keywords"
+        content="ACK St Phillips Roadblock sermons, ACK Church Eldoret, church sermons Eldoret, Christian teachings Kenya, biblical teachings, Sunday sermons, Anglican Church Kenya, ACK Eldoret">
+
+    <meta name="author" content="ACK St. Phillips Roadblock">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://ackstphillipschurch.vercel.app/sermons">
+
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Sermons & Biblical Teachings | ACK St. Phillips Roadblock">
+
+    <meta property="og:description"
+        content="Watch inspiring sermons, biblical teachings and messages of faith from ACK St. Phillips Roadblock, Eldoret.">
+
+    <meta property="og:url" content="https://ackstphillipschurch.vercel.app/sermons">
+
+    <meta property="og:site_name" content="ACK St. Phillips Roadblock">
+
+    <meta property="og:image" content="https://ackstphillipschurch.vercel.app/images/church-og.jpg">
+
+    <meta property="og:image:alt" content="ACK St. Phillips Roadblock Church, Eldoret">
+
+
+    <!-- TWITTER / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Sermons & Biblical Teachings | ACK St. Phillips Roadblock">
+
+    <meta name="twitter:description"
+        content="Watch past sermons and grow in faith through biblical teachings from ACK St. Phillips Roadblock, Eldoret.">
+
+    <meta name="twitter:image" content="https://ackstphillipschurch.vercel.app/images/church-og.jpg">
+
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#ffffff">
+
+
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="shortcut icon" href="/images/ack-logo.svg" type="image/x-icon">
+    <title>Sermons & Teachings | ACK St. Phillips Roadblock</title>
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+
+        <main class="bg-ack-cream min-h-screen">
+
+            <!-- HERO SECTION -->
+            <section class="relative bg-ack-purple text-white py-24 md:py-32 px-6 overflow-hidden">
+
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
+                    <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full border-[40px] border-white"></div>
+                    <div class="absolute -bottom-32 -left-20 w-80 h-80 rounded-full border-[30px] border-ack-gold">
+                    </div>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto text-center">
+
+                    <span class="uppercase tracking-[0.3em] text-ack-gold text-xs md:text-sm font-semibold">
+                        Watch & Grow
+                    </span>
+
+                    <h1 class="font-display text-4xl md:text-6xl lg:text-7xl mt-6 leading-tight">
+                        Messages That Inspire.
+                        <br>
+                        <span class="text-ack-gold">Faith That Grows.</span>
+                    </h1>
+
+                    <p class="max-w-2xl mx-auto mt-6 text-white/80 leading-relaxed text-sm md:text-base">
+                        Revisit powerful messages, biblical teachings and moments
+                        of worship from ACK St. Phillips Roadblock.
+                        Let God's Word continue to inspire and transform your life.
+                    </p>
+
+                    <a href="#sermon-library"
+                        class="inline-flex items-center gap-3 mt-10 bg-ack-gold text-ack-purple px-8 py-4 rounded-full font-semibold hover:bg-white transition duration-300">
+
+                        Explore Sermons
+
+                        <i class="fa-solid fa-arrow-down text-sm"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- FEATURED SERMON -->
+            <% if (featuredSermon) { %>
+
+                <section class="max-w-7xl mx-auto px-6 py-20">
+
+                    <div class="mb-10">
+
+                        <span class="text-ack-purple uppercase tracking-widest text-xs font-semibold">
+                            Featured Message
+                        </span>
+
+                        <h2 class="font-display text-3xl md:text-4xl text-ack-purple mt-3">
+                            Watch Our Featured Sermon
+                        </h2>
+
+                        <p class="text-gray-500 mt-3">
+                            Take a moment to listen, reflect and grow in faith.
+                        </p>
+
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                        <!-- VIDEO THUMBNAIL -->
+                        <button type="button"
+                            class="video-trigger group relative block w-full aspect-video rounded-2xl overflow-hidden shadow-xl bg-black text-left"
+                            data-video-id="<%= featuredSermon.youtubeId %>"
+                            data-video-title="<%= featuredSermon.title %>"
+                            aria-label="Watch <%= featuredSermon.title %>">
+
+                            <img src="https://img.youtube.com/vi/<%= encodeURIComponent(featuredSermon.youtubeId) %>/maxresdefault.jpg"
+                                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/<%= encodeURIComponent(featuredSermon.youtubeId) %>/hqdefault.jpg';"
+                                alt="<%= featuredSermon.title %>"
+                                class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                                fetchpriority="high">
+
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition duration-300">
+                            </div>
+
+                            <div class="absolute inset-0 flex items-center justify-center">
+
+                                <span
+                                    class="w-20 h-20 rounded-full bg-ack-gold text-ack-purple flex items-center justify-center text-2xl shadow-xl group-hover:scale-110 transition duration-300">
+
+                                    <i class="fa-solid fa-play ml-1"></i>
+
+                                </span>
+
+                            </div>
+
+                            <span class="absolute bottom-5 left-5 text-white text-sm font-medium">
+                                <i class="fa-solid fa-circle-play mr-2 text-ack-gold"></i>
+                                Watch Featured Sermon
+                            </span>
+
+                        </button>
+
+
+                        <!-- FEATURED DETAILS -->
+                        <div>
+
+                            <span
+                                class="inline-block bg-ack-purple/10 text-ack-purple px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest">
+                                <%= featuredSermon.category %>
+                            </span>
+
+                            <h3
+                                class="font-display text-3xl md:text-4xl lg:text-5xl text-ack-purple mt-6 leading-tight">
+                                <%= featuredSermon.title %>
+                            </h3>
+
+                            <p class="text-gray-600 mt-6 leading-relaxed">
+                                <%= featuredSermon.description %>
+                            </p>
+
+                            <div class="mt-8 space-y-4 text-gray-500 text-sm">
+
+                                <p class="flex items-center gap-3">
+
+                                    <i class="fa-solid fa-user text-ack-gold w-4"></i>
+
+                                    <span>
+                                        <%= featuredSermon.speaker %>
+                                    </span>
+
+                                </p>
+
+                                <p class="flex items-center gap-3">
+
+                                    <i class="fa-regular fa-calendar text-ack-gold w-4"></i>
+
+                                    <span>
+                                        <%= new Date(featuredSermon.date + 'T00:00:00' ).toLocaleDateString('en-GB', {
+                                            day: 'numeric' , month: 'long' , year: 'numeric' }) %>
+                                    </span>
+
+                                </p>
+
+                            </div>
+
+                            <button type="button"
+                                class="video-trigger inline-flex items-center gap-3 mt-9 bg-ack-purple text-white px-8 py-4 rounded-full font-semibold hover:bg-ack-gold hover:text-ack-purple transition duration-300"
+                                data-video-id="<%= featuredSermon.youtubeId %>"
+                                data-video-title="<%= featuredSermon.title %>">
+
+                                <i class="fa-solid fa-play text-xs"></i>
+
+                                Watch Sermon
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <% } %>
+
+
+
+                    <!-- SERMON LIBRARY -->
+                    <section id="sermon-library" class="bg-white py-20 md:py-24 px-6">
+
+                        <div class="max-w-7xl mx-auto">
+
+                            <!-- SECTION HEADER -->
+                            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+
+                                <div>
+
+                                    <span class="text-ack-gold uppercase tracking-widest text-xs font-semibold">
+                                        Sermon Archive
+                                    </span>
+
+                                    <h2 class="font-display text-3xl md:text-4xl text-ack-purple mt-3">
+                                        Explore Past Messages
+                                    </h2>
+
+                                    <p class="text-gray-500 mt-4 max-w-xl leading-relaxed">
+                                        Find encouragement, biblical wisdom and inspiration
+                                        through our collection of past sermons.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- SEARCH -->
+                                <div class="relative w-full lg:w-80">
+
+                                    <i
+                                        class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+
+                                    <input type="search" id="sermonSearch" placeholder="Search sermons..."
+                                        aria-label="Search sermons"
+                                        class="w-full border border-gray-200 rounded-full py-4 pl-12 pr-6 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition">
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- SERMON GRID -->
+                            <% if (sermons && sermons.length> 0) { %>
+
+                                <div id="sermonGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                                    <% sermons.forEach(sermon=> { %>
+
+                                        <article
+                                            class="sermon-card group border border-gray-100 rounded-2xl overflow-hidden bg-white hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                                            data-search="<%= (sermon.title + ' ' + sermon.speaker + ' ' + sermon.category).toLowerCase() %>">
+
+
+                                            <!-- THUMBNAIL -->
+                                            <button type="button"
+                                                class="video-trigger relative block w-full aspect-video overflow-hidden bg-gray-100 text-left"
+                                                data-video-id="<%= sermon.youtubeId %>"
+                                                data-video-title="<%= sermon.title %>"
+                                                aria-label="Watch <%= sermon.title %>">
+
+                                                <img src="https://img.youtube.com/vi/<%= encodeURIComponent(sermon.youtubeId) %>/hqdefault.jpg"
+                                                    alt="<%= sermon.title %>" loading="lazy"
+                                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                                                <div
+                                                    class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                                </div>
+
+                                                <span class="absolute inset-0 flex items-center justify-center">
+
+                                                    <span
+                                                        class="w-14 h-14 rounded-full bg-white/95 text-ack-purple flex items-center justify-center shadow-lg group-hover:bg-ack-gold group-hover:scale-110 transition duration-300">
+
+                                                        <i class="fa-solid fa-play ml-1"></i>
+
+                                                    </span>
+
+                                                </span>
+
+                                                <span
+                                                    class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1.5 rounded-full">
+                                                    <i class="fa-solid fa-play mr-1"></i>
+                                                    Watch
+                                                </span>
+
+                                            </button>
+
+
+                                            <!-- SERMON DETAILS -->
+                                            <div class="p-6">
+
+                                                <span
+                                                    class="text-xs font-semibold uppercase tracking-widest text-ack-gold">
+                                                    <%= sermon.category %>
+                                                </span>
+
+                                                <h3
+                                                    class="font-display text-xl md:text-2xl text-ack-purple mt-3 leading-snug group-hover:text-ack-gold transition">
+
+                                                    <%= sermon.title %>
+
+                                                </h3>
+
+                                                <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                                                    <%= sermon.description %>
+                                                </p>
+
+
+                                                <!-- META -->
+                                                <div
+                                                    class="border-t border-gray-100 mt-6 pt-5 flex flex-wrap justify-between gap-3 items-center text-xs text-gray-500">
+
+                                                    <span class="flex items-center gap-2">
+
+                                                        <i class="fa-solid fa-user text-ack-gold"></i>
+
+                                                        <%= sermon.speaker %>
+
+                                                    </span>
+
+                                                    <span class="flex items-center gap-2">
+
+                                                        <i class="fa-regular fa-calendar text-ack-gold"></i>
+
+                                                        <%= new Date(sermon.date + 'T00:00:00'
+                                                            ).toLocaleDateString('en-GB', { day: 'numeric' ,
+                                                            month: 'short' , year: 'numeric' }) %>
+
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </article>
+
+                                        <% }) %>
+
+                                </div>
+
+
+                                <!-- EMPTY SEARCH RESULTS -->
+                                <div id="noSermons" class="hidden text-center py-20">
+
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-ack-cream text-ack-purple flex items-center justify-center mx-auto text-xl">
+
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                                    </div>
+
+                                    <h3 class="font-display text-2xl text-ack-purple mt-5">
+                                        No Sermons Found
+                                    </h3>
+
+                                    <p class="text-gray-500 mt-2">
+                                        Try searching with a different title, speaker or topic.
+                                    </p>
+
+                                </div>
+
+                                <% } else { %>
+
+                                    <!-- NO SERMONS AVAILABLE -->
+                                    <div class="text-center py-20">
+
+                                        <div
+                                            class="w-20 h-20 rounded-full bg-ack-cream text-ack-purple flex items-center justify-center mx-auto text-3xl">
+
+                                            <i class="fa-solid fa-book-open"></i>
+
+                                        </div>
+
+                                        <h3 class="font-display text-2xl text-ack-purple mt-6">
+                                            Sermons Coming Soon
+                                        </h3>
+
+                                        <p class="text-gray-500 mt-3 max-w-md mx-auto leading-relaxed">
+                                            We're preparing messages to share with you.
+                                            Please check back soon for inspiring sermons and teachings.
+                                        </p>
+
+                                    </div>
+
+                                    <% } %>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- CALL TO ACTION -->
+                    <section class="bg-ack-purple text-white py-20 px-6">
+
+                        <div class="max-w-4xl mx-auto text-center">
+
+                            <span class="text-ack-gold uppercase tracking-[0.25em] text-xs font-semibold">
+                                Stay Connected
+                            </span>
+
+                            <h2 class="font-display text-3xl md:text-5xl mt-5 leading-tight">
+                                Keep Growing in
+                                <span class="text-ack-gold">Faith.</span>
+                            </h2>
+
+                            <p class="text-white/75 max-w-2xl mx-auto mt-5 leading-relaxed">
+                                Join us for worship, fellowship and the teaching of God's Word.
+                                We look forward to welcoming you at ACK St. Phillips Roadblock.
+                            </p>
+
+                            <a href="/contact"
+                                class="inline-flex items-center gap-3 mt-9 bg-ack-gold text-ack-purple px-8 py-4 rounded-full font-semibold hover:bg-white transition duration-300">
+
+                                Plan Your Visit
+
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
+        </main>
+
+
+
+        <!-- VIDEO MODAL -->
+        <div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4 md:p-8"
+            role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+
+            <div class="relative w-full max-w-5xl">
+
+                <!-- MODAL HEADER -->
+                <div class="flex items-center justify-between gap-4 mb-4">
+
+                    <h3 id="videoModalTitle" class="text-white font-semibold text-sm md:text-lg truncate">
+                        Watch Sermon
+                    </h3>
+
+                    <button type="button" id="closeVideoModal"
+                        class="w-10 h-10 shrink-0 rounded-full bg-white/10 text-white hover:bg-ack-gold hover:text-ack-purple transition flex items-center justify-center"
+                        aria-label="Close video">
+
+                        <i class="fa-solid fa-xmark text-xl"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- VIDEO PLAYER -->
+                <div class="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+
+                    <iframe id="sermonPlayer" class="w-full h-full" src="" title="Sermon video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PAGE JAVASCRIPT -->
+        <script>
+
+            // ==========================================
+            // SERMON SEARCH
+            // ==========================================
+
+            const searchInput = document.getElementById('sermonSearch');
+
+            const sermonCards = document.querySelectorAll('.sermon-card');
+
+            const noSermons = document.getElementById('noSermons');
+
+            if (searchInput) {
+
+                searchInput.addEventListener('input', () => {
+
+                    const query = searchInput.value.toLowerCase().trim();
+
+                    let visibleCount = 0;
+
+                    sermonCards.forEach(card => {
+
+                        const searchableText = card.dataset.search || '';
+
+                        const matches = searchableText.includes(query);
+
+                        card.classList.toggle('hidden', !matches);
+
+                        if (matches) {
+                            visibleCount++;
+                        }
+
+                    });
+
+                    if (noSermons) {
+                        noSermons.classList.toggle('hidden', visibleCount > 0);
+                    }
+
+                });
+
+            }
+
+
+
+            // ==========================================
+            // SERMON VIDEO MODAL
+            // ==========================================
+
+            const videoModal = document.getElementById('videoModal');
+
+            const sermonPlayer = document.getElementById('sermonPlayer');
+
+            const modalTitle = document.getElementById('videoModalTitle');
+
+            const closeVideoModal = document.getElementById('closeVideoModal');
+
+            const videoTriggers = document.querySelectorAll('.video-trigger');
+
+
+            // Open video modal
+            videoTriggers.forEach(button => {
+
+                button.addEventListener('click', () => {
+
+                    const videoId = button.dataset.videoId;
+
+                    const videoTitle = button.dataset.videoTitle;
+
+                    if (!videoId) return;
+
+                    modalTitle.textContent = videoTitle;
+
+                    sermonPlayer.src =
+                        `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+
+                    videoModal.classList.remove('hidden');
+
+                    videoModal.classList.add('flex');
+
+                    document.body.style.overflow = 'hidden';
+
+                    closeVideoModal.focus();
+
+                });
+
+            });
+
+
+            // Close video modal
+            function closeModal() {
+
+                videoModal.classList.add('hidden');
+
+                videoModal.classList.remove('flex');
+
+                // Stop video playback
+                sermonPlayer.src = '';
+
+                document.body.style.overflow = '';
+
+            }
+
+
+            closeVideoModal.addEventListener('click', closeModal);
+
+
+            // Close when clicking outside the video
+            videoModal.addEventListener('click', (event) => {
+
+                if (event.target === videoModal) {
+                    closeModal();
+                }
+
+            });
+
+
+            // Close with Escape key
+            document.addEventListener('keydown', (event) => {
+
+                if (event.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                    closeModal();
+                }
+
+            });
+
+        </script>
+
+
+        <%- include('partials/footer') %>
+
+</body>
+
+</html>

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'
 import schedule from './data/schedule.js'
 import { fellowships, getFellowshipDetails } from './data/fellowships.js'
 import { ministries, PARISH_CONTACT } from './data/ministries.js'
+import { sermons } from './data/sermons.js'
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -65,6 +66,17 @@ app.get('/ministry/:id', (req, res)=>{
     }
     res.render('ministry-details', {ministry, contacts:PARISH_CONTACT})
 })
+
+app.get('/sermons', (req, res) => {
+    const featuredSermon = sermons.find(sermon => sermon.featured);
+
+    const pastSermons = sermons.filter(sermon => !sermon.featured);
+
+    res.render('sermons', {
+        featuredSermon,
+        sermons: pastSermons
+    });
+});
 
 app.get("/sitemap.xml", (req, res) => {
     const BASE_URL = "https://ackstphillipschurch.vercel.app";
