@@ -1,96 +1,339 @@
 <!DOCTYPE html>
+
 <html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="ACK guilds and ministries at St. Phillips Roadblock — KAMA, Mothers' Union, KAYO, Sunday School, choir, vergers, and more." />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/output.css">
-    <link rel="shortcut icon" href="/images/ack-logo.svg" type="image/x-icon">
-    <title>Ministries &amp; Guilds | ACK St. Phillips Roadblock</title>
+
+
+<meta name="description"
+    content="Discover the guilds and ministries at ACK St. Phillips Roadblock, including KAMA, Mothers' Union, KAYO, Sunday School, choir and more.">
+
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<link rel="stylesheet" href="/css/output.css">
+
+<link rel="icon" href="/images/ack-logo.svg" type="image/svg+xml">
+
+<title>Ministries &amp; Guilds | ACK St. Phillips Roadblock</title>
+
+
 </head>
 
 <body class="bg-ack-cream text-gray-900 antialiased">
-    <%- include('partials/header.ejs') %>
-        <section class="relative min-h-[70vh] flex items-center overflow-hidden" aria-label="Parish ministries">
-            <div class="fixed inset-0 -z-10">
-                <img src="/images/church.webp" class="w-full h-full object-cover scale-105"
-                    alt="St. Phillips Roadblock parish church">
-            </div>
-            <div class="absolute inset-0 bg-ack-purple-dark/25"></div>
 
-            <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
-                <div class="max-w-2xl text-white">
-                    <p class="text-ack-gold text-sm font-semibold uppercase tracking-wider">
-                        <i class="fa-solid fa-people-group mr-1" aria-hidden="true"></i> Parish Ministries
-                    </p>
-                    <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mt-3">
-                        Ministries &amp; Groups
-                    </h1>
-                    <p class="mt-4 text-white/85 text-lg leading-relaxed">
-                        Serve Christ through ACK fellowships — KAMA, Mothers' Union, KAYO, worship teams, and parish
-                        ministries at St. Phillips Roadblock.
-                    </p>
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="#all-ministries"
-                            class="bg-ack-gold text-ack-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-amber-300 transition text-center">
-                            Browse Ministries
-                        </a>
-                        <a href="/fellowships"
-                            class="border border-white/40 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition text-center">
-                            Estate Fellowships
-                        </a>
-                        <a href="/#worship-schedule"
-                            class="border border-white/30 text-white/90 px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition text-center">
-                            Service Times
-                        </a>
+
+<%- include('partials/header.ejs') %>
+
+<main>
+
+    <!-- HERO -->
+    <section class="relative min-h-[580px] md:min-h-[680px] flex items-center overflow-hidden">
+
+        <img
+            src="/images/church.webp"
+            alt="ACK St. Phillips Roadblock parish church"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-r from-ack-purple-dark/95 via-ack-purple-dark/75 to-ack-purple-dark/25"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark/50 via-transparent to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 py-28 w-full">
+
+            <div class="max-w-3xl text-white">
+
+                <div class="inline-flex items-center gap-3 mb-7">
+
+                    <span class="h-px w-10 bg-ack-gold"></span>
+
+                    <span class="text-ack-gold text-xs sm:text-sm font-bold uppercase tracking-[0.25em]">
+                        Life at St. Phillips
+                    </span>
+
+                </div>
+
+                <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.08]">
+                    Growing Together.
+                    <span class="text-ack-gold block">
+                        Serving Together.
+                    </span>
+                </h1>
+
+                <p class="mt-7 text-white/80 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Discover a place to belong, grow in faith and serve others.
+                    Through our guilds and ministries, we build meaningful
+                    relationships and share God's love with our community.
+                </p>
+
+                <div class="mt-9 flex flex-wrap gap-4">
+
+                    <a href="#all-ministries"
+                        class="inline-flex items-center justify-center gap-3 bg-ack-gold text-ack-purple-dark px-7 py-4 rounded-lg font-bold text-sm hover:bg-white transition duration-300">
+                        Explore Our Ministries
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="/fellowships"
+                        class="inline-flex items-center justify-center gap-3 border border-white/40 text-white px-7 py-4 rounded-lg font-semibold text-sm hover:bg-white/10 transition duration-300">
+                        Estate Fellowships
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+
+                </div>
+
+                <div class="mt-14 flex flex-wrap items-center gap-x-8 gap-y-4 text-white/70 text-sm">
+
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-people-group text-ack-gold"></i>
+                        A place to belong
+                    </span>
+
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-ack-gold"></i>
+                        A heart to serve
+                    </span>
+
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-cross text-ack-gold"></i>
+                        A faith to grow
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-ack-gold"></div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="bg-ack-purple text-white py-12 md:py-16">
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <div class="flex gap-4">
+
+                    <div class="shrink-0 h-12 w-12 rounded-xl bg-white/10 text-ack-gold flex items-center justify-center">
+                        <i class="fa-solid fa-person text-xl"></i>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Intro -->
-        <section class="bg-ack-purple text-white py-10">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left text-sm">
-                <div>
-                    <p class="text-ack-gold font-semibold uppercase text-xs mb-1">Men</p>
-                    <p class="text-white/90">KAMA — spiritual growth, leadership, and service</p>
-                </div>
-                <div>
-                    <p class="text-ack-gold font-semibold uppercase text-xs mb-1">Women &amp; Families</p>
-                    <p class="text-white/90">Mothers' Union — prayer, marriage, and outreach</p>
-                </div>
-                <div>
-                    <p class="text-ack-gold font-semibold uppercase text-xs mb-1">Youth &amp; Children</p>
-                    <p class="text-white/90">KAYO &amp; Sunday School — discipleship for every age</p>
-                </div>
-            </div>
-        </section>
+                    <div>
+                        <p class="text-ack-gold text-xs font-bold uppercase tracking-wider mb-2">
+                            Men
+                        </p>
 
-        <!-- Ministries grid -->
-        <section class="bg-[#eef1f6] py-20 md:py-24" id="all-ministries">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Get Involved</span>
-                    <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-2">
-                        Our Parish Ministries
+                        <h3 class="font-display text-lg font-bold mb-2">
+                            KAMA
+                        </h3>
+
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Encouraging spiritual growth, Christian leadership,
+                            fellowship and service among men.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-4">
+
+                    <div class="shrink-0 h-12 w-12 rounded-xl bg-white/10 text-ack-gold flex items-center justify-center">
+                        <i class="fa-solid fa-people-roof text-xl"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-ack-gold text-xs font-bold uppercase tracking-wider mb-2">
+                            Women & Families
+                        </p>
+
+                        <h3 class="font-display text-lg font-bold mb-2">
+                            Mothers' Union
+                        </h3>
+
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Promoting Christian family life, prayer,
+                            fellowship and community outreach.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-4">
+
+                    <div class="shrink-0 h-12 w-12 rounded-xl bg-white/10 text-ack-gold flex items-center justify-center">
+                        <i class="fa-solid fa-child-reaching text-xl"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-ack-gold text-xs font-bold uppercase tracking-wider mb-2">
+                            Youth & Children
+                        </p>
+
+                        <h3 class="font-display text-lg font-bold mb-2">
+                            KAYO & Sunday School
+                        </h3>
+
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Nurturing young people and children through
+                            Christian teaching and discipleship.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MINISTRIES GRID -->
+    <section class="bg-[#eef1f6] py-20 md:py-28" id="all-ministries">
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+
+                <div class="max-w-2xl">
+
+                    <div class="flex items-center gap-3 mb-4">
+
+                        <span class="h-px w-9 bg-ack-gold"></span>
+
+                        <span class="text-ack-purple text-xs font-bold uppercase tracking-[0.2em]">
+                            Find Your Place
+                        </span>
+
+                    </div>
+
+                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-ack-purple-dark leading-tight">
+                        Our Ministries
+                        <span class="text-ack-purple"> & Guilds</span>
                     </h2>
-                    <p class="text-gray-600 mt-3">
-                        Join a guild that fits your calling. Meeting times will be manageable from the admin panel
-                        later.
+
+                    <p class="text-gray-600 mt-5 leading-relaxed max-w-xl">
+                        There is a place for everyone to grow, connect
+                        and make a difference. Explore our ministries
+                        and discover where you can serve.
                     </p>
+
                 </div>
 
-                <div id="ministries-container" class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <% ministries.forEach(m => { %>
-                        <%- include('partials/ministry-card.ejs', {m}) %>
-                    <% }) %>
-                </div>
+                <a href="/contact"
+                    class="inline-flex items-center gap-3 text-ack-purple font-bold text-sm hover:text-ack-gold transition">
+                    Want to get involved?
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
             </div>
-        </section>
-        <%- include('partials/footer.ejs') %>
+
+
+            <% if (ministries && ministries.length > 0) { %>
+
+                <div id="ministries-container"
+                    class="grid gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <% ministries.forEach(m => { %>
+
+                        <%- include('partials/ministry-card.ejs', { m }) %>
+
+                    <% }) %>
+
+                </div>
+
+            <% } else { %>
+
+                <div class="bg-white rounded-2xl p-12 text-center border border-gray-100">
+
+                    <div class="h-16 w-16 mx-auto rounded-full bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <h3 class="font-display text-xl font-bold text-ack-purple-dark">
+                        Ministries Coming Soon
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3">
+                        Information about our ministries will be available shortly.
+                    </p>
+
+                </div>
+
+            <% } %>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="bg-white py-20 md:py-24">
+
+        <div class="max-w-5xl mx-auto px-6 sm:px-8">
+
+            <div class="relative overflow-hidden rounded-3xl bg-ack-purple px-7 py-14 sm:px-12 md:py-16 text-center">
+
+                <div class="absolute -top-20 -right-20 h-64 w-64 rounded-full border border-white/10"></div>
+
+                <div class="absolute -bottom-28 -left-20 h-72 w-72 rounded-full border border-white/10"></div>
+
+                <div class="relative z-10">
+
+                    <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.25em]">
+                        Your Journey Starts Here
+                    </span>
+
+                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-5">
+                        There Is a Place for You.
+                    </h2>
+
+                    <p class="text-white/70 max-w-2xl mx-auto mt-5 leading-relaxed">
+                        Whether you are new to the parish or have been
+                        worshipping with us for years, we welcome you
+                        to become part of our church family.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4 mt-9">
+
+                        <a href="/contact"
+                            class="bg-ack-gold text-ack-purple-dark px-7 py-4 rounded-lg font-bold text-sm hover:bg-white transition">
+                            Connect With Us
+                        </a>
+
+                        <a href="/#worship-schedule"
+                            class="border border-white/30 text-white px-7 py-4 rounded-lg font-semibold text-sm hover:bg-white/10 transition">
+                            Join Us for Worship
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<%- include('partials/footer.ejs') %>
+
 
 </body>
 

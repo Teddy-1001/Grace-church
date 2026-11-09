@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Service Schedules | ACK Admin</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <%- include('../partials/admin/sidebar.ejs') %>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 min-w-0">
+
+        <!-- HEADER -->
+        <header class="h-20 bg-white border-b border-gray-200 flex items-center justify-between px-5 md:px-8">
+
+            <div>
+                <h1 class="text-xl font-bold text-ack-purple">
+                    Service Schedules
+                </h1>
+
+                <p class="text-sm text-gray-500">
+                    Manage church services and weekly activities.
+                </p>
+            </div>
+
+            <a href="/" target="_blank"
+                class="hidden sm:flex items-center gap-2 text-sm text-gray-600 hover:text-ack-purple">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                View Website
+            </a>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+        <section class="p-5 md:p-8 max-w-7xl mx-auto">
+
+            <!-- INTRO -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        Church Schedules
+                    </h2>
+
+                    <p class="text-sm text-gray-500 mt-1">
+                        Manage worship services, fellowships, meetings and other activities.
+                    </p>
+                </div>
+
+                <button
+                    onclick="openScheduleModal()"
+                    class="bg-ack-purple hover:bg-ack-purple-dark text-white px-5 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add Schedule
+
+                </button>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+
+                <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+                    <div class="flex justify-between items-center">
+
+                        <div>
+                            <p class="text-sm text-gray-500">Total Schedules</p>
+                            <h3 class="text-3xl font-bold mt-2">
+                                <%= schedules.length %>
+                            </h3>
+                        </div>
+
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-ack-purple flex items-center justify-center">
+                            <i class="fa-solid fa-calendar-days text-xl"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+                    <div class="flex justify-between items-center">
+
+                        <div>
+                            <p class="text-sm text-gray-500">Active Schedules</p>
+                            <h3 class="text-3xl font-bold mt-2">
+                                <%= schedules.filter(schedule => schedule.is_active !== false).length %>
+                            </h3>
+                        </div>
+
+                        <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center">
+                            <i class="fa-solid fa-calendar-check text-xl"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+                    <div class="flex justify-between items-center">
+
+                        <div>
+                            <p class="text-sm text-gray-500">Inactive Schedules</p>
+                            <h3 class="text-3xl font-bold mt-2">
+                                <%= schedules.filter(schedule => schedule.is_active === false).length %>
+                            </h3>
+                        </div>
+
+                        <div class="w-12 h-12 rounded-xl bg-gray-100 text-gray-500 flex items-center justify-center">
+                            <i class="fa-solid fa-calendar-xmark text-xl"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- SCHEDULES TABLE -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+
+                <div class="p-5 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+
+                    <div>
+                        <h3 class="font-bold text-gray-900">
+                            All Schedules
+                        </h3>
+
+                        <p class="text-xs text-gray-500 mt-1">
+                            Activities displayed on your church website.
+                        </p>
+                    </div>
+
+                    <input
+                        type="search"
+                        id="scheduleSearch"
+                        placeholder="Search schedules..."
+                        class="border border-gray-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:border-ack-purple w-full sm:w-64">
+
+                </div>
+
+
+                <div class="overflow-x-auto">
+
+                    <table class="w-full text-left">
+
+                        <thead class="bg-gray-50 text-xs uppercase text-gray-500">
+
+                            <tr>
+                                <th class="px-6 py-4">Activity</th>
+                                <th class="px-6 py-4">Day</th>
+                                <th class="px-6 py-4">Time</th>
+                                <th class="px-6 py-4">Location</th>
+                                <th class="px-6 py-4">Status</th>
+                                <th class="px-6 py-4 text-right">Actions</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody class="divide-y divide-gray-100" id="schedulesTable">
+
+                            <% if (schedules.length > 0) { %>
+
+                                <% schedules.forEach(schedule => { %>
+
+                                    <tr class="schedule-row hover:bg-gray-50 transition">
+
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3 min-w-48">
+
+                                                <div class="w-10 h-10 rounded-xl bg-purple-50 text-ack-purple flex items-center justify-center">
+                                                    <i class="fa-solid fa-church"></i>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-semibold text-sm text-gray-900">
+                                                        <%= schedule.title %>
+                                                    </p>
+
+                                                    <p class="text-xs text-gray-500">
+                                                        <%= schedule.description || 'Church activity' %>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </td>
+
+
+                                        <td class="px-6 py-4 text-sm text-gray-600">
+                                            <%= schedule.day %>
+                                        </td>
+
+
+                                        <td class="px-6 py-4 text-sm text-gray-600 whitespace-nowrap">
+                                            <%= schedule.start_time %> - <%= schedule.end_time %>
+                                        </td>
+
+
+                                        <td class="px-6 py-4 text-sm text-gray-600">
+                                            <%= schedule.location || 'Main Church' %>
+                                        </td>
+
+
+                                        <td class="px-6 py-4">
+
+                                            <% if (schedule.is_active !== false) { %>
+
+                                                <span class="text-xs font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full">
+                                                    Active
+                                                </span>
+
+                                            <% } else { %>
+
+                                                <span class="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
+                                                    Inactive
+                                                </span>
+
+                                            <% } %>
+
+                                        </td>
+
+
+                                        <td class="px-6 py-4">
+
+                                            <div class="flex items-center justify-end gap-3">
+
+                                                <a
+                                                    href="/admin/schedules/<%= schedule.id %>/edit"
+                                                    class="text-blue-600 hover:text-blue-800"
+                                                    title="Edit schedule">
+
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+
+                                                </a>
+
+
+                                                <form
+                                                    action="/admin/schedules/<%= schedule.id %>/delete"
+                                                    method="POST"
+                                                    onsubmit="return confirm('Delete this schedule?')">
+
+                                                    <button
+                                                        type="submit"
+                                                        class="text-red-500 hover:text-red-700"
+                                                        title="Delete schedule">
+
+                                                        <i class="fa-solid fa-trash"></i>
+
+                                                    </button>
+
+                                                </form>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                <% }) %>
+
+                            <% } else { %>
+
+                                <tr>
+                                    <td colspan="6" class="text-center py-16">
+
+                                        <i class="fa-solid fa-calendar-days text-4xl text-gray-200"></i>
+
+                                        <p class="font-semibold mt-3 text-gray-600">
+                                            No schedules available
+                                        </p>
+
+                                        <p class="text-sm text-gray-400 mt-1">
+                                            Add your first church activity.
+                                        </p>
+
+                                    </td>
+                                </tr>
+
+                            <% } %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ADD SCHEDULE MODAL -->
+<div id="scheduleModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl">
+
+        <!-- MODAL HEADER -->
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900">
+                    Add Church Schedule
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    Enter the details of the church activity.
+                </p>
+            </div>
+
+            <button onclick="closeScheduleModal()"
+                class="w-9 h-9 rounded-full hover:bg-gray-100 text-gray-500">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+        <form action="/admin/schedules" method="POST" class="p-6 space-y-5">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <!-- TITLE -->
+                <div class="sm:col-span-2">
+
+                    <label class="block text-sm font-semibold mb-2">
+                        Activity Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        name="title"
+                        required
+                        placeholder="e.g. Sunday English Service"
+                        class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                </div>
+
+
+                <!-- DAY -->
+                <div>
+
+                    <label class="block text-sm font-semibold mb-2">
+                        Day *
+                    </label>
+
+                    <select
+                        name="day"
+                        required
+                        class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                        <option value="">Select day</option>
+
+                        <% ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].forEach(day => { %>
+                            <option value="<%= day %>"><%= day %></option>
+                        <% }) %>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div>
+
+                    <label class="block text-sm font-semibold mb-2">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        name="location"
+                        placeholder="e.g. Main Sanctuary"
+                        class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                </div>
+
+
+                <!-- START TIME -->
+                <div>
+
+                    <label class="block text-sm font-semibold mb-2">
+                        Start Time *
+                    </label>
+
+                    <input
+                        type="time"
+                        name="start_time"
+                        required
+                        class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                </div>
+
+
+                <!-- END TIME -->
+                <div>
+
+                    <label class="block text-sm font-semibold mb-2">
+                        End Time *
+                    </label>
+
+                    <input
+                        type="time"
+                        name="end_time"
+                        required
+                        class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+            <div>
+
+                <label class="block text-sm font-semibold mb-2">
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    rows="4"
+                    placeholder="Provide more information about this activity..."
+                    class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple"></textarea>
+
+            </div>
+
+
+            <!-- DISPLAY ORDER -->
+            <div>
+
+                <label class="block text-sm font-semibold mb-2">
+                    Display Order
+                </label>
+
+                <input
+                    type="number"
+                    name="display_order"
+                    value="0"
+                    min="0"
+                    class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-ack-purple">
+
+                <p class="text-xs text-gray-400 mt-1">
+                    Lower numbers appear first on the public website.
+                </p>
+
+            </div>
+
+
+            <!-- ACTIVE -->
+            <label class="flex items-center gap-2 text-sm text-gray-600">
+
+                <input
+                    type="checkbox"
+                    name="is_active"
+                    value="true"
+                    checked
+                    class="accent-ack-purple w-4 h-4">
+
+                Display this schedule on the public website
+
+            </label>
+
+
+            <!-- BUTTONS -->
+            <div class="flex justify-end gap-3 pt-4 border-t border-gray-100">
+
+                <button
+                    type="button"
+                    onclick="closeScheduleModal()"
+                    class="px-5 py-3 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-100">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="px-6 py-3 rounded-lg bg-ack-purple text-white text-sm font-semibold hover:bg-ack-purple-dark">
+
+                    <i class="fa-solid fa-plus mr-1"></i>
+                    Save Schedule
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    function openScheduleModal() {
+        const modal = document.getElementById("scheduleModal");
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+    }
+
+
+    function closeScheduleModal() {
+        const modal = document.getElementById("scheduleModal");
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    }
+
+
+    // Search schedules
+    document.getElementById("scheduleSearch").addEventListener("input", function () {
+
+        const searchValue = this.value.toLowerCase();
+
+        document.querySelectorAll(".schedule-row").forEach(row => {
+
+            const rowText = row.textContent.toLowerCase();
+
+            row.style.display = rowText.includes(searchValue) ? "" : "none";
+
+        });
+
+    });
+
+
+    // Close modal when clicking outside
+    document.getElementById("scheduleModal").addEventListener("click", function (event) {
+
+        if (event.target === this) {
+            closeScheduleModal();
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

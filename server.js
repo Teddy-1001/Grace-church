@@ -65,7 +65,10 @@ app.get('/ministry/:id', (req, res)=>{
     if(!ministry){
         return res.status(404).render('404')
     }
-    res.render('ministry-details', {ministry, contacts:PARISH_CONTACT})
+    const meeting = ministry.meeting || [];
+
+    const extraLinks = ministry.extraLinks || [];
+    res.render('ministry-details', {ministry, meeting, extraLinks, contacts:PARISH_CONTACT})
 })
 
 app.get('/sermons', (req, res) => {
@@ -77,6 +80,10 @@ app.get('/sermons', (req, res) => {
         featuredSermon,
         sermons: pastSermons
     });
+});
+
+app.get("/give", (req, res) => {
+    res.render("give");
 });
 
 app.get("/gallery", (req, res) => {
@@ -93,6 +100,120 @@ app.get("/leadership", (req, res) => {
         otherLeaders: sortedLeadership.filter(leader => !leader.featured)
     });
 });
+
+app.get("/services", (req, res) => {
+    res.render("services", {
+        title: "Church Services | ACK St. Phillips Roadblock"
+    });
+});
+
+
+app.get("/admin/dashboard", (req, res) => {
+
+    const schedules = [
+        {
+            title: "English Service",
+            day: "Sunday",
+            start_time: "8:00 AM",
+            end_time: "9:00 AM"
+        },
+        {
+            title: "Kiswahili Service",
+            day: "Sunday",
+            start_time: "10:00 AM",
+            end_time: "12:30 PM"
+        },
+        {
+            title: "Sunday School & Teens",
+            day: "Sunday",
+            start_time: "9:00 AM",
+            end_time: "9:00 AM"
+        },
+        {
+            title: "Estate Fellowships",
+            day: "Sunday",
+            start_time: "2:00 PM",
+            end_time: "4:00 PM"
+        }
+    ];
+
+    res.render("admin/dashboard", {
+        stats: {
+            leaders: leadership.length,
+            schedules: schedules.length,
+            sermons: 0,
+            gallery: 0
+        },
+        schedules
+    });
+
+});
+
+app.get("/admin/leadership", (req, res) => {
+
+    const leaders = [...leadership].sort(
+        (a, b) => a.order - b.order
+    );
+
+    res.render("admin/leadership", {
+        leaders
+    });
+
+});
+
+app.get("/admin/schedules", (req, res) => {
+
+    const schedules = [
+        {
+            id: 1,
+            title: "English Service",
+            day: "Sunday",
+            start_time: "08:00 AM",
+            end_time: "09:00 AM",
+            location: "Main Sanctuary",
+            description: "Sunday worship service",
+            is_active: true
+        },
+        {
+            id: 2,
+            title: "Kiswahili Service",
+            day: "Sunday",
+            start_time: "10:00 AM",
+            end_time: "12:30 PM",
+            location: "Main Sanctuary",
+            description: "Kiswahili worship service",
+            is_active: true
+        },
+        {
+            id: 3,
+            title: "Sunday School & Teens",
+            day: "Sunday",
+            start_time: "09:00 AM",
+            end_time: "11:00 AM",
+            location: "Children's Church",
+            description: "Children and teenagers fellowship",
+            is_active: true
+        },
+        {
+            id: 4,
+            title: "Estate Fellowships",
+            day: "Wednesday",
+            start_time: "02:00 PM",
+            end_time: "04:00 PM",
+            location: "Various Estates",
+            description: "Community fellowship meetings",
+            is_active: true
+        }
+    ];
+
+    res.render("admin/schedules", {
+        schedules
+    });
+
+});
+
+
+
 
 app.get("/sitemap.xml", (req, res) => {
     const BASE_URL = "https://ackstphillipschurch.vercel.app";

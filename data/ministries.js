@@ -7,6 +7,7 @@ export const ministries = [
     description:
       "The men's guild of the Anglican Church of Kenya — focused on spiritual growth, leadership, family responsibility, and service in church and community.",
     meetingDay: "Sunday",
+
     time: "2:00 PM – 4:00 PM",
     location: "Parish Hall",
     leader: "KAMA Chairman",

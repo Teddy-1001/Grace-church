@@ -32,19 +32,19 @@
         <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Welcome">
 
             <div class="slide -z-10 fixed inset-0 opacity-0 transition-opacity duration-1000">
-                <img loading="eager" src="./images/DSC_9586.JPG" class="w-full h-full object-cover scale-105"
+                <img loading="eager" src="./images/woman-preaching.jpg" class="w-full h-full object-cover scale-105"
                     alt="Congregation worshipping at ACK St. Phillips Roadblock">
             </div>
             <div class="slide -z-10 fixed inset-0 opacity-0 transition-opacity duration-1000">
-                <img loading="eager" src="./images/DSC_9586.JPG" class="w-full h-full object-cover scale-105"
+                <img loading="eager" src="./images/woman-preaching.jpg" class="w-full h-full object-cover scale-105"
                     alt="Congregation worshipping at ACK St. Phillips Roadblock">
             </div>
             <div class="slide -z-10 fixed inset-0  opacity-100 transition-opacity duration-1000">
-                <img loading="eager" src="./images/DSC_9586.JPG" class="w-full h-full object-cover scale-105"
+                <img loading="eager" src="./images/woman-preaching.jpg" class="w-full h-full object-cover scale-105"
                     alt="Congregation worshipping at ACK St. Phillips Roadblock">
             </div>
             <div class="slide -z-10 fixed inset-0 opacity-0 transition-opacity duration-1000">
-                <img loading="eager" src="./images/DSC_9586.JPG" class="w-full h-full object-cover scale-105"
+                <img loading="eager" src="./images/woman-preaching.jpg" class="w-full h-full object-cover scale-105"
                     alt="Congregation worshipping at ACK St. Phillips Roadblock">
             </div>
 
@@ -109,7 +109,9 @@
                     <i class="fa-solid fa-clock text-ack-gold text-xl mt-1" aria-hidden="true"></i>
                     <div>
                         <p class="font-semibold text-ack-gold text-sm uppercase">Sunday Worship</p>
-                        <p class="text-sm text-white/90 mt-1">8:00 AM English · 10:00 AM Kiswahili &amp; Sunday School
+                        <p class="text-sm text-white/90 mt-1">8:00 AM English Service 
+                        </p>
+                        <p class="text-sm text-white/90 mt-1">10:00 AM Kiswahili Service &amp; Sunday School
                         </p>
                     </div>
                 </div>
@@ -124,21 +126,23 @@
                 <div
                     class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
                     <i class="fa-solid fa-location-dot text-ack-gold text-xl mt-1" aria-hidden="true"></i>
-                    <div>
+                    <div cl>
                         <p class="font-semibold text-ack-gold text-sm uppercase">Location</p>
-                        <p class="text-sm text-white/90 mt-1">Roadblock, near Eldoret–Nakuru Highway, Eldoret</p>
+                        <p class="text-sm text-white/90 mt-1 text-center">Roadblock, near Uganda-road, Eldoret</p>
                     </div>
                 </div>
                 <div
                     class="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
                     <i class="fa-solid fa-hands-praying text-ack-gold text-xl mt-1" aria-hidden="true"></i>
-                    <div>
+                    <div class="text-center">
                         <p class="font-semibold text-ack-gold text-sm uppercase">Morning Prayer</p>
-                        <p class="text-sm text-white/90 mt-1">Weekdays 6:00 – 7:00 AM in the parish church</p>
+                        <p class="text-sm text-white/90 mt-1 text-center">Tuesday 7:00AM – 10:00 AM in the parish church</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        
 
         <!-- worship schedules -->
         <section id="worship-schedule" class="bg-[#eef1f6] text-gray-900 py-20 md:py-24">
@@ -199,102 +203,236 @@
             </div>
         </section>
 
+        <!-- Mission, Vision & Ministries -->
+<section class="relative overflow-hidden bg-ack-cream py-20 md:py-28"
+    aria-label="Our mission and ministries">
 
-        <!-- our missions and ministries -->
-        <section class="bg-ack-cream py-16 md:py-20" aria-label="Mission and ministries">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12">
-                    <span class="text-ack-purple text-sm font-semibold uppercase tracking-wider">Who We Are</span>
-                    <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-2">
-                        Rooted in Christ, Serving Humanity
-                    </h2>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+        <!-- Section heading -->
+        <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+
+            <span class="inline-flex items-center gap-2 text-ack-purple text-xs font-bold uppercase tracking-[0.25em]">
+                <span class="w-8 h-px bg-ack-gold"></span>
+                Who We Are
+                <span class="w-8 h-px bg-ack-gold"></span>
+            </span>
+
+            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-ack-purple-dark mt-5 leading-tight">
+                Rooted in Christ,
+                <span class="text-ack-purple">Serving Humanity.</span>
+            </h2>
+
+            <p class="mt-5 text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+                We are a community of faith committed to worshipping God,
+                growing together in Christ and transforming lives through
+                love, fellowship and service.
+            </p>
+
+        </div>
+
+
+        <!-- Cards grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+
+            <!-- OUR MISSION -->
+            <article class="group relative min-h-[430px] overflow-hidden rounded-2xl shadow-lg">
+
+                <img
+                    src="/images/man-reads-bible-male-hands-with-bible-closeup.webp"
+                    alt="Hands holding an open Bible"
+                    loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple-dark/65 to-ack-purple-dark/10"></div>
+
+                <div class="absolute inset-0 flex flex-col justify-end p-7">
+
+                    <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        Our Purpose
+                    </span>
+
+                    <h3 class="font-display text-2xl font-bold text-white mt-3">
+                        Our Mission
+                    </h3>
+
+                    <p class="text-white/80 text-sm leading-relaxed mt-3">
+                        To make Christ known through holistic ministry —
+                        worship, discipleship and service in our community.
+                    </p>
+
+                    <div class="w-12 h-1 bg-ack-gold rounded-full mt-6 transition-all duration-300 group-hover:w-20"></div>
+
                 </div>
+            </article>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
-                        <img src="/images/man-reads-bible-male-hands-with-bible-closeup.webp"
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                            alt="Hands holding an open Bible">
-                        <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                            <h3 class="font-display text-2xl text-white font-bold">Our Mission</h3>
-                            <p class="text-white/90 mt-3 text-sm leading-relaxed">
-                                To make Christ known through holistic ministry — worship, discipleship, and service in
-                                our community.
-                            </p>
+            <!-- SUNDAY WORSHIP -->
+            <article class="group relative min-h-[430px] overflow-hidden rounded-2xl shadow-lg">
+
+                <img
+                    src="/images/church.webp"
+                    alt="Church building"
+                    loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple-dark/80 to-ack-purple-dark/20"></div>
+
+                <div class="absolute inset-0 flex flex-col justify-end p-7">
+
+                    <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        Come Worship With Us
+                    </span>
+
+                    <h3 class="font-display text-2xl font-bold text-white mt-3">
+                        Sunday Worship
+                    </h3>
+
+                    <p class="text-white/75 text-sm mt-2">
+                        Every Lord's Day, we gather as one parish family.
+                    </p>
+
+                    <div class="mt-5 space-y-3">
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-ack-gold mt-1 text-sm" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white text-sm font-semibold">8:00 AM – 9:00 AM</p>
+                                <p class="text-white/60 text-xs">English Service & Communion</p>
+                            </div>
                         </div>
-                    </article>
 
-                    <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
-                        <img src="/images/church.webp"
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            alt="Church building">
-                        <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                            <h3 class="font-display text-2xl text-white font-bold">Sunday Worship</h3>
-                            <p class="text-white/90 mt-2 text-sm">Every Lord's Day we gather as one parish family.</p>
-                            <ul class="mt-4 text-white text-sm space-y-1.5 text-left w-full max-w-[14rem]">
-                                <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>8:00 – 9:00
-                                    AM · English + Communion</li>
-                                <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>10:00 AM –
-                                    12:30 PM · Kiswahili</li>
-                                <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>10:00 AM ·
-                                    Sunday School &amp; Teens</li>
-                                <li><i class="fa-solid fa-check text-ack-gold mr-2" aria-hidden="true"></i>2:00 – 4:00
-                                    PM · Estate fellowships</li>
-                            </ul>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-ack-gold mt-1 text-sm" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white text-sm font-semibold">10:00 AM – 12:30 PM</p>
+                                <p class="text-white/60 text-xs">Kiswahili Service</p>
+                            </div>
                         </div>
-                    </article>
 
-                    <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
-                        <img src="/images/41654.jpg"
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            alt="Cross at sunrise">
-                        <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                            <h3 class="font-display text-2xl text-white font-bold">Our Vision</h3>
-                            <p class="text-white/90 mt-3 text-sm leading-relaxed">
-                                A Christ-centred parish sustainably transforming society through the Gospel.
-                            </p>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-children text-ack-gold mt-1 text-sm" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white text-sm font-semibold">Sunday School & Teens</p>
+                                <p class="text-white/60 text-xs">Growing together in faith</p>
+                            </div>
                         </div>
-                    </article>
 
-                    <article class="relative group overflow-hidden rounded-2xl h-[26rem] shadow-lg">
-                        <img src="/images/vertical-grayscale-shot-grassy-field-with-blurred-cross.webp"
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                            alt="Cross in a field">
-                        <div class="absolute inset-0 bg-ack-purple-dark/75"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                            <h3 class="font-display text-2xl text-white font-bold">ACK Guilds &amp; Ministries</h3>
-                            <p class="text-white/90 mt-2 text-sm max-w-xs">Serve and grow through our parish groups.</p>
-                            <nav class="mt-5 w-full max-w-xs space-y-2" aria-label="Ministry links">
-                                <a href="/ministry?id=men-fellowship"
-                                    class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
-                                    KAMA (Men's Association)
-                                </a>
-                                <a href="/ministry?id=mothers-union"
-                                    class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
-                                    Mothers' Union
-                                </a>
-                                <a href="/ministry?id=youth-ministry"
-                                    class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
-                                    KAYO / Youth Ministry
-                                </a>
-                                <a href="/ministry?id=sunday-school"
-                                    class="block bg-white/10 hover:bg-ack-gold/30 transition text-white px-4 py-2 rounded-md text-left text-sm">
-                                    Sunday School
-                                </a>
-                            </nav>
-                            <a href="/ministries"
-                                class="inline-block mt-4 text-ack-gold text-sm font-semibold hover:underline">
-                                View all ministries →
-                            </a>
-                        </div>
-                    </article>
+                    </div>
+
+                    <a href="/schedules"
+                        class="inline-flex items-center gap-2 mt-6 text-ack-gold text-sm font-bold hover:gap-4 transition-all">
+                        View service schedules
+                        <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                    </a>
+
                 </div>
-            </div>
-        </section>
+            </article>
+
+
+            <!-- OUR VISION -->
+            <article class="group relative min-h-[430px] overflow-hidden rounded-2xl shadow-lg">
+
+                <img
+                    src="/images/41654.jpg"
+                    alt="Cross at sunrise"
+                    loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple-dark/65 to-ack-purple-dark/10"></div>
+
+                <div class="absolute inset-0 flex flex-col justify-end p-7">
+
+                    <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        Our Aspiration
+                    </span>
+
+                    <h3 class="font-display text-2xl font-bold text-white mt-3">
+                        Our Vision
+                    </h3>
+
+                    <p class="text-white/80 text-sm leading-relaxed mt-3">
+                        A Christ-centred parish sustainably transforming
+                        society through the Gospel.
+                    </p>
+
+                    <div class="w-12 h-1 bg-ack-gold rounded-full mt-6 transition-all duration-300 group-hover:w-20"></div>
+
+                </div>
+            </article>
+
+
+            <!-- MINISTRIES -->
+            <article class="group relative min-h-[430px] overflow-hidden rounded-2xl shadow-lg">
+
+                <img
+                    src="/images/vertical-shot.jpg"
+                    alt="Cross standing in a field"
+                    loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple-dark/85 to-ack-purple-dark/20"></div>
+
+                <div class="absolute inset-0 flex flex-col justify-end p-7">
+
+                    <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        Grow & Serve
+                    </span>
+
+                    <h3 class="font-display text-2xl font-bold text-white mt-3">
+                        Ministries
+                    </h3>
+
+                    <p class="text-white/75 text-sm mt-2">
+                        Discover your place to belong, grow and serve.
+                    </p>
+
+                    <nav class="mt-5 space-y-2" aria-label="Ministry links">
+
+                        <a href="/ministry/men-fellowship"
+                            class="flex items-center justify-between rounded-lg bg-white/10 border border-white/10 px-4 py-2.5 text-white text-sm hover:bg-ack-gold hover:text-ack-purple-dark hover:border-ack-gold transition-all">
+                            <span>KAMA (Men's Association)</span>
+                            <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="/ministry/mothers-union"
+                            class="flex items-center justify-between rounded-lg bg-white/10 border border-white/10 px-4 py-2.5 text-white text-sm hover:bg-ack-gold hover:text-ack-purple-dark hover:border-ack-gold transition-all">
+                            <span>Mothers' Union</span>
+                            <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="/ministry/youth-ministry"
+                            class="flex items-center justify-between rounded-lg bg-white/10 border border-white/10 px-4 py-2.5 text-white text-sm hover:bg-ack-gold hover:text-ack-purple-dark hover:border-ack-gold transition-all">
+                            <span>KAYO / Youth Ministry</span>
+                            <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="/ministry/sunday-school"
+                            class="flex items-center justify-between rounded-lg bg-white/10 border border-white/10 px-4 py-2.5 text-white text-sm hover:bg-ack-gold hover:text-ack-purple-dark hover:border-ack-gold transition-all">
+                            <span>Sunday School</span>
+                            <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                        </a>
+
+                    </nav>
+
+                    <a href="/ministries"
+                        class="inline-flex items-center gap-2 mt-5 text-ack-gold text-sm font-bold hover:gap-4 transition-all">
+                        Explore all ministries
+                        <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
 
         <!-- theme of the year -->
         <section id="theme" class="bg-white py-20 border-y border-gray-200">

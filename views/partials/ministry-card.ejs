@@ -1,25 +1,75 @@
-<article
-    class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
-    <div class="relative h-56 overflow-hidden bg-ack-purple/10">
-        <img src="<%= m.image %>" alt="<%= m.title %>"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
-        <span class="absolute top-4 left-4 <%= m.badgeClass %> text-xs px-3 py-1 rounded-full font-semibold">
-            <%= m.name %>
-        </span>
-        <span class="absolute bottom-4 left-4 bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">
-            <%= m.estate %>
-        </span>
+<article class="group bg-white rounded-2xl overflow-hidden border border-gray-100 transition-all duration-300">
+
+
+<!-- Image -->
+<div class="relative h-52 overflow-hidden bg-ack-purple/10">
+
+    <img
+        src="<%= m.image %>"
+        alt="<%= m.title %>"
+        loading="lazy"
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    >
+
+    <!-- Category -->
+    <span class="absolute top-4 left-4 <%= m.badgeClass %> text-xs font-semibold px-3 py-1.5 rounded-full">
+        <%= m.name %>
+    </span>
+
+</div>
+
+
+<!-- Content -->
+<div class="p-6">
+
+    <h2 class="font-display text-xl font-bold text-ack-purple-dark group-hover:text-ack-purple transition-colors">
+        <%= m.title %>
+    </h2>
+
+    <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+        <%= m.description %>
+    </p>
+
+
+    <!-- Meeting Information -->
+    <div class="mt-5 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-gray-500">
+
+        <% if (m.meetingDay && m.time) { %>
+
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-regular fa-clock text-ack-gold"></i>
+                <%= m.meetingDay %>, <%= m.time %>
+            </span>
+
+        <% } %>
+
+        <% if (m.estate) { %>
+
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-ack-gold"></i>
+                <%= m.estate %>
+            </span>
+
+        <% } %>
+
     </div>
-    <div class="p-6">
-        <h2 class="text-xl font-bold text-ack-purple-dark"><%= m.title %></h2>
-        <p class="text-gray-600 text-sm mt-2 leading-relaxed line-clamp-3"><%= m.description %></p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-600">
-            <li><i class="fa-solid fa-location-dot text-ack-gold w-4" aria-hidden="true"></i><%= m.location %></li>
-            <li><i class="fa-solid fa-clock text-ack-gold w-4" aria-hidden="true"></i><%= m.meetingDay %>, <%= m.time %></li>
-        </ul>
-        <a href="/ministry/<%= m.id %>"
-            class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
-            View ministry <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
-        </a>
-    </div>
+
+
+    <!-- Link -->
+    <a
+        href="/ministry/<%= m.id %>"
+        class="mt-6 flex items-center justify-between text-sm font-bold text-ack-purple group/link"
+    >
+        <span class="group-hover/link:text-ack-gold transition-colors">
+            Explore Ministry
+        </span>
+
+        <span class="h-9 w-9 rounded-full bg-ack-purple/5 flex items-center justify-center group-hover/link:bg-ack-purple group-hover/link:text-white transition-all">
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+    </a>
+
+</div>
+
+
 </article>

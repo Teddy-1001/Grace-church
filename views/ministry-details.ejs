@@ -2,34 +2,31 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive layout -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page title -->
-    <title>Ministry | ACK St. Phillips Roadblock</title>
+    <title><%= ministry.name %> | ACK St. Phillips Roadblock</title>
 
-    <!-- SEO description -->
     <meta
         name="description"
-        content="Discover the guilds and ministries at ACK St. Phillips Roadblock, including KAMA, Mothers' Union, KAYO, Sunday School, choir, vergers, and more."
+        content="Discover <%= ministry.name %> at ACK St. Phillips Roadblock. Learn about our activities, meeting times and how to get involved."
     >
 
-    <!-- Website theme -->
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Font Awesome icons -->
+    <link
+        rel="preconnect"
+        href="https://cdnjs.cloudflare.com"
+        crossorigin
+    >
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     >
 
-    <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="/css/output.css">
 
-    <!-- Website favicon -->
     <link
         rel="icon"
         href="/images/ack-logo.svg"
@@ -38,178 +35,514 @@
 </head>
 
 <body class="bg-ack-cream text-gray-900 antialiased">
+
     <%- include('partials/header.ejs') %>
-        <main id="ministry-detail" class="min-h-[60vh]">
 
-            <section class="relative min-h-[42vh] flex items-end overflow-hidden">
-                <img src="<%= ministry.image %>" alt="" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple/25 to-transparent">
+    <main id="ministry-detail">
+
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[380px] md:min-h-[460px] flex items-end overflow-hidden">
+
+            <img
+                src="<%= ministry.image %>"
+                alt="<%= ministry.name %>"
+                class="absolute inset-0 w-full h-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark via-ack-purple-dark/65 to-ack-purple-dark/10"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pb-12 pt-36 w-full">
+
+                <a
+                    href="/ministries"
+                    class="inline-flex items-center gap-2 text-white/75 hover:text-ack-gold text-sm mb-7 transition-colors"
+                >
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    All Ministries
+                </a>
+
+                <div class="mb-4">
+
+                    <span class="<%= ministry.badgeClass %> inline-flex px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <%= ministry.type %>
+                    </span>
+
                 </div>
-                <div class="relative z-10 max-w-7xl mx-auto px-6 pb-12 pt-32 w-full text-white">
-                    <a href="/ministries"
-                        class="inline-flex items-center gap-2 text-white/80 hover:text-ack-gold text-sm mb-4 transition">
-                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All ministries
-                    </a>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="<%= ministry.badgeClass %> text-xs px-3 py-1 rounded-full font-semibold">
-                            <%= ministry.type %>
-                        </span>
-                    </div>
-                    <h1 class="font-display text-3xl md:text-5xl font-bold">
-                        <%= ministry.name %>
-                    </h1>
-                </div>
-            </section>
-            <!-- <div class="max-w-7xl mx-auto px-6 py-16 text-center text-gray-500">
 
-            </div> -->
-            <section class="max-w-7xl mx-auto px-6 py-12 md:py-16">
-                <div class="grid lg:grid-cols-3 gap-10">
-                    <div class="lg:col-span-2">
-                        <h2 class="text-sm font-semibold text-ack-purple uppercase tracking-wider">About this ministry
-                        </h2>
-                        <p class="text-gray-700 mt-3 leading-relaxed text-lg">
-                            <%= ministry.description %>
-                        </p>
-                        <p class="text-gray-600 mt-4 text-sm leading-relaxed">
-                            <%= ministry.membership %>
-                        </p>
-                        <section class="mt-10">
-                            <h2
-                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-hands-holding-heart text-ack-gold" aria-hidden="true"></i> What we
-                                do
-                            </h2>
-                            <ul class="mt-4 space-y-2">
-                                <% ministry.activities.map((item)=> { %>
-                                    <li class="flex gap-2 text-gray-700 text-sm leading-relaxed"><i
-                                            class="fa-solid fa-check text-ack-gold mt-1 shrink-0"
-                                            aria-hidden="true"></i>
-                                        <span>
-                                            <%= item %>
-                                        </span>
-                                    </li>
-                                    <% }) %>
+                <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white max-w-3xl">
+                    <%= ministry.name %>
+                </h1>
 
-                            </ul>
-                        </section>
+                <p class="text-white/75 mt-4 max-w-2xl text-sm sm:text-base leading-relaxed">
+                    A community growing together in faith, fellowship and service.
+                </p>
 
-                        <section class="mt-10">
-                            <h2
-                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-calendar-days text-ack-gold" aria-hidden="true"></i> Weekly
-                                schedule
-                            </h2>
-                            <div class="mt-4 space-y-3">
-                                <% ministry.schedule.map((item)=> { %>
-                                    <div
-                                        class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
-                                        <span class="text-xs font-bold text-ack-purple uppercase shrink-0 w-28">
-                                            <%= item.day %>
-                                        </span>
-                                        <span class="text-sm font-semibold text-gray-900 shrink-0">
-                                            <%= item.time %>
-                                        </span>
-                                        <span class="text-sm text-gray-600">
-                                            <%= item.activities %>
-                                        </span>
-                                    </div>
-                                    <% }) %>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN CONTENT -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
+
+
+                <!-- LEFT CONTENT -->
+                <div class="lg:col-span-2 space-y-10">
+
+
+                    <!-- ABOUT -->
+                    <section>
+
+                        <div class="flex items-center gap-3 mb-5">
+
+                            <div class="h-11 w-11 rounded-xl bg-ack-purple/10 flex items-center justify-center text-ack-purple">
+                                <i class="fa-solid fa-book-open text-lg"></i>
                             </div>
+
+                            <div>
+                                <span class="text-xs text-ack-purple font-bold uppercase tracking-wider">
+                                    Get to know us
+                                </span>
+
+                                <h2 class="font-display text-2xl font-bold text-ack-purple-dark">
+                                    About This Ministry
+                                </h2>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 shadow-sm">
+
+                            <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
+                                <%= ministry.description %>
+                            </p>
+
+                            <% if (ministry.membership) { %>
+
+                                <div class="border-t border-gray-100 mt-6 pt-6">
+
+                                    <h3 class="font-semibold text-ack-purple-dark text-sm mb-2">
+                                        Membership
+                                    </h3>
+
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        <%= ministry.membership %>
+                                    </p>
+
+                                </div>
+
+                            <% } %>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ACTIVITIES -->
+                    <% if (ministry.activities && ministry.activities.length) { %>
+
+                        <section>
+
+                            <div class="flex items-center gap-3 mb-5">
+
+                                <div class="h-11 w-11 rounded-xl bg-ack-purple/10 flex items-center justify-center text-ack-purple">
+                                    <i class="fa-solid fa-hands-holding-heart text-lg"></i>
+                                </div>
+
+                                <div>
+                                    <span class="text-xs text-ack-purple font-bold uppercase tracking-wider">
+                                        Our Work
+                                    </span>
+
+                                    <h2 class="font-display text-2xl font-bold text-ack-purple-dark">
+                                        What We Do
+                                    </h2>
+                                </div>
+
+                            </div>
+
+                            <div class="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 shadow-sm">
+
+                                <ul class="grid sm:grid-cols-2 gap-5">
+
+                                    <% ministry.activities.forEach((item) => { %>
+
+                                        <li class="flex items-start gap-3">
+
+                                            <span class="h-7 w-7 shrink-0 rounded-full bg-ack-gold/15 text-ack-purple flex items-center justify-center">
+                                                <i class="fa-solid fa-check text-xs" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="text-gray-700 text-sm leading-relaxed pt-1">
+                                                <%= item %>
+                                            </span>
+
+                                        </li>
+
+                                    <% }) %>
+
+                                </ul>
+
+                            </div>
+
                         </section>
 
-                        <section class="mt-10">
-                            <h2
-                                class="text-sm font-semibold text-ack-purple uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-hand-holding-dollar text-ack-gold" aria-hidden="true"></i> Giving
-                                &amp; payments
-                            </h2>
-                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">
-                                Support this group’s programmes through the channels below. Always include your
-                                <strong>name</strong> and
-                                <strong>ministry/fellowship</strong> in the M-Pesa message.
+                    <% } %>
+
+
+                    <!-- SCHEDULE -->
+                    <% if (ministry.schedule && ministry.schedule.length) { %>
+
+                        <section>
+
+                            <div class="flex items-center gap-3 mb-5">
+
+                                <div class="h-11 w-11 rounded-xl bg-ack-purple/10 flex items-center justify-center text-ack-purple">
+                                    <i class="fa-solid fa-calendar-days text-lg"></i>
+                                </div>
+
+                                <div>
+                                    <span class="text-xs text-ack-purple font-bold uppercase tracking-wider">
+                                        When We Gather
+                                    </span>
+
+                                    <h2 class="font-display text-2xl font-bold text-ack-purple-dark">
+                                        Meeting Schedule
+                                    </h2>
+                                </div>
+
+                            </div>
+
+                            <div class="space-y-3">
+
+                                <% ministry.schedule.forEach((item) => { %>
+
+                                    <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
+
+                                        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+
+                                            <div class="flex items-center gap-3 sm:w-36 shrink-0">
+
+                                                <span class="h-10 w-10 rounded-lg bg-ack-purple/10 flex items-center justify-center text-ack-purple">
+                                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                                </span>
+
+                                                <span class="text-sm font-bold text-ack-purple-dark">
+                                                    <%= item.day %>
+                                                </span>
+
+                                            </div>
+
+                                            <div class="flex items-center gap-2 sm:w-40 shrink-0 text-sm font-semibold text-gray-800">
+
+                                                <i class="fa-regular fa-clock text-ack-gold"></i>
+
+                                                <%= item.time %>
+
+                                            </div>
+
+                                            <p class="text-sm text-gray-500 leading-relaxed">
+                                                <%= item.activities %>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                <% }) %>
+
+                            </div>
+
+                        </section>
+
+                    <% } %>
+
+
+                    <!-- GIVING -->
+                    <% if (ministry.payments && ministry.payments.length) { %>
+
+                        <section>
+
+                            <div class="flex items-center gap-3 mb-5">
+
+                                <div class="h-11 w-11 rounded-xl bg-ack-purple/10 flex items-center justify-center text-ack-purple">
+                                    <i class="fa-solid fa-hand-holding-dollar text-lg"></i>
+                                </div>
+
+                                <div>
+                                    <span class="text-xs text-ack-purple font-bold uppercase tracking-wider">
+                                        Support Our Work
+                                    </span>
+
+                                    <h2 class="font-display text-2xl font-bold text-ack-purple-dark">
+                                        Giving & Payments
+                                    </h2>
+                                </div>
+
+                            </div>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                                Support this ministry's programmes and activities through the payment channels below.
+                                Please include your name and ministry/fellowship in your M-Pesa message.
                             </p>
-                            <div class="mt-4 grid sm:grid-cols-2 gap-4">
-                                <% ministry.payments.map((p)=> { %>
-                                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                        <p class="font-semibold text-ack-purple-dark text-sm">
-                                            <%= p.title %>
-                                        </p>
-                                        <p class="text-2xl font-bold text-gray-900 mt-1">
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+
+                                <% ministry.payments.forEach((p) => { %>
+
+                                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+
+                                        <div class="flex items-center justify-between">
+
+                                            <span class="text-xs font-bold text-ack-purple uppercase tracking-wider">
+                                                <%= p.title %>
+                                            </span>
+
+                                            <span class="h-9 w-9 rounded-lg bg-green-50 text-green-600 flex items-center justify-center">
+                                                <i class="fa-solid fa-mobile-screen"></i>
+                                            </span>
+
+                                        </div>
+
+                                        <p class="text-2xl font-bold text-ack-purple-dark mt-4">
                                             <%= p.amount %>
                                         </p>
-                                        <p class="text-sm text-gray-700 mt-3"><i
-                                                class="fa-solid fa-mobile-screen text-green-600 mr-1"
-                                                aria-hidden="true"></i><strong>M-Pesa:</strong>
-                                            <%= p.mpesa %>
-                                        </p>
-                                        <p class="text-xs text-gray-500 mt-2">
-                                            <%= p.notes %>
-                                        </p>
+
+                                        <div class="mt-4 border-t border-gray-100 pt-4">
+
+                                            <p class="text-sm text-gray-700">
+                                                <i class="fa-solid fa-money-bill-wave text-green-600 mr-2"></i>
+                                                <strong>M-Pesa:</strong>
+                                                <%= p.mpesa %>
+                                            </p>
+
+                                            <% if (p.notes) { %>
+
+                                                <p class="text-xs text-gray-500 mt-3 leading-relaxed">
+                                                    <%= p.notes %>
+                                                </p>
+
+                                            <% } %>
+
+                                        </div>
+
                                     </div>
-                                    <% }) %>
+
+                                <% }) %>
+
                             </div>
+
                         </section>
-                    </div>
-                    <aside class="space-y-6 lg:sticky lg:top-24 h-fit">
-                        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-                            <h2 class="font-semibold text-ack-purple-dark">Meeting details</h2>
-                            <ul class="mt-4 space-y-4 text-sm text-gray-700">
-                                ${meeting
-                                .map(
-                                (m) => `
-                                <li class="flex gap-3">
-                                    <i class="fa-solid fa-${m.icon} text-ack-gold mt-0.5" aria-hidden="true"></i>
-                                    <span><strong class="text-gray-900">${esc(m.label)}</strong><br>${m.html ||
-                                        esc(m.value)}</span>
-                                </li>
-                                `
-                                )
-                                .join("")}
-                            </ul>
-                        </div>
-                       <div class="bg-ack-purple text-white rounded-2xl p-6">
-    <h3 class="font-semibold text-ack-gold text-sm uppercase">
-        Parish office
-    </h3>
 
-    <p class="text-white/85 text-sm mt-2 leading-relaxed">
-        <%= contacts.officeHours %>
-    </p>
+                    <% } %>
 
-    <ul class="mt-3 text-sm space-y-2 text-white/90">
-        <li>
-            <a href="tel:<%= contacts.phone.replace(/\s/g, '') %>"
-               class="hover:text-ack-gold">
-                <%= contacts.phone %>
-            </a>
-        </li>
 
-        <li>
-            <a href="mailto:<%= contacts.email %>"
-               class="hover:text-ack-gold break-all">
-                <%= contacts.email %>
-            </a>
-        </li>
-    </ul>
-</div>
-                        
-                        ${(extraLinks || [])
-                        <!-- .map(
-                        (l) => `
-                        <a href="${l.href}" class="block text-center ${l.primary ? " bg-ack-gold text-ack-purple-dark
-                            font-semibold"
-                            : "border-2 border-ack-purple text-ack-purple font-semibold hover:bg-ack-purple/5" } py-3
-                            rounded-lg text-sm transition">
-                            ${esc(l.label)}
-                        </a>
-                        `
-                        ) -->
-                        .join("")}
-                    </aside>
                 </div>
-            </section>
-        </main>
-</body>
 
+
+                <!-- RIGHT SIDEBAR -->
+                <aside class="space-y-6 lg:sticky lg:top-28 h-fit">
+
+
+                    <!-- MEETING DETAILS -->
+                    <% if (meeting && meeting.length) { %>
+
+                        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+
+                            <div class="flex items-center gap-3 mb-6">
+
+                                <div class="h-10 w-10 rounded-xl bg-ack-gold/15 text-ack-purple flex items-center justify-center">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+
+                                <h2 class="font-display text-xl font-bold text-ack-purple-dark">
+                                    Meeting Details
+                                </h2>
+
+                            </div>
+
+                            <ul class="space-y-5">
+
+                                <% meeting.forEach((m) => { %>
+
+                                    <li class="flex gap-3">
+
+                                        <i class="fa-solid fa-<%= m.icon %> text-ack-gold mt-1"></i>
+
+                                        <div>
+
+                                            <p class="text-sm font-bold text-gray-900">
+                                                <%= m.label %>
+                                            </p>
+
+                                            <% if (m.html) { %>
+
+                                                <div class="text-sm text-gray-500 mt-1 leading-relaxed">
+                                                    <%- m.html %>
+                                                </div>
+
+                                            <% } else { %>
+
+                                                <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                                                    <%= m.value %>
+                                                </p>
+
+                                            <% } %>
+
+                                        </div>
+
+                                    </li>
+
+                                <% }) %>
+
+                            </ul>
+
+                        </div>
+
+                    <% } %>
+
+
+                    <!-- PARISH OFFICE -->
+                    <div class="bg-ack-purple text-white rounded-2xl p-7 shadow-sm">
+
+                        <div class="flex items-center gap-3">
+
+                            <div class="h-10 w-10 rounded-xl bg-white/10 text-ack-gold flex items-center justify-center">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <h3 class="font-display text-xl font-bold">
+                                Parish Office
+                            </h3>
+
+                        </div>
+
+                        <p class="text-white/70 text-sm mt-5 leading-relaxed">
+                            <%= contacts.officeHours %>
+                        </p>
+
+                        <div class="border-t border-white/15 mt-5 pt-5 space-y-4">
+
+                            <div class="flex items-start gap-3">
+
+                                <i class="fa-solid fa-phone text-ack-gold mt-1"></i>
+
+                                <a
+                                    href="tel:<%= contacts.phone.replace(/\s/g, '') %>"
+                                    class="text-sm text-white/85 hover:text-ack-gold transition break-all"
+                                >
+                                    <%= contacts.phone %>
+                                </a>
+
+                            </div>
+
+                            <div class="flex items-start gap-3">
+
+                                <i class="fa-solid fa-envelope text-ack-gold mt-1"></i>
+
+                                <a
+                                    href="mailto:<%= contacts.email %>"
+                                    class="text-sm text-white/85 hover:text-ack-gold transition break-all"
+                                >
+                                    <%= contacts.email %>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXTRA LINKS -->
+                    <% if (extraLinks && extraLinks.length) { %>
+
+                        <div class="space-y-3">
+
+                            <% extraLinks.forEach((l) => { %>
+
+                                <a
+                                    href="<%= l.href %>"
+                                    class="block text-center py-3.5 px-5 rounded-xl text-sm transition-all
+                                    <%= l.primary
+                                        ? 'bg-ack-gold text-ack-purple-dark font-bold hover:bg-ack-purple hover:text-white'
+                                        : 'bg-white border border-ack-purple text-ack-purple font-semibold hover:bg-ack-purple hover:text-white' %>"
+                                >
+                                    <%= l.label %>
+
+                                    <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+
+                                </a>
+
+                            <% }) %>
+
+                        </div>
+
+                    <% } %>
+
+
+                    <!-- ALL MINISTRIES -->
+                    <a
+                        href="/ministries"
+                        class="flex items-center justify-center gap-2 text-sm font-semibold text-ack-purple hover:text-ack-gold transition py-3"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Explore Other Ministries
+                    </a>
+
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOSING CTA -->
+        <section class="bg-ack-purple py-16 md:py-20">
+
+            <div class="max-w-4xl mx-auto px-5 text-center">
+
+                <span class="text-ack-gold text-xs font-bold uppercase tracking-[0.25em]">
+                    You Belong Here
+                </span>
+
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
+                    Be Part of Something Meaningful.
+                </h2>
+
+                <p class="text-white/70 mt-5 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                    God has given each of us gifts to share. Discover how you can
+                    grow in faith, build relationships and serve through this ministry.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+
+                    <a
+                        href="/contact"
+                        class="bg-ack-gold text-ack-purple-dark px-7 py-3.5 rounded-lg text-sm font-bold hover:bg-white transition"
+                    >
+                        Get in Touch
+                    </a>
+
+                    <a
+                        href="/ministries"
+                        class="border border-white/40 text-white px-7 py-3.5 rounded-lg text-sm font-semibold hover:bg-white hover:text-ack-purple-dark transition"
+                    >
+                        Explore Ministries
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+
+</body>
 </html>

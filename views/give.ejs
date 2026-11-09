@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Support the ministry of ACK St. Phillips Roadblock Church through your generous giving, tithes, offerings and donations.">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="shortcut icon" href="/images/ack-logo.svg" type="image/x-icon">
+
+    <title>Give & Support | ACK St. Phillips Roadblock</title>
+</head>
+
+<body class="bg-ack-cream text-gray-900 antialiased">
+
+    <%- include('partials/header.ejs') %>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="relative overflow-hidden bg-ack-purple-dark">
+
+            <div class="absolute inset-0 opacity-20">
+                <img src="/images/church.webp"
+                    alt=""
+                    class="w-full h-full object-cover">
+            </div>
+
+            <div class="absolute inset-0 bg-gradient-to-r from-ack-purple-dark via-ack-purple-dark/95 to-ack-purple/70"></div>
+
+            <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-32">
+
+                <div class="max-w-3xl">
+
+                    <span class="inline-flex items-center gap-2 text-ack-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        <span class="w-8 h-px bg-ack-gold"></span>
+                        Give with purpose
+                    </span>
+
+                    <h1 class="font-display text-4xl md:text-6xl font-bold text-white leading-tight mt-6">
+                        Your generosity makes a
+                        <span class="text-ack-gold">difference.</span>
+                    </h1>
+
+                    <p class="text-white/75 text-base md:text-lg leading-relaxed mt-6 max-w-2xl">
+                        Your giving helps us spread the Gospel, serve our community,
+                        support those in need and strengthen the work of God's church.
+                    </p>
+
+                    <a href="#giving-form"
+                        class="inline-flex items-center gap-3 bg-ack-gold text-ack-purple-dark px-7 py-4 rounded-xl font-bold text-sm mt-9 hover:bg-white transition">
+                        Make a contribution
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCRIPTURE -->
+        <section class="max-w-5xl mx-auto px-6 -mt-8 relative z-10">
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 md:p-10 text-center">
+
+                <i class="fa-solid fa-quote-left text-3xl text-ack-gold"></i>
+
+                <blockquote class="font-display text-xl md:text-2xl text-ack-purple-dark font-semibold leading-relaxed mt-4">
+                    "Each of you should give what you have decided in your heart to give,
+                    not reluctantly or under compulsion, for God loves a cheerful giver."
+                </blockquote>
+
+                <p class="text-sm text-ack-purple font-bold mt-5">
+                    2 Corinthians 9:7
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- GIVING PURPOSES -->
+        <section class="max-w-7xl mx-auto px-6 py-20">
+
+            <div class="text-center max-w-2xl mx-auto">
+
+                <span class="text-xs font-bold uppercase tracking-widest text-ack-gold">
+                    Make an impact
+                </span>
+
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-3">
+                    Your giving supports our mission
+                </h2>
+
+                <p class="text-gray-500 text-sm md:text-base mt-4 leading-relaxed">
+                    Every contribution helps us continue serving God and making
+                    a positive difference in our community.
+                </p>
+
+            </div>
+
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+                <!-- TITHES -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Tithes
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Faithfully support the ministry and ongoing work of the church
+                        through your tithes.
+                    </p>
+
+                </div>
+
+
+                <!-- OFFERINGS -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-gift"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Offerings
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Give freely and joyfully towards the worship, fellowship
+                        and ministry of our parish.
+                    </p>
+
+                </div>
+
+
+                <!-- THANKSGIVING -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Thanksgiving
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Express gratitude to God through a special thanksgiving
+                        contribution.
+                    </p>
+
+                </div>
+
+
+                <!-- MISSIONS -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-earth-africa"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Missions & Outreach
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Help us reach more people, share the Gospel and support
+                        outreach activities.
+                    </p>
+
+                </div>
+
+
+                <!-- CHURCH DEVELOPMENT -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-church"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Church Development
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Contribute towards the development, improvement and
+                        maintenance of our church facilities.
+                    </p>
+
+                </div>
+
+
+                <!-- SPECIAL GIFTS -->
+                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+
+                    <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+
+                    <h3 class="font-bold text-xl text-ack-purple-dark mt-6">
+                        Special Gifts
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed mt-3">
+                        Support special parish programmes, ministries and
+                        community initiatives.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GIVING FORM -->
+        <section id="giving-form" class="bg-white border-y border-gray-200">
+
+            <div class="max-w-7xl mx-auto px-6 py-20">
+
+                <div class="grid lg:grid-cols-2 gap-14 items-start">
+
+                    <!-- LEFT INFORMATION -->
+                    <div>
+
+                        <span class="text-xs font-bold uppercase tracking-widest text-ack-gold">
+                            Make your contribution
+                        </span>
+
+                        <h2 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-4">
+                            Give generously.
+                            <span class="text-ack-purple">Give joyfully.</span>
+                        </h2>
+
+                        <p class="text-gray-500 mt-5 leading-relaxed">
+                            Choose the purpose of your contribution and the amount
+                            you would like to give. We are preparing a secure
+                            M-Pesa payment experience to make giving easier.
+                        </p>
+
+
+                        <div class="space-y-5 mt-10">
+
+                            <div class="flex gap-4">
+
+                                <span class="w-12 h-12 shrink-0 rounded-xl bg-ack-purple/10 text-ack-purple flex items-center justify-center">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </span>
+
+                                <div>
+                                    <h3 class="font-bold text-ack-purple-dark">
+                                        Giving with confidence
+                                    </h3>
+
+                                    <p class="text-sm text-gray-500 mt-1">
+                                        Your contributions support the work and
+                                        mission of ACK St. Phillips Roadblock Church.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex gap-4">
+
+                                <span class="w-12 h-12 shrink-0 rounded-xl bg-ack-purple/10 text-ack-purple flex items-center justify-center">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </span>
+
+                                <div>
+                                    <h3 class="font-bold text-ack-purple-dark">
+                                        Convenient M-Pesa giving
+                                    </h3>
+
+                                    <p class="text-sm text-gray-500 mt-1">
+                                        M-Pesa STK Push payments will be available
+                                        soon.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex gap-4">
+
+                                <span class="w-12 h-12 shrink-0 rounded-xl bg-ack-purple/10 text-ack-purple flex items-center justify-center">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+
+                                <div>
+                                    <h3 class="font-bold text-ack-purple-dark">
+                                        Need assistance?
+                                    </h3>
+
+                                    <p class="text-sm text-gray-500 mt-1">
+                                        Contact our parish office for assistance
+                                        with your contribution.
+                                    </p>
+
+                                    <a href="tel:+254798125596"
+                                        class="text-sm font-semibold text-ack-purple mt-2 inline-block">
+                                        +254 798 125 596
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM -->
+                    <div class="bg-ack-cream rounded-3xl p-6 md:p-8 border border-gray-200">
+
+                        <div class="mb-7">
+
+                            <h3 class="font-display text-2xl font-bold text-ack-purple-dark">
+                                Your giving details
+                            </h3>
+
+                            <p class="text-sm text-gray-500 mt-2">
+                                Select your contribution details below.
+                            </p>
+
+                        </div>
+
+
+                        <form id="givingForm" class="space-y-6">
+
+                            <!-- NAME -->
+                            <div>
+
+                                <label for="donorName"
+                                    class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Your name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="donorName"
+                                    name="donorName"
+                                    placeholder="Enter your full name"
+                                    required
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition"
+                                >
+
+                            </div>
+
+
+                            <!-- PHONE -->
+                            <div>
+
+                                <label for="phone"
+                                    class="block text-sm font-semibold text-gray-700 mb-2">
+                                    M-Pesa phone number
+                                </label>
+
+                                <div class="flex">
+
+                                    <span class="flex items-center px-4 bg-gray-100 border border-r-0 border-gray-200 rounded-l-xl text-sm font-semibold text-gray-600">
+                                        +254
+                                    </span>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="7XX XXX XXX"
+                                        inputmode="numeric"
+                                        class="w-full min-w-0 bg-white border border-gray-200 rounded-r-xl px-4 py-3 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition"
+                                    >
+
+                                </div>
+
+                                <p class="text-xs text-gray-400 mt-2">
+                                    This number will be used for the future M-Pesa payment request.
+                                </p>
+
+                            </div>
+
+
+                            <!-- GIVING PURPOSE -->
+                            <div>
+
+                                <label for="purpose"
+                                    class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Giving purpose
+                                </label>
+
+                                <select
+                                    id="purpose"
+                                    name="purpose"
+                                    required
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition">
+
+                                    <option value="">Select giving purpose</option>
+                                    <option value="Tithe">Tithe</option>
+                                    <option value="Offering">Offering</option>
+                                    <option value="Thanksgiving">Thanksgiving</option>
+                                    <option value="Missions & Outreach">Missions & Outreach</option>
+                                    <option value="Church Development">Church Development</option>
+                                    <option value="Special Gift">Special Gift</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- AMOUNT -->
+                            <div>
+
+                                <label for="amount"
+                                    class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Contribution amount (KES)
+                                </label>
+
+                                <div class="grid grid-cols-3 gap-3 mb-3">
+
+                                    <button type="button" data-amount="100"
+                                        class="amount-option border border-gray-200 bg-white rounded-xl py-3 text-sm font-semibold hover:border-ack-purple hover:text-ack-purple transition">
+                                        KSh 100
+                                    </button>
+
+                                    <button type="button" data-amount="500"
+                                        class="amount-option border border-gray-200 bg-white rounded-xl py-3 text-sm font-semibold hover:border-ack-purple hover:text-ack-purple transition">
+                                        KSh 500
+                                    </button>
+
+                                    <button type="button" data-amount="1000"
+                                        class="amount-option border border-gray-200 bg-white rounded-xl py-3 text-sm font-semibold hover:border-ack-purple hover:text-ack-purple transition">
+                                        KSh 1,000
+                                    </button>
+
+                                </div>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    name="amount"
+                                    min="1"
+                                    step="1"
+                                    placeholder="Enter another amount"
+                                    required
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition"
+                                >
+
+                            </div>
+
+
+                            <!-- MESSAGE -->
+                            <div>
+
+                                <label for="message"
+                                    class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Additional message
+                                    <span class="text-gray-400 font-normal">(Optional)</span>
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="3"
+                                    placeholder="Any additional information..."
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-ack-purple focus:ring-2 focus:ring-ack-purple/10 transition resize-none"
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- SUBMIT -->
+                            <button
+                                type="submit"
+                                class="w-full flex items-center justify-center gap-3 bg-ack-purple text-white font-bold rounded-xl py-4 hover:bg-ack-purple-dark transition">
+
+                                Continue with M-Pesa
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                            <p id="paymentMessage"
+                                class="hidden text-sm text-center text-ack-purple bg-ack-purple/5 rounded-xl p-4">
+                            </p>
+
+                            <p class="text-xs text-center text-gray-400 leading-relaxed">
+                                M-Pesa payment integration is not active yet.
+                                No payment will be initiated from this form.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT CTA -->
+        <section class="max-w-7xl mx-auto px-6 py-20">
+
+            <div class="bg-ack-purple-dark rounded-3xl p-8 md:p-12 relative overflow-hidden">
+
+                <div class="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-white/5"></div>
+
+                <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-8">
+
+                    <div class="max-w-2xl">
+
+                        <span class="text-ack-gold text-xs font-bold uppercase tracking-widest">
+                            We're here to help
+                        </span>
+
+                        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-4">
+                            Have questions about giving?
+                        </h2>
+
+                        <p class="text-white/70 mt-4 leading-relaxed">
+                            Our parish office is available to help you with
+                            giving arrangements and any questions you may have.
+                        </p>
+
+                    </div>
+
+                    <a href="/contact"
+                        class="inline-flex items-center justify-center gap-3 bg-ack-gold text-ack-purple-dark font-bold px-7 py-4 rounded-xl hover:bg-white transition shrink-0">
+
+                        Contact the parish
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+
+
+    <!-- FORM INTERACTION -->
+    <script>
+
+        const amountInput = document.getElementById("amount");
+        const amountButtons = document.querySelectorAll(".amount-option");
+
+        amountButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                amountInput.value = button.dataset.amount;
+
+                amountButtons.forEach((btn) => {
+                    btn.classList.remove(
+                        "bg-ack-purple",
+                        "text-white",
+                        "border-ack-purple"
+                    );
+
+                    btn.classList.add("bg-white");
+                });
+
+                button.classList.add(
+                    "bg-ack-purple",
+                    "text-white",
+                    "border-ack-purple"
+                );
+
+            });
+
+        });
+
+
+        const givingForm = document.getElementById("givingForm");
+        const paymentMessage = document.getElementById("paymentMessage");
+
+        givingForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            if (!givingForm.reportValidity()) {
+                return;
+            }
+
+            paymentMessage.textContent =
+                "Thank you for your generous heart! M-Pesa payments are coming soon. Please contact the parish office to arrange your contribution.";
+
+            paymentMessage.classList.remove("hidden");
+
+        });
+
+    </script>
+
+</body>
+</html>

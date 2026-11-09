@@ -24,7 +24,7 @@ export const fellowships = [
             { day: "Sunday", time: "2:00 – 4:00 PM", activity: "Estate fellowship at host home" },
         ],
         payments: [
-            { title: "Fellowship welfare fund", amount: "Voluntary", mpesa: "Till 000000", notes: "Label: Kahoya Fellowship" },
+            { title: "Fellowship welfare fund", amount: "Voluntary", mpesa: "6610002859", notes: "Label: Kahoya Fellowship" },
             { title: "Host refreshment", amount: "KSh 50–100", mpesa: "Cash to host", notes: "When announced" },
         ],
         leadership: [

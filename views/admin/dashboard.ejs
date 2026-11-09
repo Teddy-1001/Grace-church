@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | ACK St. Phillips</title>
+
+    <link rel="stylesheet" href="/css/output.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="min-h-screen flex">
+
+        <!-- MOBILE OVERLAY -->
+        <div id="sidebarOverlay"
+            class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden"></div>
+
+
+        <!-- SIDEBAR -->
+       <%- include('../partials/admin/sidebar.ejs') %>
+      
+
+
+
+        <!-- MAIN CONTENT -->
+        <div class="flex-1 min-w-0">
+
+            <!-- TOP HEADER -->
+            <header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-5 md:px-8 sticky top-0 z-30">
+
+                <div class="flex items-center gap-4">
+
+                    <button id="menuBtn"
+                        class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="text-xs text-slate-400">
+                            Church Administration
+                        </p>
+
+                        <h2 class="font-display text-lg font-semibold text-ack-purple">
+                            Dashboard Overview
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <a href="/"
+                        target="_blank"
+                        class="hidden sm:flex items-center gap-2 text-sm text-slate-500 hover:text-ack-purple transition">
+                        <i class="fa-solid fa-globe"></i>
+                        Visit Website
+                    </a>
+
+                    <div class="h-9 w-px bg-slate-200 hidden sm:block"></div>
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="hidden sm:block text-right">
+                            <p class="text-sm font-semibold text-slate-700">
+                                Administrator
+                            </p>
+
+                            <p class="text-xs text-slate-400">
+                                Church Admin
+                            </p>
+                        </div>
+
+                        <div class="w-10 h-10 rounded-full bg-ack-purple text-ack-gold flex items-center justify-center">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- PAGE CONTENT -->
+            <main class="p-5 md:p-8 max-w-7xl mx-auto">
+
+
+                <!-- WELCOME -->
+                <section class="mb-9">
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+
+                        <div>
+                            <p class="text-sm text-slate-500 mb-2">
+                                Welcome back, Administrator
+                            </p>
+
+                            <h1 class="font-display text-2xl md:text-3xl font-bold text-ack-purple">
+                                Your Church at a Glance
+                            </h1>
+
+                            <p class="text-sm text-slate-400 mt-2">
+                                Manage your church website and keep information up to date.
+                            </p>
+                        </div>
+
+                        <a href="/"
+                            target="_blank"
+                            class="inline-flex items-center justify-center gap-2 bg-ack-purple text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-ack-purple-dark transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            View Website
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- STATISTICS -->
+                <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-9">
+
+                    <!-- LEADERS -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <p class="text-sm text-slate-500">
+                                    Church Leaders
+                                </p>
+
+                                <h3 class="text-3xl font-bold text-ack-purple mt-3">
+                                    <%= stats.leaders %>
+                                </h3>
+                            </div>
+
+                            <div class="w-12 h-12 rounded-xl bg-purple-50 text-ack-purple flex items-center justify-center">
+                                <i class="fa-solid fa-users text-lg"></i>
+                            </div>
+
+                        </div>
+
+                        <a href="/admin/leadership"
+                            class="text-xs text-ack-purple font-semibold mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all">
+                            Manage leaders
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- SCHEDULES -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <p class="text-sm text-slate-500">
+                                    Service Schedules
+                                </p>
+
+                                <h3 class="text-3xl font-bold text-ack-purple mt-3">
+                                    <%= stats.schedules %>
+                                </h3>
+                            </div>
+
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+                                <i class="fa-regular fa-clock text-lg"></i>
+                            </div>
+
+                        </div>
+
+                        <a href="/admin/schedules"
+                            class="text-xs text-ack-purple font-semibold mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all">
+                            Manage schedules
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- SERMONS -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <p class="text-sm text-slate-500">
+                                    Published Sermons
+                                </p>
+
+                                <h3 class="text-3xl font-bold text-ack-purple mt-3">
+                                    <%= stats.sermons %>
+                                </h3>
+                            </div>
+
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                                <i class="fa-solid fa-video text-lg"></i>
+                            </div>
+
+                        </div>
+
+                        <a href="/admin/sermons"
+                            class="text-xs text-ack-purple font-semibold mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all">
+                            Manage sermons
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- GALLERY -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <p class="text-sm text-slate-500">
+                                    Gallery Images
+                                </p>
+
+                                <h3 class="text-3xl font-bold text-ack-purple mt-3">
+                                    <%= stats.gallery %>
+                                </h3>
+                            </div>
+
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                                <i class="fa-regular fa-images text-lg"></i>
+                            </div>
+
+                        </div>
+
+                        <a href="/admin/gallery"
+                            class="text-xs text-ack-purple font-semibold mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all">
+                            Manage gallery
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- MAIN DASHBOARD GRID -->
+                <section class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+
+                    <!-- QUICK ACTIONS -->
+                    <div class="xl:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
+
+                        <div class="flex items-center justify-between mb-7">
+
+                            <div>
+                                <h3 class="font-display text-lg font-bold text-ack-purple">
+                                    Quick Actions
+                                </h3>
+
+                                <p class="text-xs text-slate-400 mt-1">
+                                    Common website management tasks
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-bolt text-ack-gold"></i>
+
+                        </div>
+
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+
+                            <a href="/admin/leadership"
+                                class="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-ack-purple/30 hover:bg-purple-50/40 transition">
+
+                                <div class="w-11 h-11 rounded-xl bg-purple-50 text-ack-purple flex items-center justify-center group-hover:bg-ack-purple group-hover:text-white transition">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-semibold text-slate-700">
+                                        Add Church Leader
+                                    </h4>
+
+                                    <p class="text-xs text-slate-400 mt-1">
+                                        Update church leadership
+                                    </p>
+                                </div>
+
+                            </a>
+
+
+                            <a href="/admin/schedules"
+                                class="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-ack-purple/30 hover:bg-purple-50/40 transition">
+
+                                <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-semibold text-slate-700">
+                                        Update Service Times
+                                    </h4>
+
+                                    <p class="text-xs text-slate-400 mt-1">
+                                        Manage worship schedules
+                                    </p>
+                                </div>
+
+                            </a>
+
+
+                            <a href="/admin/sermons"
+                                class="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-ack-purple/30 hover:bg-purple-50/40 transition">
+
+                                <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition">
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-semibold text-slate-700">
+                                        Publish Sermon
+                                    </h4>
+
+                                    <p class="text-xs text-slate-400 mt-1">
+                                        Add a new church sermon
+                                    </p>
+                                </div>
+
+                            </a>
+
+
+                            <a href="/admin/gallery"
+                                class="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-ack-purple/30 hover:bg-purple-50/40 transition">
+
+                                <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-semibold text-slate-700">
+                                        Upload Photos
+                                    </h4>
+
+                                    <p class="text-xs text-slate-400 mt-1">
+                                        Add church event images
+                                    </p>
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WEBSITE STATUS -->
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
+
+                        <h3 class="font-display text-lg font-bold text-ack-purple">
+                            Website Overview
+                        </h3>
+
+                        <p class="text-xs text-slate-400 mt-1 mb-7">
+                            Your website management
+                        </p>
+
+
+                        <div class="space-y-6">
+
+                            <div class="flex items-center justify-between">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-700">
+                                            Public Website
+                                        </p>
+
+                                        <p class="text-xs text-slate-400">
+                                            Church website
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex items-center justify-between">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="w-9 h-9 rounded-lg bg-purple-50 text-ack-purple flex items-center justify-center">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-700">
+                                            Leadership
+                                        </p>
+
+                                        <p class="text-xs text-slate-400">
+                                            Profiles management
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full">
+                                    Managed
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex items-center justify-between">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-calendar"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-700">
+                                            Schedules
+                                        </p>
+
+                                        <p class="text-xs text-slate-400">
+                                            Worship information
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-3 py-1.5 rounded-full">
+                                    Review
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="/admin/settings"
+                            class="mt-8 flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-50 text-ack-purple text-sm font-semibold hover:bg-ack-purple hover:text-white transition">
+                            Website Settings
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- SERVICE SCHEDULE -->
+                <section class="mt-7 bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
+
+                    <div class="flex items-center justify-between mb-6">
+
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-ack-purple">
+                                Worship Schedule
+                            </h3>
+
+                            <p class="text-xs text-slate-400 mt-1">
+                                Current Sunday service times
+                            </p>
+                        </div>
+
+                        <a href="/admin/schedules"
+                            class="text-xs font-semibold text-ack-purple hover:text-ack-gold transition">
+                            Manage Schedules
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                        <% schedules.forEach(schedule => { %>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+
+                                <div class="flex items-center gap-2 mb-3">
+
+                                    <span class="w-2 h-2 rounded-full bg-ack-gold"></span>
+
+                                    <span class="text-xs text-slate-400">
+                                        <%= schedule.day %>
+                                    </span>
+
+                                </div>
+
+                                <h4 class="font-semibold text-sm text-ack-purple">
+                                    <%= schedule.title %>
+                                </h4>
+
+                                <p class="text-xs text-slate-500 mt-2">
+                                    <%= schedule.start_time %> – <%= schedule.end_time %>
+                                </p>
+
+                            </div>
+
+                        <% }) %>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="mt-10 py-5 border-t border-slate-200 flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-400">
+
+                    <p>
+                        &copy; <%= new Date().getFullYear() %> ACK St. Phillips Roadblock.
+                    </p>
+
+                    <p>
+                        Church Administration Portal
+                    </p>
+
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SIDEBAR SCRIPT -->
+    <script>
+
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.getElementById("menuBtn");
+        const overlay = document.getElementById("sidebarOverlay");
+
+        function openSidebar() {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        }
+
+        menuBtn?.addEventListener("click", openSidebar);
+        overlay?.addEventListener("click", closeSidebar);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeSidebar();
+        });
+
+        document.getElementById("logoutBtn")?.addEventListener("click", () => {
+            alert("Logout functionality will be connected when authentication is implemented.");
+        });
+
+    </script>
+
+</body>
+
+</html>
