@@ -1,21 +1,225 @@
-<div id="announcements" class="tab-content hidden mt-10 max-w-3xl mx-auto" role="tabpanel">
-    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
-        <img src="/images/announcement-illustration.svg" alt="" class="w-24 mx-auto opacity-80"
-            aria-hidden="true">
-        <h3 class="text-xl font-semibold text-ack-purple mt-4">Parish Announcements</h3>
-        <p class="text-gray-600 mt-2 text-sm">
-            Notices from the vicar, synod, and parish committees will appear here once the admin panel is connected.
-        </p>
-        <ul class="mt-6 text-left space-y-3 text-sm text-gray-700 border-t border-gray-100 pt-6">
-            <li class="flex gap-3">
-                <span class="text-ack-gold font-bold shrink-0">NEW</span>
-                <span>Welcome to our updated parish website. Check the weekly schedule for service times.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="text-gray-400 font-bold shrink-0">INFO</span>
-                <span>Parish office open Tuesdays, 8:00 AM – 5:00 PM. Contact the church office for baptisms and
-                    weddings.</span>
-            </li>
-        </ul>
+<!-- ANNOUNCEMENTS -->
+<div
+    id="announcements"
+    class="tab-content hidden mt-10 max-w-7xl mx-auto"
+    role="tabpanel"
+>
+    <div class="flex items-center justify-between mb-5">
+        <div>
+            <span
+                class="text-ack-purple text-xs font-semibold uppercase tracking-[0.2em]"
+            >
+                Parish Updates
+            </span>
+
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 uppercase mt-1">
+                Important Announcements
+            </h3>
+        </div>
+
+        <div class="hidden sm:flex items-center gap-2">
+            <button
+                id="announcement-prev"
+                type="button"
+                class="w-10 h-10 rounded-full border border-gray-200 bg-white text-ack-purple
+                       flex items-center justify-center hover:bg-ack-purple hover:text-white
+                       transition-all duration-300"
+                aria-label="Previous announcement"
+            >
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button
+                id="announcement-next"
+                type="button"
+                class="w-10 h-10 rounded-full border border-gray-200 bg-white text-ack-purple
+                       flex items-center justify-center hover:bg-ack-purple hover:text-white
+                       transition-all duration-300"
+                aria-label="Next announcement"
+            >
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
+
+    <!-- SLIDER -->
+    <div class="relative overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+
+        <div
+            id="announcement-slider"
+            class="flex gap-2 transition-transform duration-700 ease-in-out"
+        >
+
+            <!-- ANNOUNCEMENT 1 -->
+            <div class="announcement-slide min-w-full">
+                <img
+                    src="/images/announcements/announcement-2.jpg"
+                    alt="Parish announcement"
+                    class="w-full h-auto max-h-[650px] object-cover"
+                >
+            </div>
+
+           
+            <!-- ANNOUNCEMENT 2 -->
+            <div class="announcement-slide min-w-full">
+                <img
+                    src="/images/announcements/announcement-2.jpg"
+                    alt="Parish announcement"
+                    class="w-full h-auto max-h-[650px] object-cover"
+                >
+            </div>
+
+        </div>
+
+        <!-- MOBILE ARROWS -->
+        <button
+            id="announcement-prev-mobile"
+            type="button"
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10
+                   rounded-full bg-black/40 backdrop-blur-sm text-white
+                   flex items-center justify-center hover:bg-ack-purple transition"
+            aria-label="Previous announcement"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button
+            id="announcement-next-mobile"
+            type="button"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10
+                   rounded-full bg-black/40 backdrop-blur-sm text-white
+                   flex items-center justify-center hover:bg-ack-purple transition"
+            aria-label="Next announcement"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- DOTS -->
+    <div
+        id="announcement-dots"
+        class="flex justify-center gap-2 mt-5"
+        aria-label="Announcement navigation"
+    ></div>
+
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("announcement-slider");
+    const slides = document.querySelectorAll(".announcement-slide");
+    const dotsContainer = document.getElementById("announcement-dots");
+
+    const prevButtons = [
+        document.getElementById("announcement-prev"),
+        document.getElementById("announcement-prev-mobile")
+    ];
+
+    const nextButtons = [
+        document.getElementById("announcement-next"),
+        document.getElementById("announcement-next-mobile")
+    ];
+
+    let currentSlide = 0;
+    let autoSlide;
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement("button");
+
+        dot.type = "button";
+        dot.className =
+            "w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300";
+
+        dot.setAttribute(
+            "aria-label",
+            `Go to announcement ${index + 1}`
+        );
+
+        dot.addEventListener("click", () => {
+            goToSlide(index);
+            restartAutoSlide();
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll("button");
+
+    function goToSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+
+        slider.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            if (i === currentSlide) {
+                dot.classList.remove("bg-gray-300");
+                dot.classList.add(
+                    "bg-ack-purple",
+                    "w-6"
+                );
+            } else {
+                dot.classList.remove(
+                    "bg-ack-purple",
+                    "w-6"
+                );
+
+                dot.classList.add("bg-gray-300");
+            }
+        });
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    prevButtons.forEach(button => {
+        if (button) {
+            button.addEventListener("click", () => {
+                previousSlide();
+                restartAutoSlide();
+            });
+        }
+    });
+
+    nextButtons.forEach(button => {
+        if (button) {
+            button.addEventListener("click", () => {
+                nextSlide();
+                restartAutoSlide();
+            });
+        }
+    });
+
+    function startAutoSlide() {
+        autoSlide = setInterval(() => {
+            nextSlide();
+        }, 985000);
+    }
+
+    function restartAutoSlide() {
+        clearInterval(autoSlide);
+        startAutoSlide();
+    }
+
+    // Pause when hovering over the poster
+    slider.parentElement.addEventListener("mouseenter", () => {
+        clearInterval(autoSlide);
+    });
+
+    slider.parentElement.addEventListener("mouseleave", () => {
+        startAutoSlide();
+    });
+
+    // Initial state
+    goToSlide(0);
+    startAutoSlide();
+});
+</script>

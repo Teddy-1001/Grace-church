@@ -1,24 +1,33 @@
-<article
-    class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
-    <div class="relative h-56 overflow-hidden bg-ack-purple/10">
-        <img src="<%= f.image %>" alt="<%= f.title %>"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
-        <span class="absolute top-4 left-4 <%= f.badgeClass %> text-xs px-3 py-1 rounded-full font-semibold">
-            <%= f.tag %>
-        </span>
-        <span class="absolute bottom-4 left-4 bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">
-            <%= f.estate %>
-        </span>
-    </div>
-    <div class="p-6">
-        <h2 class="text-xl font-bold text-ack-purple-dark"><%= f.title %></h2>
-        <ul class="mt-4 space-y-2 text-sm text-gray-600">
-            <li><i class="fa-solid fa-location-dot text-ack-gold w-4" aria-hidden="true"></i><%= f.location %></li>
-            <li><i class="fa-solid fa-clock text-ack-gold w-4" aria-hidden="true"></i><%= f.day %>, <%= f.time %></li>
-        </ul>
-        <a href="/fellowships/<%= f.id %>"
-            class="inline-flex items-center gap-1 mt-5 text-ack-purple font-semibold text-sm hover:text-ack-gold transition">
-            View fellowship <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
-        </a>
-    </div>
+<article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <a href="/fellowships/<%= f.id %>" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-ack-purple focus-visible:ring-offset-2">
+        <div class="relative h-52 overflow-hidden bg-ack-purple/10">
+            <img src="<%= f.image %>" alt="<%= f.title %>"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ack-purple-dark/75 via-transparent to-transparent"></div>
+            <span class="absolute left-4 top-4 <%= f.badgeClass %> rounded-full px-3 py-1.5 text-xs font-semibold">
+                <%= f.tag %>
+            </span>
+            <span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-sm font-medium text-white">
+                <i class="fa-solid fa-location-dot text-ack-gold" aria-hidden="true"></i>
+                <%= f.estate %>
+            </span>
+        </div>
+        <div class="p-5">
+            <h2 class="font-display text-xl font-bold text-ack-purple-dark transition group-hover:text-ack-purple">
+                <%= f.title %>
+            </h2>
+            <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-gray-600"><%= f.description %></p>
+            <div class="mt-5 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
+                <span class="inline-flex items-center gap-2 text-sm text-gray-600">
+                    <i class="fa-regular fa-clock text-ack-gold" aria-hidden="true"></i>
+                    <span><%= f.day %> · <%= f.time %></span>
+                </span>
+                <span class="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-ack-purple">
+                    Visit
+                    <i class="fa-solid fa-arrow-right text-xs transition group-hover:translate-x-1" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </a>
 </article>

@@ -1,10 +1,639 @@
-<div id="events" class="tab-content hidden mt-10 max-w-3xl mx-auto" role="tabpanel">
-    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
-        <i class="fa-solid fa-calendar-days text-4xl text-ack-purple/40" aria-hidden="true"></i>
-        <h3 class="text-xl font-semibold text-ack-purple mt-4">Upcoming Events</h3>
-        <p class="text-gray-600 mt-2 text-sm">
-            Diocesan synods, confirmations, MU rallies, and parish special services will be listed here.
-        </p>
-        <p class="text-gray-400 text-sm mt-4 italic">No events posted yet.</p>
+<!-- UPCOMING EVENTS -->
+<section id="events" class="tab-content hidden mt-10 max-w-7xl mx-auto" role="tabpanel">
+    <!-- HEADER -->
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <span class="text-ack-purple text-xs font-semibold uppercase tracking-[0.2em]">
+                Parish Calendar
+            </span>
+
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 uppercase mt-1">
+                Upcoming Events
+            </h3>
+        </div>
+
+        <!-- DESKTOP CONTROLS -->
+        <div class="hidden sm:flex items-center gap-2">
+            <button id="event-prev" type="button" class="w-10 h-10 rounded-full border border-gray-200 bg-white
+                       text-ack-purple flex items-center justify-center
+                       hover:bg-ack-purple hover:text-white
+                       transition-all duration-300" aria-label="Previous event">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button id="event-next" type="button" class="w-10 h-10 rounded-full border border-gray-200 bg-white
+                       text-ack-purple flex items-center justify-center
+                       hover:bg-ack-purple hover:text-white
+                       transition-all duration-300" aria-label="Next event">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
-</div>
+
+
+    <!-- EVENT SLIDER -->
+    <div id="event-slider-wrapper" class="relative overflow-hidden rounded-2xl border border-gray-200
+               bg-white shadow-sm">
+
+        <!-- IMPORTANT:
+             This container must remain flex and must NOT wrap.
+        -->
+        <div id="event-slider" class="flex flex-nowrap transition-transform duration-700 ease-in-out"
+            style="width: 100%;">
+
+            <!-- ================= EVENT 1 ================= -->
+            <article class="event-slide flex-none w-full min-w-full">
+                <div class="grid md:grid-cols-2">
+
+                    <!-- POSTER -->
+                    <div class="relative bg-gray-100">
+                        <img src="/images/events/announcement-1.jpg" alt="Parish Family Sunday"
+                            class="block w-full h-full min-h-[280px] md:min-h-[420px] object-cover">
+
+                        <!-- DATE BADGE -->
+                        <div class="absolute top-5 left-5 bg-white rounded-xl
+                                   shadow-lg overflow-hidden text-center w-16">
+                            <div class="bg-ack-purple text-white text-xs font-bold py-1">
+                                AUG
+                            </div>
+
+                            <div class="text-2xl font-bold text-gray-900 py-2">
+                                24
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- DETAILS -->
+                    <div class="p-6 md:p-10 flex flex-col justify-center">
+
+                        <span class="inline-flex w-fit items-center gap-2
+                                   bg-ack-purple/10 text-ack-purple
+                                   text-xs font-semibold uppercase tracking-wider
+                                   px-3 py-1.5 rounded-full">
+                            Parish Event
+                        </span>
+
+                        <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mt-4">
+                            Parish Family Sunday
+                        </h4>
+
+                        <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                            Join us for a special day of worship, fellowship,
+                            thanksgiving and family activities at ACK St. Phillips.
+                        </p>
+
+                        <div class="space-y-3 mt-6 text-sm text-gray-600">
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-calendar text-ack-purple w-4"></i>
+
+                                <span>
+                                    Sunday, 24 August 2026
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-clock text-ack-purple w-4"></i>
+
+                                <span>
+                                    8:00 AM – 1:00 PM
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-ack-purple w-4"></i>
+
+                                <span>
+                                    ACK St. Phillips Roadblock
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a href="/contact" class="inline-flex items-center gap-2 w-fit mt-7
+                                   bg-ack-purple text-white px-5 py-2.5
+                                   rounded-lg text-sm font-semibold
+                                   hover:bg-ack-purple/90 transition">
+                            Event Details
+
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- ================= EVENT 2 ================= -->
+            <article class="event-slide flex-none w-full min-w-full">
+                <div class="grid md:grid-cols-2">
+
+                    <!-- POSTER -->
+                    <div class="relative bg-gray-100">
+                        <img src="/images/events/announcement-1.jpg" alt="Confirmation Service"
+                            class="block w-full h-full min-h-[280px] md:min-h-[420px] object-cover">
+
+                        <!-- DATE BADGE -->
+                        <div class="absolute top-5 left-5 bg-white rounded-xl
+                                   shadow-lg overflow-hidden text-center w-16">
+                            <div class="bg-ack-purple text-white text-xs font-bold py-1">
+                                SEP
+                            </div>
+
+                            <div class="text-2xl font-bold text-gray-900 py-2">
+                                06
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- DETAILS -->
+                    <div class="p-6 md:p-10 flex flex-col justify-center">
+
+                        <span class="inline-flex w-fit items-center gap-2
+                                   bg-ack-purple/10 text-ack-purple
+                                   text-xs font-semibold uppercase tracking-wider
+                                   px-3 py-1.5 rounded-full">
+                            Special Service
+                        </span>
+
+                        <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mt-4">
+                            Confirmation Service
+                        </h4>
+
+                        <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                            A special confirmation service bringing together
+                            candidates, families and the wider parish community.
+                        </p>
+
+                        <div class="space-y-3 mt-6 text-sm text-gray-600">
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-calendar text-ack-purple w-4"></i>
+
+                                <span>
+                                    Sunday, 6 September 2026
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-clock text-ack-purple w-4"></i>
+
+                                <span>
+                                    10:00 AM
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-ack-purple w-4"></i>
+
+                                <span>
+                                    ACK St. Phillips Roadblock
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a href="/contact" class="inline-flex items-center gap-2 w-fit mt-7
+                                   bg-ack-purple text-white px-5 py-2.5
+                                   rounded-lg text-sm font-semibold
+                                   hover:bg-ack-purple/90 transition">
+                            Event Details
+
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- ================= EVENT 3 ================= -->
+            <article class="event-slide flex-none w-full min-w-full">
+                <div class="grid md:grid-cols-2">
+
+                    <!-- POSTER -->
+                    <div class="relative bg-gray-100">
+                        <img src="/images/events/announcement-1.jpg" alt="Mothers Union Rally"
+                            class="block w-full h-full min-h-[280px] md:min-h-[420px] object-cover">
+
+                        <!-- DATE BADGE -->
+                        <div class="absolute top-5 left-5 bg-white rounded-xl
+                                   shadow-lg overflow-hidden text-center w-16">
+                            <div class="bg-ack-purple text-white text-xs font-bold py-1">
+                                SEP
+                            </div>
+
+                            <div class="text-2xl font-bold text-gray-900 py-2">
+                                20
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- DETAILS -->
+                    <div class="p-6 md:p-10 flex flex-col justify-center">
+
+                        <span class="inline-flex w-fit items-center gap-2
+                                   bg-ack-purple/10 text-ack-purple
+                                   text-xs font-semibold uppercase tracking-wider
+                                   px-3 py-1.5 rounded-full">
+                            Fellowship
+                        </span>
+
+                        <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mt-4">
+                            Mothers' Union Rally
+                        </h4>
+
+                        <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                            A day of worship, fellowship and ministry bringing
+                            together members of the Mothers' Union.
+                        </p>
+
+                        <div class="space-y-3 mt-6 text-sm text-gray-600">
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-calendar text-ack-purple w-4"></i>
+
+                                <span>
+                                    Sunday, 20 September 2026
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-clock text-ack-purple w-4"></i>
+
+                                <span>
+                                    8:00 AM – 3:00 PM
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-ack-purple w-4"></i>
+
+                                <span>
+                                    ACK St. Phillips Roadblock
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a href="/contact" class="inline-flex items-center gap-2 w-fit mt-7
+                                   bg-ack-purple text-white px-5 py-2.5
+                                   rounded-lg text-sm font-semibold
+                                   hover:bg-ack-purple/90 transition">
+                            Event Details
+
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+
+        <!-- MOBILE PREVIOUS -->
+        <button id="event-prev-mobile" type="button" class="absolute left-3 top-1/2 -translate-y-1/2
+                   w-10 h-10 rounded-full bg-black/40
+                   backdrop-blur-sm text-white flex items-center
+                   justify-center hover:bg-ack-purple transition sm:hidden" aria-label="Previous event">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <!-- MOBILE NEXT -->
+        <button id="event-next-mobile" type="button" class="absolute right-3 top-1/2 -translate-y-1/2
+                   w-10 h-10 rounded-full bg-black/40
+                   backdrop-blur-sm text-white flex items-center
+                   justify-center hover:bg-ack-purple transition sm:hidden" aria-label="Next event">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+
+    <!-- DOTS -->
+    <div id="event-dots" class="flex justify-center gap-2 mt-5" aria-label="Event navigation"></div>
+
+</section>
+
+
+<!-- EVENT SLIDER JAVASCRIPT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const slider = document.getElementById("event-slider");
+        const slides = document.querySelectorAll(".event-slide");
+        const dotsContainer = document.getElementById("event-dots");
+
+        const prevButton = document.getElementById("event-prev");
+        const nextButton = document.getElementById("event-next");
+
+        const prevMobileButton =
+            document.getElementById("event-prev-mobile");
+
+        const nextMobileButton =
+            document.getElementById("event-next-mobile");
+
+        const wrapper =
+            document.getElementById("event-slider-wrapper");
+
+
+        // Make sure the slider exists
+        if (!slider || !slides.length) {
+            return;
+        }
+
+
+        let currentSlide = 0;
+        let autoSlide = null;
+
+
+        /*
+        ==========================================
+        CREATE DOTS
+        ==========================================
+        */
+
+        slides.forEach(function (_, index) {
+
+            const dot = document.createElement("button");
+
+            dot.type = "button";
+
+            dot.setAttribute(
+                "aria-label",
+                "Go to event " + (index + 1)
+            );
+
+            dot.className =
+                "event-dot w-2.5 h-2.5 rounded-full " +
+                "bg-gray-300 transition-all duration-300";
+
+
+            dot.addEventListener("click", function () {
+
+                goToSlide(index);
+
+                restartAutoSlide();
+
+            });
+
+
+            dotsContainer.appendChild(dot);
+
+        });
+
+
+        const dots =
+            dotsContainer.querySelectorAll(".event-dot");
+
+
+        /*
+        ==========================================
+        GO TO SLIDE
+        ==========================================
+        */
+
+        function goToSlide(index) {
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            currentSlide = index;
+
+
+            /*
+            Move the ENTIRE slider left.
+    
+            0%   = slide 1
+            -100% = slide 2
+            -200% = slide 3
+            */
+            slider.style.transform =
+                "translate3d(-" +
+                (currentSlide * 100) +
+                "%, 0, 0)";
+
+
+            /*
+            Update dots
+            */
+            dots.forEach(function (dot, dotIndex) {
+
+                if (dotIndex === currentSlide) {
+
+                    dot.classList.remove("bg-gray-300");
+
+                    dot.classList.add(
+                        "bg-ack-purple",
+                        "w-6"
+                    );
+
+                } else {
+
+                    dot.classList.remove(
+                        "bg-ack-purple",
+                        "w-6"
+                    );
+
+                    dot.classList.add(
+                        "bg-gray-300"
+                    );
+
+                }
+
+            });
+
+        }
+
+
+        /*
+        ==========================================
+        NEXT
+        ==========================================
+        */
+
+        function nextSlide() {
+
+            goToSlide(currentSlide + 1);
+
+        }
+
+
+        /*
+        ==========================================
+        PREVIOUS
+        ==========================================
+        */
+
+        function previousSlide() {
+
+            goToSlide(currentSlide - 1);
+
+        }
+
+
+        /*
+        ==========================================
+        DESKTOP BUTTONS
+        ==========================================
+        */
+
+        if (prevButton) {
+
+            prevButton.addEventListener(
+                "click",
+                function () {
+
+                    previousSlide();
+
+                    restartAutoSlide();
+
+                }
+            );
+
+        }
+
+
+        if (nextButton) {
+
+            nextButton.addEventListener(
+                "click",
+                function () {
+
+                    nextSlide();
+
+                    restartAutoSlide();
+
+                }
+            );
+
+        }
+
+
+        /*
+        ==========================================
+        MOBILE BUTTONS
+        ==========================================
+        */
+
+        if (prevMobileButton) {
+
+            prevMobileButton.addEventListener(
+                "click",
+                function () {
+
+                    previousSlide();
+
+                    restartAutoSlide();
+
+                }
+            );
+
+        }
+
+
+        if (nextMobileButton) {
+
+            nextMobileButton.addEventListener(
+                "click",
+                function () {
+
+                    nextSlide();
+
+                    restartAutoSlide();
+
+                }
+            );
+
+        }
+
+
+        /*
+        ==========================================
+        AUTO SLIDE
+        ==========================================
+        */
+
+        function startAutoSlide() {
+
+            clearInterval(autoSlide);
+
+            autoSlide = setInterval(
+                function () {
+
+                    nextSlide();
+
+                },
+                6000
+            );
+
+        }
+
+
+        /*
+        ==========================================
+        RESTART AUTO SLIDE
+        ==========================================
+        */
+
+        function restartAutoSlide() {
+
+            clearInterval(autoSlide);
+
+            startAutoSlide();
+
+        }
+
+
+        /*
+        ==========================================
+        PAUSE WHILE HOVERING
+        ==========================================
+        */
+
+        if (wrapper) {
+
+            wrapper.addEventListener(
+                "mouseenter",
+                function () {
+
+                    clearInterval(autoSlide);
+
+                }
+            );
+
+
+            wrapper.addEventListener(
+                "mouseleave",
+                function () {
+
+                    startAutoSlide();
+
+                }
+            );
+
+        }
+
+
+        /*
+        ==========================================
+        INITIAL SLIDE
+        ==========================================
+        */
+
+        goToSlide(0);
+
+        startAutoSlide();
+
+    });
+</script>

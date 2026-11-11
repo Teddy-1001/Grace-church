@@ -1,19 +1,57 @@
 <div id="verse" class="tab-content hidden mt-10 w-full" role="tabpanel">
-    <div class="max-w-4xl mx-auto text-center">
-        <h3 class="font-display text-2xl font-bold text-ack-purple-dark">Verse of the Day</h3>
-        <div id="verse-content" class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-10">
-            <% if(verse){ %>
-                <p class="text-xl italic text-gray-700 leading-relaxed">
-                    "<%= verse.text %>"
+
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-8">
+            <span class="inline-flex items-center gap-2 text-ack-purple text-sm font-semibold uppercase tracking-widest">
+                <i class="fa-solid fa-book-bible"></i>
+                Daily Inspiration
+            </span>
+
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-ack-purple-dark mt-3">
+                Verse of the Day
+            </h3>
+
+            <p class="text-gray-500 mt-3 text-sm md:text-base">
+                Let God's Word guide your heart and strengthen your faith.
+            </p>
+        </div>
+
+        <!-- Verse Card -->
+        <div id="verse-content"
+            class="relative overflow-hidden bg-white rounded-2xl border border-gray-200 shadow-sm p-8 md:p-12 text-center">
+            <div class="relative z-10">
+
+                <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-ack-purple/10 flex items-center justify-center">
+                    <i class="fa-solid fa-cross text-2xl text-ack-purple"></i>
+                </div>
+
+                <% if(verse){ %>
+
+                    <p class="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium">
+                        "<%= verse.text %>"
+                    </p>
+
+                    <div class="w-16 h-1 bg-ack-gold mx-auto my-7 rounded-full"></div>
+
+                    <p class="text-sm md:text-base text-ack-purple font-bold tracking-wide">
+                        <%= verse.reference %>
+                    </p>
+
+                <% } else { %>
+
+                    <p class="text-gray-500">
+                        Today's verse is currently unavailable. Please check back later.
+                    </p>
+
+                <% } %>
+
+                <p class="text-xs text-gray-400 uppercase tracking-widest mt-8">
+                    ACK St. Phillips Roadblock Church
                 </p>
 
-                <p class="text-sm mt-4 text-ack-purple font-semibold">
-                    —<%= verse.reference %>
-                </p>
-                <% } else{ %>
-                    <p class="text-gray-500">Loading verse…</p>
-                    <% } %>
-
+            </div>
         </div>
     </div>
 </div>

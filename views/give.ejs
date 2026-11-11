@@ -26,14 +26,13 @@
         <!-- HERO -->
         <section class="relative overflow-hidden bg-ack-purple-dark">
 
-            <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 blur-xs">
                 <img src="/images/church.webp"
                     alt=""
                     class="w-full h-full object-cover">
             </div>
 
-            <div class="absolute inset-0 bg-gradient-to-r from-ack-purple-dark via-ack-purple-dark/95 to-ack-purple/70"></div>
-
+            <div class="absolute inset-0 bg-black/20"></div>
             <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-32">
 
                 <div class="max-w-3xl">
@@ -69,7 +68,7 @@
         <!-- SCRIPTURE -->
         <section class="max-w-5xl mx-auto px-6 -mt-8 relative z-10">
 
-            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 md:p-10 text-center">
+            <div class="bg-white shadow-lg border border-gray-100 p-7 md:p-10 text-center">
 
                 <i class="fa-solid fa-quote-left text-3xl text-ack-gold"></i>
 
@@ -111,7 +110,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
 
                 <!-- TITHES -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-hand-holding-heart"></i>
@@ -130,7 +129,7 @@
 
 
                 <!-- OFFERINGS -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-gift"></i>
@@ -149,7 +148,7 @@
 
 
                 <!-- THANKSGIVING -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-hands-praying"></i>
@@ -168,7 +167,7 @@
 
 
                 <!-- MISSIONS -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-earth-africa"></i>
@@ -187,7 +186,7 @@
 
 
                 <!-- CHURCH DEVELOPMENT -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-church"></i>
@@ -206,7 +205,7 @@
 
 
                 <!-- SPECIAL GIFTS -->
-                <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-lg transition">
+                <div class="bg-white p-7 border border-gray-200 transition">
 
                     <span class="w-14 h-14 rounded-2xl bg-ack-purple/10 text-ack-purple flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-heart"></i>
@@ -326,7 +325,7 @@
 
 
                     <!-- FORM -->
-                    <div class="bg-ack-cream rounded-3xl p-6 md:p-8 border border-gray-200">
+                    <div class="bg-ack-cream p-6 md:p-8 border border-gray-200">
 
                         <div class="mb-7">
 
@@ -345,7 +344,6 @@
 
                             <!-- NAME -->
                             <div>
-
                                 <label for="donorName"
                                     class="block text-sm font-semibold text-gray-700 mb-2">
                                     Your name
@@ -387,14 +385,7 @@
                                     >
 
                                 </div>
-
-                                <p class="text-xs text-gray-400 mt-2">
-                                    This number will be used for the future M-Pesa payment request.
-                                </p>
-
                             </div>
-
-
                             <!-- GIVING PURPOSE -->
                             <div>
 
@@ -496,12 +487,6 @@
                             <p id="paymentMessage"
                                 class="hidden text-sm text-center text-ack-purple bg-ack-purple/5 rounded-xl p-4">
                             </p>
-
-                            <p class="text-xs text-center text-gray-400 leading-relaxed">
-                                M-Pesa payment integration is not active yet.
-                                No payment will be initiated from this form.
-                            </p>
-
                         </form>
 
                     </div>
@@ -528,11 +513,11 @@
                             We're here to help
                         </span>
 
-                        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-4">
+                        <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-800 mt-4">
                             Have questions about giving?
                         </h2>
 
-                        <p class="text-white/70 mt-4 leading-relaxed">
+                        <p class=" mt-4 leading-relaxed text-gray-600">
                             Our parish office is available to help you with
                             giving arrangements and any questions you may have.
                         </p>
@@ -540,7 +525,7 @@
                     </div>
 
                     <a href="/contact"
-                        class="inline-flex items-center justify-center gap-3 bg-ack-gold text-ack-purple-dark font-bold px-7 py-4 rounded-xl hover:bg-white transition shrink-0">
+                        class="inline-flex items-center justify-center gap-3 bg-ack-gold text-ack-purple-dark font-bold px-7 py-4 rounded-xl hover:bg-white transition shrink-0 text-gray-100">
 
                         Contact the parish
                         <i class="fa-solid fa-arrow-right"></i>

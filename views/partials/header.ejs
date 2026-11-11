@@ -1,65 +1,90 @@
-<header
-  id="site-header"
-  class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/60 transition-all duration-300"
->
+<header id="site-header"
+  class="relative bg-white/95 backdrop-blur-xl border-b border-gray-200/60 transition-all duration-300">
   <!-- ANNOUNCEMENT BAR -->
-  <div class="bg-ack-purple text-white text-sm">
-    <div
-      class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2"
-    >
-      <p class="text-center sm:text-left text-xs sm:text-sm">
-        <i class="fa-regular fa-clock text-ack-gold mr-1"></i>
-        Join us every Sunday — English
-        <span class="font-semibold">8:00 AM</span>
-        <span class="text-ack-gold mx-1">·</span>
-        Kiswahili <span class="font-semibold">10:00 AM</span>
+  <div class="bg-ack-purple text-white text-sm border-b border-white/10">
+    <div class="mx-auto flex flex-col lg:flex-row items-center justify-between
+        px-4 lg:px-8 py-2.5 gap-2 lg:gap-6">
+
+      <!-- SERVICE TIMES -->
+      <p class="flex items-center text-center lg:text-left text-[11px] sm:text-xs md:text-sm">
+        <i class="fa-regular fa-clock text-ack-gold mr-2"></i>
+
+        <span>
+          Join us every Sunday —
+          <span class="font-semibold">English 8:00 AM</span>
+
+          <span class="text-ack-gold mx-1.5">·</span>
+
+          <span class="font-semibold">Kiswahili 10:00 AM</span>
+        </span>
       </p>
 
-      <div class="flex items-center gap-4 text-white/90">
-        <a href="#" class="social-link" aria-label="Facebook">
-          <i class="fa-brands fa-facebook"></i>
+      <!-- LOCATION -->
+      <a href="https://www.google.com/maps/search/?api=1&query=ACK+St+Phillips+Roadblock+Eldoret" target="_blank"
+        rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 text-white/70
+                   hover:text-ack-gold transition-colors duration-200
+                   text-[11px] sm:text-xs md:text-sm">
+        <i class="fa-solid fa-location-dot text-ack-gold"></i>
+
+        <span>
+          Uganda Road, Behind Rubis, Roadblock — Eldoret
+        </span>
+
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-60"></i>
+      </a>
+
+      <!-- SOCIAL LINKS -->
+      <div class="flex items-center gap-3 text-white/70">
+
+        <a href="#" class="social-link flex items-center justify-center w-7 h-7
+                       rounded-full hover:bg-white/10 hover:text-ack-gold
+                       transition-all duration-200" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f text-xs"></i>
         </a>
 
-        <a href="#" class="social-link" aria-label="X">
-          <i class="fa-brands fa-x-twitter"></i>
+        <a href="#" class="social-link flex items-center justify-center w-7 h-7
+                       rounded-full hover:bg-white/10 hover:text-ack-gold
+                       transition-all duration-200" aria-label="X">
+          <i class="fa-brands fa-x-twitter text-xs"></i>
         </a>
 
-        <a href="#" class="social-link" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
+        <a href="#" class="social-link flex items-center justify-center w-7 h-7
+                       rounded-full hover:bg-white/10 hover:text-ack-gold
+                       transition-all duration-200" aria-label="Instagram">
+          <i class="fa-brands fa-instagram text-xs"></i>
         </a>
 
-        <a href="#" class="social-link" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
+        <a href="#" class="social-link flex items-center justify-center w-7 h-7
+                       rounded-full hover:bg-white/10 hover:text-ack-gold
+                       transition-all duration-200" aria-label="YouTube">
+          <i class="fa-brands fa-youtube text-xs"></i>
         </a>
+
       </div>
+
     </div>
   </div>
 
   <!-- MAIN NAVIGATION -->
-  <nav
-    class="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-6 py-3"
-    aria-label="Main navigation"
-  >
+  <nav class="sticky top-0 z-[100] bg-white/95 backdrop-blur-xl
+         border-b border-gray-200/60
+         mx-auto flex items-center justify-between
+         px-4 lg:px-6 py-3" aria-label="Main navigation">
     <!-- LOGO -->
     <a href="/" class="flex items-center gap-3 shrink-0 group">
-      <img
-        src="/images/ack-logo.svg"
-        class="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
-        alt="ACK St. Phillips logo"
-      />
+      <img src="/images/ack-logo.svg" class="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+        alt="ACK St. Phillips logo" />
 
       <span class="font-semibold text-ack-purple-dark leading-tight">
-        <span class="block text-sm">St. Phillips</span>
+        <span class="block text-sm md:text-xl text-ack-purple font-extrabold uppercase">St. Phillip's</span>
         <span class="block text-xs font-normal text-gray-500 tracking-wide">
-          Roadblock
+          ACK CHURCH, Roadblock
         </span>
       </span>
     </a>
 
     <!-- DESKTOP NAVIGATION -->
-    <ul
-      class="hidden lg:flex items-center gap-4 text-gray-700 font-medium text-sm"
-    >
+    <ul class="hidden lg:flex items-center gap-6 text-gray-700 font-medium text-sm uppercase">
       <!-- HOME -->
       <li>
         <a href="/" class="nav-link">Home</a>
@@ -190,44 +215,27 @@
 
     <!-- GIVE BUTTON -->
     <div class="hidden lg:flex items-center">
-      <a
-        href="/give"
-        class="group flex items-center gap-2 p-4 bg-ack-gold text-ack-purple-dark hover:bg-amber-300 transition-all duration-300 px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm hover:shadow-md"
-      >
-        <i
-          class="fa-solid fa-hand-holding-heart group-hover:scale-110 transition-transform"
-        ></i>
-
+      <a href="/give" class="group flex items-center gap-2 bg-ack-gold text-ack-purple-dark
+       hover:bg-amber-300 transition-all duration-300
+       px-5 py-2.5 text-sm font-semibold shadow-sm"> <i
+          class="fa-solid fa-hand-holding-heart group-hover:scale-110 transition-transform"></i>
         Give
-
-        <i
-          class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"
-        ></i>
+        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
       </a>
     </div>
 
     <!-- MOBILE MENU BUTTON -->
-    <button
-      id="menu-btn"
-      type="button"
+    <button id="menu-btn" type="button"
       class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl text-ack-purple-dark hover:bg-purple-50 transition"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
+      aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <i id="menu-icon" class="fa-solid fa-bars-staggered text-xl"></i>
     </button>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div
-    id="mobile-menu"
-    class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl"
-  >
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
     <div class="max-w-7xl mx-auto px-5 py-6">
-      <p
-        class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold mb-4"
-      >
+      <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold mb-4">
         Explore St. Phillips
       </p>
 
@@ -241,12 +249,7 @@
 
         <!-- MOBILE ABOUT -->
         <li>
-          <button
-            class="mobile-dropdown-btn"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-about"
-          >
+          <button class="mobile-dropdown-btn" type="button" aria-expanded="false" aria-controls="mobile-about">
             <span>
               <i class="fa-solid fa-church"></i>
               About
@@ -265,12 +268,7 @@
 
         <!-- MOBILE SERVICES -->
         <li>
-          <button
-            class="mobile-dropdown-btn"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-services"
-          >
+          <button class="mobile-dropdown-btn" type="button" aria-expanded="false" aria-controls="mobile-services">
             <span>
               <i class="fa-solid fa-calendar-days"></i>
               Services
@@ -288,12 +286,7 @@
 
         <!-- MOBILE MINISTRIES -->
         <li>
-          <button
-            class="mobile-dropdown-btn"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-ministries"
-          >
+          <button class="mobile-dropdown-btn" type="button" aria-expanded="false" aria-controls="mobile-ministries">
             <span>
               <i class="fa-solid fa-hands-praying"></i>
               Ministries
@@ -312,12 +305,7 @@
 
         <!-- MOBILE FELLOWSHIPS -->
         <li>
-          <button
-            class="mobile-dropdown-btn"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-fellowships"
-          >
+          <button class="mobile-dropdown-btn" type="button" aria-expanded="false" aria-controls="mobile-fellowships">
             <span>
               <i class="fa-solid fa-people-group"></i>
               Fellowships
@@ -363,21 +351,15 @@
       </ul>
 
       <!-- MOBILE GIVE -->
-      <a
-        href="/give"
-        class="mt-6 flex items-center justify-center gap-2 w-full bg-ack-gold text-ack-purple-dark py-3.5 rounded-xl font-semibold hover:bg-amber-300 transition"
-      >
+      <a href="/give"
+        class="mt-6 flex items-center justify-center gap-2 w-full bg-ack-gold text-ack-purple-dark py-3.5 rounded-xl font-semibold hover:bg-amber-300 transition">
         <i class="fa-solid fa-hand-holding-heart"></i>
         Support Our Ministry
       </a>
 
       <!-- MOBILE SOCIAL LINKS -->
       <div class="flex items-center justify-center gap-6 mt-6 text-gray-400">
-        <a
-          href="#"
-          class="hover:text-ack-purple transition"
-          aria-label="Facebook"
-        >
+        <a href="#" class="hover:text-ack-purple transition" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
@@ -385,19 +367,11 @@
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
-        <a
-          href="#"
-          class="hover:text-ack-purple transition"
-          aria-label="Instagram"
-        >
+        <a href="#" class="hover:text-ack-purple transition" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a
-          href="#"
-          class="hover:text-ack-purple transition"
-          aria-label="YouTube"
-        >
+        <a href="#" class="hover:text-ack-purple transition" aria-label="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
       </div>
@@ -416,6 +390,7 @@
     padding: 12px 0;
     transition: color 0.25s ease;
     white-space: nowrap;
+
   }
 
   .nav-link:hover {
@@ -466,8 +441,8 @@
     z-index: 100;
   }
 
-  .group:hover > .nav-dropdown,
-  .group:focus-within > .nav-dropdown {
+  .group:hover>.nav-dropdown,
+  .group:focus-within>.nav-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -526,8 +501,8 @@
     gap: 13px;
   }
 
-  .mobile-nav-link > i,
-  .mobile-dropdown-btn span > i {
+  .mobile-nav-link>i,
+  .mobile-dropdown-btn span>i {
     width: 18px;
     text-align: center;
     color: #71578e;
@@ -574,6 +549,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+
     #site-header *,
     #site-header *::before,
     #site-header *::after {
